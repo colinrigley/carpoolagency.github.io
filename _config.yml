@@ -1,3 +1,3 @@
-markdown: rdiscount
-highlighter: pygments
-excerpt_separator: "<!--more-->"
+kelexcerpt_separator: "<!--more-->"
+collections:
+  - people

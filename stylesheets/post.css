@@ -1,0 +1,52 @@
+/* PostArticle Page */
+#postArticle .PostWrapper {
+    padding: 4em;
+    background-color: rgba(255,255,255,0.95);
+    top: 14em;
+    position: relative;
+}
+#postArticle .PostTitle {
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+#postArticle .DefaultImage {
+    position: absolute;
+    width: 100%;
+    max-height: 40em;
+    height: 40em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#postArticle .PostAuthor {
+  margin: 3em 0em 3em 0em;
+}
+#postArticle .AuthorTable td.Picture,
+#postArticle .AuthorTable .Image,
+#postArticle .AuthorTable .ImagePlaceholder {
+  width: 6em;
+  height: 6em;
+  padding: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3em;
+}
+#postArticle .AuthorTable .ImagePlaceholder {
+  background-image: url('/images/profile/Placeholder.png');
+}
+#postArticle .AuthorTable .Image {
+  z-index: 2;
+  position: absolute;
+}
+#postArticle .AuthorTable td {
+  border: none;
+}
+
+#postArticle .AuthorTable .Name {
+  font-size: 1.3em;
+}

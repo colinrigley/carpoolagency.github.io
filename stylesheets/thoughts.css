@@ -1,0 +1,32 @@
+/* Thoughts Page */
+#thoughts ul.PostList {
+  margin: 0;
+  padding: 6em 0 0 0;
+}
+#thoughts .PostItem {
+  height: 25em;
+}
+#thoughts .PostTitle {
+  font-size: 2em;
+}
+#thoughts .PostDefaultImage {
+  width: 15em;
+  height: 15em;
+  border-radius: 15em;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  float: left;
+}
+#thoughts .PostSummary {
+  float: left;
+  margin-left: 18em;
+  width: 40em;
+}
+#thoughts .PostSummary td {
+  border: none;
+}
+#thoughts .PostSummary a {
+  color: #6ABA4D;
+}

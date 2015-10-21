@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 @import url(https://fonts.googleapis.com/css?family=Vollkorn);
+@import url(/stylesheets/members.css);
+@import url(/stylesheets/thoughts.css);
+@import url(/stylesheets/post.css);
 
 body {
   padding:50px;
-  font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#000;
   font-weight:300;
 }
@@ -82,8 +85,6 @@ table {
 
 th, td {
   text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
 }
 
 dt {
@@ -182,92 +183,32 @@ footer {
   position:fixed;
   bottom:50px;
 }
+/* Carpool Common */
 
-/* PostArticle Page */
-#postArticle .PostWrapper {
-    padding: 4em;
-    background-color: rgba(255,255,255,0.95);
-    top: 14em;
-    position: relative;
+/* Color Settings */
+.f-carpool-green {
+  color: #67BC46;
 }
-#postArticle .PostTitle {
-  color: #6ABA4D;
-  font-size: 4em;
-  font-weight: 500;
-  line-height: 1.2em;
+.f-light-gray, .f-light-grey {
+  color: #999999;
 }
-#postArticle .DefaultImage {
-    position: absolute;
-    width: 100%;
-    max-height: 40em;
-    height: 40em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-#postArticle .PostAuthor {
-  margin: 3em 0em 3em 0em;
-}
-#postArticle .AuthorTable td.Picture,
-#postArticle .AuthorTable .Image,
-#postArticle .AuthorTable .ImagePlaceholder {
-  width: 6em;
-  height: 6em;
-  padding: 0;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-clip-path: circle(3em at 50% 50%);
-  clip-path: circle(3em at 50% 50%);
-}
-#postArticle .AuthorTable .Image {
-  z-index: 2;
-  position: absolute;
-}
-#postArticle .AuthorTable td {
-  border: none;
-}
-#postArticle .AuthorTable .ImagePlaceholder {
-  background-image: url('/images/profile/Placeholder.png');
-}
-#postArticle .AuthorTable .Name {
-  font-size: 1.3em;
+.bg-carpool-green {
+  background-color: #67BC46;
+  color: #FFF;
 }
 
-/* Thoughts Page */
-#thoughts ul.PostList {
-  margin: 0;
-  padding: 6em 0 0 0;
+/* Layout Settings */
+.text-right {
+  text-align: right;
 }
-#thoughts .PostItem {
-  height: 25em;
+.text-left {
+  text-align: right;
 }
-#thoughts .PostTitle {
-  font-size: 2em;
-  color: #6ABA4D;  
+.text-center {
+  text-align: center;
 }
-#thoughts .PostDefaultImage, #thoughts .ClipCircle {
-  width: 15em;
-  height: 15em;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  float: left;
-}
-#thoughts .PostSummary {
-  float: left;
-  margin-left: 18em;
-  width: 40em;
-}
-#thoughts .PostSummary td {
-  border: none;
-}
-#thoughts .PostSummary a {
-  color: #6ABA4D
+.row {
+  clear: both;
 }
 
 /* Carpool Wrapper Settings */
