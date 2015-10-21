@@ -1,0 +1,37 @@
+---
+layout: default
+title: Some of our thinking
+---
+
+<h1>Some of our thinking</h1>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+<div id="thoughts">
+<ul class="PostList">
+  {% for post in site.posts %}
+   <div class="PostItem">
+      
+      <div class="PostDefaultImage" style="background-image: url('{{ post.defaultImage }}');"></div>
+      <img class="ClipCircle" src="/images/clipcircle.png">
+      <!-- IE and Edge is not supporting good clipping mask,  -->
+      <table class="PostSummary">
+         <tr>
+          	<td class="PostTitle">{{ post.title }}</td>
+         </tr>
+         <tr>
+            <td class="PostAuthor">By {{ post.author }}</td>
+         </tr>
+         <tr>
+            <td class="PostBody">{{ post.excerpt }}</td>
+         </tr>
+         <tr>
+            <td><a href="{{ post.url }}">Read more</a></td>
+         </tr>
+      </table>
+   </div>
+  {% endfor %}
+</ul>
+</div>
+<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+   var getRandom
+</script>

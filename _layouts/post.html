@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div id="postArticle">
+	<div class="DefaultImage" style="background-image: url('{{ page.defaultImage }}');"></div>
+	<div class="PostWrapper">
+		<div class="PostTitle">{{ page.title }}</div>
+		<div class="PostAuthor">
+			<table class="AuthorTable">
+				<tbody>
+					<tr>
+						<td class="Picture"><div class="Image" style="background-image: url('/images/profile/{{ page.author }}.png');"></div><div class="ImagePlaceholder"></div></td>
+						<td><div class="Name">By {{ page.author }}</div></td>
+					</tr>
+				</tbody>
+			</table>
+	
+			<a class="btnTwitter"><img src="/images/btn/Twitter.png"></a>
+			<a class="btnLinkedIn"><img src="/images/btn/Linkedin.png"></a>
+			<a class="btnFacebook"><img src="/images/btn/Facebook.png"></a>
+	
+		</div>
+
+		<div id="PostBody">
+			{{ content }}
+		</div>
+	</div>
+	
+
+	<div id="related">
+	  <h2>Related Posts</h2>
+	  <ul class="posts">
+	    {% for post in site.related_posts limit:3 %}
+	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	    {% endfor %}
+	  </ul>
+	</div>
+</div>

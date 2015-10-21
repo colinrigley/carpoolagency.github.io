@@ -1,0 +1,358 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+
+body {
+  padding:50px;
+  font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#000;
+  font-weight:300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color:#222;
+  margin:0 0 20px;
+}
+
+p, ul, ol, table, pre, dl {
+  margin:0 0 20px;
+}
+
+h1, h2, h3 {
+  line-height:1.1;
+}
+
+h1 {
+  font-size: 3em;
+  color: #999999;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+h2 {
+  color:#393939;
+}
+
+h3, h4, h5, h6 {
+  color:#494949;
+}
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
+a small {
+  font-size:11px;
+  color:#777;
+  margin-top:-0.6em;
+  display:block;
+}
+
+.wrapper {
+  width:860px;
+  margin:0 auto;
+}
+
+blockquote {
+  border-left:1px solid #e5e5e5;
+  margin:0;
+  padding:0 0 0 20px;
+  font-style:italic;
+}
+
+code, pre {
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  color:#333;
+  font-size:12px;
+}
+
+pre {
+  padding:8px 15px;
+  background: #f8f8f8;
+  border-radius:5px;
+  border:1px solid #e5e5e5;
+  overflow-x: auto;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td {
+  text-align:left;
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+dt {
+  color:#444;
+  font-weight:700;
+}
+
+th {
+  color:#444;
+}
+
+header {
+  width:270px;
+  float:left;
+  position:fixed;
+}
+
+header ul {
+  list-style:none;
+  height:40px;
+
+  padding:0;
+
+  background: #eee;
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+
+  border-radius:5px;
+  border:1px solid #d2d2d2;
+  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+  width:270px;
+}
+
+header li {
+  width:89px;
+  float:left;
+  border-right:1px solid #d2d2d2;
+  height:40px;
+}
+
+header ul a {
+  line-height:1;
+  font-size:11px;
+  color:#999;
+  display:block;
+  text-align:center;
+  padding-top:6px;
+  height:40px;
+}
+
+strong {
+  color:#222;
+  font-weight:700;
+}
+
+header ul li + li {
+  width:88px;
+  border-left:1px solid #fff;
+}
+
+header ul li + li + li {
+  border-right:none;
+  width:89px;
+}
+
+header ul a strong {
+  font-size:14px;
+  display:block;
+  color:#222;
+}
+
+section {
+  width:500px;
+  float:right;
+  padding-bottom:50px;
+}
+
+small {
+  font-size:11px;
+}
+
+hr {
+  border:0;
+  background:#e5e5e5;
+  height:1px;
+  margin:0 0 20px;
+}
+
+footer {
+  width:270px;
+  float:left;
+  position:fixed;
+  bottom:50px;
+}
+
+/* PostArticle Page */
+#postArticle .PostWrapper {
+    padding: 4em;
+    background-color: rgba(255,255,255,0.95);
+    top: 14em;
+    position: relative;
+}
+#postArticle .PostTitle {
+  color: #6ABA4D;
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+#postArticle .DefaultImage {
+    position: absolute;
+    width: 100%;
+    max-height: 40em;
+    height: 40em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#postArticle .PostAuthor {
+  margin: 3em 0em 3em 0em;
+}
+#postArticle .AuthorTable td.Picture,
+#postArticle .AuthorTable .Image,
+#postArticle .AuthorTable .ImagePlaceholder {
+  width: 6em;
+  height: 6em;
+  padding: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: circle(3em at 50% 50%);
+  clip-path: circle(3em at 50% 50%);
+}
+#postArticle .AuthorTable .Image {
+  z-index: 2;
+  position: absolute;
+}
+#postArticle .AuthorTable td {
+  border: none;
+}
+#postArticle .AuthorTable .ImagePlaceholder {
+  background-image: url('/images/profile/Placeholder.png');
+}
+#postArticle .AuthorTable .Name {
+  font-size: 1.3em;
+}
+
+/* Thoughts Page */
+#thoughts ul.PostList {
+  margin: 0;
+  padding: 6em 0 0 0;
+}
+#thoughts .PostItem {
+  height: 25em;
+}
+#thoughts .PostTitle {
+  font-size: 2em;
+  color: #6ABA4D;  
+}
+#thoughts .PostDefaultImage, #thoughts .ClipCircle {
+  width: 15em;
+  height: 15em;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  float: left;
+}
+#thoughts .PostSummary {
+  float: left;
+  margin-left: 18em;
+  width: 40em;
+}
+#thoughts .PostSummary td {
+  border: none;
+}
+#thoughts .PostSummary a {
+  color: #6ABA4D
+}
+
+/* Carpool Wrapper Settings */
+.carpool-wrapper{
+  width: 58em;
+  margin: 0 auto;
+}
+
+/* Commercial Settings*/
+.btnTwitter img,
+.btnLinkedIn img,
+.btnFacebook img {
+  height: 1.5em;
+  margin-right: 1em;
+}
+
+
+
+@media print, screen and (max-width: 960px) {
+
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  header {
+    padding-right:320px;
+  }
+
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  body {
+    word-wrap:break-word;
+  }
+
+  header {
+    padding:0;
+  }
+
+  header ul, header p.view {
+    position:static;
+  }
+
+  pre, code {
+    word-wrap:normal;
+  }
+}
+
+@media print, screen and (max-width: 480px) {
+  body {
+    padding:15px;
+  }
+
+  header ul {
+    display:none;
+  }
+}
+
+@media print {
+  body {
+    padding:0.4in;
+    font-size:12pt;
+    color:#444;
+  }
+}
