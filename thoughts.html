@@ -4,27 +4,26 @@ title: Some of our thinking
 ---
 
 <h1>Some of our thinking</h1>
-
-Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+<p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
 <div id="thoughts">
-<ul class="PostList">
+<ul class="postList">
   {% for post in site.posts %}
-   <div class="PostItem">
+   <div class="postItem">
       
-      <div class="PostDefaultImage" style="background-image: url('{{ post.defaultImage }}');"></div>
+      <div class="postDefaultImage" style="background-image: url('{{ post.defaultImage }}');"></div>
       <!-- IE and Edge is not supporting good clipping mask,  -->
-      <table class="PostSummary">
+      <table class="postSummary">
          <tr>
-          	<td class="PostTitle f-carpool-green">{{ post.title }}</td>
+          	<td class="postTitle"><a href="{{ post.url }}" class="f-carpool-green">{{ post.title }}</td>
          </tr>
          <tr>
-            <td class="PostAuthor">By {{ post.author }}</td>
+            <td class="postAuthor">By {{ post.author }}</td>
          </tr>
          <tr>
-            <td class="PostBody">{{ post.excerpt }}</td>
+            <td class="postBody">{{ post.excerpt }}</td>
          </tr>
          <tr>
-            <td><a href="{{ post.url }}">Read more</a></td>
+            <td><a href="{{ post.url }}" class="readMore f-carpool-green">Read more</a></td>
          </tr>
       </table>
    </div>

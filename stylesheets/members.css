@@ -16,7 +16,6 @@
 }
 #carpoolMembers .member {
   width: 13em;
-  height: 21em;
   float: left;
   margin: 0 0 4em 2em;
 
@@ -44,4 +43,10 @@
 }
 #carpoolMembers .member-role {
   font-size: 16pt;
+}
+
+#carpoolMembers .contactLinks i {
+  font-size: 2.5em;
+  margin: 0 0.3em;
+  color: #999999;
 }

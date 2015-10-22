@@ -2,7 +2,7 @@
 members:
 - name: "Samuel"
   role: "Development"
-  picture: "samuel.png"
+  picture: "samuel kim.png"
   linkedin: "https://www.linkedin.com/in/samuelhgkim"
   facebook: "https://www.facebook.com/hyungyu.kim.142"
 - name: "Nicole"
@@ -15,6 +15,8 @@ members:
   facebook: "https://www.facebook.com/hyungyu.kim.142"
 - name: "Nicole"
   role: "Project"
+  linkedin: "https://www.linkedin.com/in/samuelhgkim"
+  facebook: "https://www.facebook.com/hyungyu.kim.142"
   twitter: "http://www.twitter.com"
 - name: "Samuel"
   role: "Development"

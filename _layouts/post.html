@@ -2,15 +2,15 @@
 layout: default
 ---
 <div id="postArticle">
-	<div class="DefaultImage" style="background-image: url('{{ page.defaultImage }}');"></div>
-	<div class="PostWrapper">
-		<div class="PostTitle f-carpool-green">{{ page.title }}</div>
-		<div class="PostAuthor">
-			<table class="AuthorTable">
+	<div class="defaultImage" style="background-image: url('{{ page.defaultImage }}');"></div>
+	<div class="postWrapper">
+		<div class="postTitle f-carpool-green">{{ page.title }}</div>
+		<div class="postAuthor">
+			<table class="authorTable">
 				<tbody>
 					<tr>
-						<td class="Picture"><div class="Image" style="background-image: url('/images/profile/{{ page.author }}.png');"></div><div class="ImagePlaceholder"></div></td>
-						<td><div class="Name">By {{ page.author }}</div></td>
+						<td class="picture"><div class="image" style="background-image: url('/images/profile/{{ page.author }}.png');"></div><div class="imagePlaceholder"></div></td>
+						<td><div class="name">By {{ page.author }}</div></td>
 					</tr>
 				</tbody>
 			</table>
@@ -21,8 +21,8 @@ layout: default
 	
 		</div>
 
-		<div id="PostBody">
-			{{ content }}
+		<div id="postBody">
+			<p>{{ content }}</p>
 		</div>
 	</div>
 	

@@ -7,7 +7,7 @@ title: This is who works at Carpool
 
 <h1>This is who works at Carpool</h1>
 <div class="body">
-Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	<p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
 </div>
 <div class="apply text-center">
 	<a href="#" class="f-carpool-green">
@@ -21,7 +21,7 @@ Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l
 		<table>
 			<tbody>
 				<tr>
-					<td><div class="member-image" src="/images/profile/{{person.picture}}"></div><div class="imagePlaceholder"></div></td>
+					<td><div class="member-image" style="background-image: url('/images/profile/{{ member.picture }}')"></div><div class="imagePlaceholder"></div></td>
 				</tr>
 				<tr>
 					<td><div class="member-name f-carpool-green text-center">{{ member.name }}</div></td>
@@ -29,7 +29,18 @@ Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque l
 				<tr>
 					<td><div class="member-role f-light-gray text-center">{{ member.role }}</div></td>
 				</tr>
-				<tr class="ContactLinks">
+				<tr class="contactLinks">
+					<td class="text-center">
+					{% if member.linkedin %}
+						<a href="{{ member.linkedin }}" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+					{% endif %}
+					{% if member.facebook %}
+						<a href="{{ member.facebook }}" target="_blank"><i class="fa fa-facebook-square"></i></a>
+					{% endif %}
+					{% if member.twitter %}
+						<a href="{{ member.twitter }}" target="_blank"><i class="fa fa-twitter-square"></i></a>
+					{% endif %}
+					</td>
 				</tr>
 			</tbody>
 		</table>

@@ -1,16 +1,17 @@
 /* PostArticle Page */
-#postArticle .PostWrapper {
+#postArticle .postWrapper {
     padding: 4em;
     background-color: rgba(255,255,255,0.95);
     top: 14em;
     position: relative;
 }
-#postArticle .PostTitle {
+#postArticle .postTitle {
   font-size: 4em;
   font-weight: 500;
   line-height: 1.2em;
+  letter-spacing: -1px;
 }
-#postArticle .DefaultImage {
+#postArticle .defaultImage {
     position: absolute;
     width: 100%;
     max-height: 40em;
@@ -22,12 +23,12 @@
     left: 0;
     z-index: -1;
 }
-#postArticle .PostAuthor {
+#postArticle .postAuthor {
   margin: 3em 0em 3em 0em;
 }
-#postArticle .AuthorTable td.Picture,
-#postArticle .AuthorTable .Image,
-#postArticle .AuthorTable .ImagePlaceholder {
+#postArticle .authorTable td.picture,
+#postArticle .authorTable .image,
+#postArticle .authorTable .imagePlaceholder {
   width: 6em;
   height: 6em;
   padding: 0;
@@ -36,17 +37,18 @@
   background-size: cover;
   border-radius: 3em;
 }
-#postArticle .AuthorTable .ImagePlaceholder {
+#postArticle .authorTable .imagePlaceholder {
   background-image: url('/images/profile/Placeholder.png');
 }
-#postArticle .AuthorTable .Image {
+#postArticle .authorTable .image {
   z-index: 2;
   position: absolute;
 }
-#postArticle .AuthorTable td {
+#postArticle .authorTable td {
   border: none;
 }
 
-#postArticle .AuthorTable .Name {
+#postArticle .authorTable .name {
   font-size: 1.3em;
+  margin-left: 1em;
 }
