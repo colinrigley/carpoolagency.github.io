@@ -1,38 +1,39 @@
 ---
-layout: default
+layout: main
 ---
-<div id="postArticle">
-	<div class="defaultImage" style="background-image: url('{{ page.defaultImage }}');"></div>
-	<div class="postWrapper">
-		<div class="postTitle f-carpool-green">{{ page.title }}</div>
-		<div class="postAuthor">
-			<table class="authorTable">
-				<tbody>
-					<tr>
-						<td class="picture"><div class="image" style="background-image: url('/images/profile/{{ page.author }}.png');"></div><div class="imagePlaceholder"></div></td>
-						<td><div class="name">By {{ page.author }}</div></td>
-					</tr>
-				</tbody>
-			</table>
-	
-			<a class="btnTwitter"><img src="/images/btn/Twitter.png"></a>
-			<a class="btnLinkedIn"><img src="/images/btn/Linkedin.png"></a>
-			<a class="btnFacebook"><img src="/images/btn/Facebook.png"></a>
-	
-		</div>
+<div id="carpool">
+	<div id="postArticle">
+		<div class="defaultImage" style="background-image: url('{{ page.defaultImage }}');"></div>
+		<div class="postWrapper c-58 center-margin">
+			<div class="postTitle green">{{ page.title }}</div>
+			<div class="postAuthor">
+				<table class="authorTable">
+					<tbody>
+						<tr>
+							<td class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{{ page.authorImage }}');"></div><div class="imagePlaceholder"></div></td>
+							<td class="name gray"><div>By {{ page.author }}</div></td>
+						</tr>
+					</tbody>
+				</table>
+		
+				<a class="btnTwitter"><img src="/carpool/img/btn/Twitter.png"></a>
+				<a class="btnLinkedIn"><img src="/carpool/img/btn/Linkedin.png"></a>
+				<a class="btnFacebook"><img src="/carpool/img/btn/Facebook.png"></a>
+		
+			</div>
 
-		<div id="postBody">
-			<p>{{ content }}</p>
+			<div id="postBody">
+				<p>{{ content }}</p>
+			</div>
 		</div>
-	</div>
-	
-
-	<div id="related">
-	  <h2>Related Posts</h2>
-	  <ul class="posts">
-	    {% for post in site.related_posts limit:3 %}
-	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	    {% endfor %}
-	  </ul>
+		
+		<div id="related" class="c-50 center-margin">
+		  <h2>Related Posts</h2>
+		  <ul class="posts">
+		    {% for post in site.related_posts limit:3 %}
+		      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		    {% endfor %}
+		  </ul>
+		</div>
 	</div>
 </div>
