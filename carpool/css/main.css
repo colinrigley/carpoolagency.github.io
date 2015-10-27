@@ -676,6 +676,7 @@ html, body {
 #carpool #welcome .video-overlay .welcomeMenu a {
     text-decoration: none;
     color: #309600;
+    font-weight: 200;
 }
 
 #carpool #welcome .video-overlay .welcomeMenu li {
@@ -684,7 +685,6 @@ html, body {
     font-size: 16px;
     list-style: none;
     color: #309600;
-    font-weight: 200;
 }
 
 #carpool #welcome .downArrowContainer {

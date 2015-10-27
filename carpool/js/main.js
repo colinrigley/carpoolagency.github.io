@@ -293,18 +293,21 @@ $(function(){
     // Show the navigation on scrolling
     // Anchor offset with extra 100 height for unloaded image
     var anchor_offset = $("#welcome .video-overlay").offset().top + $("#welcome .video-overlay").height() + 100;
-
+    var upper_anchor_offset = $("#welcome .outer-container").height() / 2;
+    var lower_anchor_offset = 792;
+    // var lower_anchor_offset = $("#welcome .outer-container").height();
     
     $(window).scroll(function () {
-        console.log("currentPageName: ", currentPageName);
+        var self = this;
+        //console.log("currentPageName: ", currentPageName);
         //$(".header .logoContainer").slideDown(200);
         //$(".header .menuContainer").slideDown(200);
         var video1Time = (window.pageYOffset - animationVideo1_offset) / 200;
         var video2Time = (window.pageYOffset - animationVideo2_offset) / 200;
         // var videoTime = window.pageYOffset / 400;
-        console.log("pageYOffset: ", window.pageYOffset);
-        console.log("video1Time: ", video1Time);
-        console.log("video2Time: ", video2Time);
+        //console.log("pageYOffset: ", window.pageYOffset);
+        //console.log("video1Time: ", video1Time);
+        //console.log("video2Time: ", video2Time);
         if (currentPageName === "welcome") {
             vid1.currentTime = video1Time;
         }
@@ -316,11 +319,42 @@ $(function(){
         // Detect scroll up or down
         var st = $(this).scrollTop();
 
+        //console.log("scrollTop: ", st);
+        //console.log("lastScrollTop: ", lastScrollTop);
+
         if (st > lastScrollTop){
+            //console.log("downscroll!");
+            lastScrollTop = st;
             // Downscroll
             // Show navigation logo and hide navigation menu
+            //console.log("scrollTop: ", st);
+            if (st > upper_anchor_offset && st < lower_anchor_offset) {
+                if (!State.InTransition) {
+                    State.InTransition = true;
+                    // Scroll above the video background and pull up the content of the page
+                    $("html, body").animate({
+                        scrollTop: lower_anchor_offset
+                    }, {
+                        duration: 600,
+                        complete: function () {
+                            if ($(".header .logoContainer").is(':hidden')) {
+                                $(".header .logoContainer").slideDown(200);
+                            }
+                            if ($(".header .menuContainer").is(':hidden')) {
+                                $(".header .menuContainer").slideDown(200);
+                            }
+                            //console.log("animate complete: ", $(self).scrollTop());
+                            //console.log("window: ", $(window).scrollTop());
+                            lastScrollTop = $(window).scrollTop();
+                            State.InTransition = false;
+                        }
+                    });
+                }
+                return false;
+            }
+
             if (currentPageName !== "welcome") {
-                if ($(".header .menuContainer").is(':visible')) {
+                if ($(".header .menuContainer").is(':visible') && st > 815) {
                     $(".header .menuContainer").slideUp(200);
                 }
                 if (st > anchor_offset) {
@@ -333,7 +367,7 @@ $(function(){
                     if ($(".header .logoContainer").is(':hidden')) {
                         $(".header .logoContainer").slideDown(200);
                     }
-                    if ($(".header .menuContainer").is(':visible')) {
+                    if ($(".header .menuContainer").is(':visible') && st > 815) {
                         $(".header .menuContainer").slideUp(200);
                     }
                     if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
@@ -341,7 +375,8 @@ $(function(){
                     }
                 }
             }
-        } else {
+        } else if (st < lastScrollTop) {
+            //console.log("upscroll!");
             // Upscroll
             // Show navigation logo and show navigation menu
             if (st > anchor_offset) {
@@ -370,13 +405,15 @@ $(function(){
                         $(".header .menuContainer").slideDown(200);
                     }
                 }
-                
+
                 if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
                     $(".downArrowContainer .downArrow").fadeTo(100, 1);
                 }
             }
+
+            lastScrollTop = st;
         }
-        lastScrollTop = st;
+        
 
         
     });
