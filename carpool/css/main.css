@@ -280,6 +280,10 @@ html, body {
     overflow: hidden;
 }
 
+#carpool .pageNavLink.active {
+    font-weight: 700;
+}
+
 /*
  * Header
  */
@@ -743,6 +747,54 @@ html, body {
     overflow: hidden;
 }
 
+#carpool #about .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #about .inner-container {
+    position: relative;
+}
+
+#carpool #about .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #about .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #about .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #about .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #about .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #about .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+}
+
 #carpool #about .sectionTitle {
     font-family: "Vollkorn";
     font-size: 56px;
@@ -781,6 +833,54 @@ html, body {
  */
 #carpool #work {
     overflow: hidden;
+}
+
+#carpool #work .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #work .inner-container {
+    position: relative;
+}
+
+#carpool #work .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #work .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #work .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #work .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #work .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #work .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
 }
 
 #carpool #work .sectionTitle {
@@ -828,6 +928,76 @@ html, body {
  */
 #carpool #thoughts {
     overflow: hidden;
+}
+
+#carpool #thoughts .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #thoughts .inner-container {
+    position: relative;
+}
+
+#carpool #thoughts .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #thoughts .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #thoughts .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #thoughts .video-overlay .overlayAuthor {
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 15px;
+}
+
+#carpool #thoughts .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #thoughts .video-overlay .overlayReadMore {
+    font-size: 16px;
+    color: #67bc46;
+    display: block;
+    margin-top: 15px;
+}
+
+#carpool #thoughts .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #thoughts .downArrowContainer .downArrowText {
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #thoughts .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+    color: #FFF;
 }
 
 #carpool #thoughts .btnTwitter img, #carpool #thoughts .btnLinkedIn img, #carpool #thoughts .btnFacebook img {
@@ -892,6 +1062,54 @@ html, body {
  */
 #carpool #connect {
     overflow: hidden;
+}
+
+#carpool #connect .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #connect .inner-container {
+    position: relative;
+}
+
+#carpool #connect .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #connect .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #connect .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #connect .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #connect .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #connect .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
 }
 
 #carpool #connect .sectionTitle {
