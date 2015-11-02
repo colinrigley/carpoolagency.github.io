@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-	<head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-	    <title>Carpool Agency</title>
 
-	    <script type="text/javascript" src="/carpool/js/lib/jquery-2.1.4.min.js"></script>
-	    <link rel="stylesheet" href="/carpool/css/main.css">
-	    <link rel="stylesheet" href="/carpool/css/font-awesome/css/font-awesome.min.css">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	    <!--[if lt IE 9]>
-	    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
-	</head>
+	{% include head.html %}
 
-	{{ content }}
+	<div id="carpool">
 
+		{% include header.html %}  
+
+			{{ content }}
+
+		{% include footer.html %}  
+
+		<!-- Script Tags -->
+		<script type="text/javascript" src="/carpool/js/main.js"></script>
+
+	</div>
 </html>

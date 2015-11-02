@@ -1,0 +1,1272 @@
+/*
+ * Body
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/*
+ * Carpool container
+ */
+#carpool {
+    /*overflow: hidden;
+    position: relative;*/
+    font-family: "Helvetica Neue", "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#carpool html,
+#carpool body,
+#carpool div,
+#carpool span,
+#carpool object,
+#carpool iframe,
+#carpool h1,
+#carpool h2,
+#carpool h3,
+#carpool h4,
+#carpool h5,
+#carpool h6,
+#carpool p,
+#carpool blockquote,
+#carpool pre,
+#carpool abbr,
+#carpool address,
+#carpool cite,
+#carpool code,
+#carpool del,
+#carpool dfn,
+#carpool em,
+#carpool img,
+#carpool ins,
+#carpool kbd,
+#carpool q,
+#carpool samp,
+#carpool small,
+#carpool strong,
+#carpool sub,
+#carpool sup,
+#carpool var,
+#carpool b,
+#carpool i,
+#carpool dl,
+#carpool dt,
+#carpool dd,
+#carpool ol,
+#carpool ul,
+#carpool li,
+#carpool fieldset,
+#carpool form,
+#carpool label,
+#carpool legend,
+#carpool table,
+#carpool caption,
+#carpool tbody,
+#carpool tfoot,
+#carpool thead,
+#carpool tr,
+#carpool th,
+#carpool td,
+#carpool article,
+#carpool aside,
+#carpool canvas,
+#carpool details,
+#carpool figcaption,
+#carpool figure,
+#carpool footer,
+#carpool header,
+#carpool hgroup,
+#carpool menu,
+#carpool nav,
+#carpool section,
+#carpool summary,
+#carpool time,
+#carpool mark,
+#carpool audio,
+#carpool video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+#carpool ul,
+#carpool li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#carpool table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#carpool *,
+#carpool *:before,
+#carpool *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box;
+  /* Firefox (desktop or Android) 28- */
+  -moz-box-sizing: border-box;
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+
+/*
+ * CSS Styles for shared element
+ */
+
+#carpool .row {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    zoom: 1;
+}
+
+#carpool .center-margin {margin: 0 auto;}
+#carpool .d-none {display: none;}
+#carpool .overflow-hidden {overflow: hidden;}
+
+#carpool a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#carpool .float-left {
+    float: left;
+    display: block;
+}
+
+#carpool .text-center {
+    text-align: center;
+}
+
+#carpool .c-6 {width: 84px;}
+#carpool .c-8 {width: 112px;}
+#carpool .c-12 {width: 168px;}
+#carpool .c-40 {width: 560px;}
+#carpool .c-43 {width: 602px;}
+#carpool .c-50 {width: 700px;}
+#carpool .c-58 {width: 812px;}
+#carpool .c-60 {width: 840px;}
+#carpool .r-7 {height: 98px;}
+#carpool .pt-1 {padding-top: 14px;}
+#carpool .pt-2 {padding-top: 28px;}
+#carpool .pt-3 {padding-top: 42px;}
+#carpool .pt-4 {padding-top: 56px;}
+#carpool .pt-5 {padding-top: 70px;}
+#carpool .pt-6 {padding-top: 84px;}
+#carpool .pt-7 {padding-top: 98px;}
+#carpool .pt-8 {padding-top: 112px;}
+#carpool .pt-9 {padding-top: 126px;}
+#carpool .pt-10 {padding-top: 140px;}
+#carpool .pb-1 {padding-bottom: 14px;}
+#carpool .pb-2 {padding-bottom: 28px;}
+#carpool .pb-3 {padding-bottom: 42px;}
+#carpool .pb-4 {padding-bottom: 56px;}
+#carpool .pb-5 {padding-bottom: 70px;}
+#carpool .pb-6 {padding-bottom: 84px;}
+#carpool .pb-7 {padding-bottom: 98px;}
+#carpool .pb-8 {padding-bottom: 112px;}
+#carpool .pb-9 {padding-bottom: 126px;}
+#carpool .pb-10 {padding-bottom: 140px;}
+#carpool .pl-1 {padding-left: 14px;}
+#carpool .pl-2 {padding-left: 28px;}
+#carpool .pl-3 {padding-left: 42px;}
+#carpool .pl-4 {padding-left: 56px;}
+#carpool .pl-5 {padding-left: 70px;}
+#carpool .pl-6 {padding-left: 84px;}
+#carpool .pl-7 {padding-left: 98px;}
+#carpool .pl-8 {padding-left: 112px;}
+#carpool .pl-9 {padding-left: 126px;}
+#carpool .pl-10 {padding-left: 140px;}
+#carpool .pr-1 {padding-right: 14px;}
+#carpool .pr-2 {padding-right: 28px;}
+#carpool .pr-3 {padding-right: 42px;}
+#carpool .pr-4 {padding-right: 56px;}
+#carpool .pr-5 {padding-right: 70px;}
+#carpool .pr-6 {padding-right: 84px;}
+#carpool .pr-7 {padding-right: 98px;}
+#carpool .pr-8 {padding-right: 112px;}
+#carpool .pr-9 {padding-right: 126px;}
+#carpool .pr-10 {padding-right: 140px;}
+#carpool .mt-1 {margin-top: 14px;}
+#carpool .mt-2 {margin-top: 28px;}
+#carpool .mt-3 {margin-top: 42px;}
+#carpool .mt-4 {margin-top: 56px;}
+#carpool .mt-5 {margin-top: 70px;}
+#carpool .mt-6 {margin-top: 84px;}
+#carpool .mt-7 {margin-top: 98px;}
+#carpool .mt-8 {margin-top: 112px;}
+#carpool .mt-9 {margin-top: 126px;}
+#carpool .mt-10 {margin-top: 140px;}
+#carpool .mb-1 {margin-bottom: 14px;}
+#carpool .mb-2 {margin-bottom: 28px;}
+#carpool .mb-3 {margin-bottom: 42px;}
+#carpool .mb-4 {margin-bottom: 56px;}
+#carpool .mb-5 {margin-bottom: 70px;}
+#carpool .mb-6 {margin-bottom: 84px;}
+#carpool .mb-7 {margin-bottom: 98px;}
+#carpool .mb-8 {margin-bottom: 112px;}
+#carpool .mb-9 {margin-bottom: 126px;}
+#carpool .mb-10 {margin-bottom: 140px;}
+#carpool .ml-1 {margin-left: 14px;}
+#carpool .ml-2 {margin-left: 28px;}
+#carpool .ml-3 {margin-left: 42px;}
+#carpool .ml-4 {margin-left: 56px;}
+#carpool .ml-5 {margin-left: 70px;}
+#carpool .ml-6 {margin-left: 84px;}
+#carpool .ml-7 {margin-left: 98px;}
+#carpool .ml-8 {margin-left: 112px;}
+#carpool .ml-9 {margin-left: 126px;}
+#carpool .ml-10 {margin-left: 140px;}
+#carpool .mr-1 {margin-right: 14px;}
+#carpool .mr-2 {margin-right: 28px;}
+#carpool .mr-3 {margin-right: 42px;}
+#carpool .mr-4 {margin-right: 56px;}
+#carpool .mr-5 {margin-right: 70px;}
+#carpool .mr-6 {margin-right: 84px;}
+#carpool .mr-7 {margin-right: 98px;}
+#carpool .mr-8 {margin-right: 112px;}
+#carpool .mr-9 {margin-right: 126px;}
+#carpool .mr-10 {margin-right: 140px;}
+
+/* Background colors */
+#carpool .background-light {background-color: #FFF;}
+#carpool .bg-darkGreen {background: #309600;}
+#carpool .bg-green {background: #68bc47;}
+#carpool .bg-lightGreen {background: #a2e03f;}
+#carpool .bg-yellow {background: #f9ec31;}
+
+/* Color */
+#carpool .green {color: #68bc47;}
+#carpool .lightGreen {color: #a2e03f;}
+#carpool .darkGreen {color: #309600;}
+#carpool .yellow {color: #f9ec31;}
+#carpool .gray {color: #999999;}
+
+/*
+ * For horizontal pages
+ */
+#carpool .carpool-window {
+    width: 100%;
+    min-width: 85em;
+    overflow: hidden;
+}
+
+#carpool .carpool-chapter.horizontal {
+    width: 65535px;
+    clear: both;
+    float: none;
+    min-width: 85em;
+}
+
+#carpool .carpool-chapter.horizontal .carpool-page {
+    float: left;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#carpool .pageNavLink.active {
+    font-weight: 700;
+}
+
+/*
+ * Header
+ */
+#carpool .header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#carpool .header a {
+    text-decoration: none;
+    color: #000;
+}
+
+#carpool .header .logoContainer {
+    position: fixed;
+}
+
+#carpool .header .logoContainer .logo {
+    background: transparent url('/carpool/img/logo.png') no-repeat scroll 0% 0%;
+    display: inline-block;
+    text-indent: -9999px;
+    width: 50px;
+    height: 28px;
+    background-size: contain;
+    margin-left: 28px;
+    margin-top: 14px;
+}
+
+#carpool .header .menuContainer {
+    position: fixed;
+    left: 98px;
+    top: 21px;
+}
+
+#carpool .header .menuContainer .globalNav li {
+    display: inline;
+    margin-right: 21px;
+    font-size: 17px;
+    list-style: none;
+    color: #000;
+}
+
+#carpool .header .rightContainer {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    right: 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool .header .rightContainer hr {
+    display: block;
+    border-style: inset;
+    border-width: 1px;
+}
+
+#carpool .header .rightContainer hr.green {
+    border-color: #68bc47;
+    margin: 16px 15px 0 15px;
+}
+
+#carpool .header .rightContainer hr.lightGreen {
+    border-color: #a2e03f;
+    margin: 10px 15px 0 15px;
+}
+
+#carpool .header .rightContainer hr.yellow {
+    border-color: #309600;
+    margin: 10px 15px 0 15px;
+}
+
+#carpool .header .dropdownContainer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+#carpool .header .dropdownContainer i {
+    font-size: 36px;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+#carpool .header .dropdownContainer .navigationWrapper, #carpool .header .dropdownContainer .twitterWrapper, #carpool .header .dropdownContainer .calendarWrapper {
+    width: 22%;
+    height: 100%;
+    float: left;
+    padding: 70px 28px 42px 28px;    
+}
+
+#carpool .header .dropdownContainer .instagramWrapper {
+    width: 34%;
+    height: 100%;
+    float: left;
+    padding: 70px 28px 42px 28px;
+}
+
+#carpool .header .dropdownContainer .navigationWrapper .logoWhite {
+    background: transparent url('/carpool/img/carpool_logo_wht.png') no-repeat;
+    width: 168px;
+    height: 42px;
+    background-size: contain;
+    margin-bottom: 28px;
+}
+
+#carpool .header .dropdownContainer .navigationWrapper .navigationMenu li {
+    margin-bottom: 14px;
+}
+
+#carpool .header .dropdownContainer .navigationWrapper .navigationMenu a {
+    font-size: 20px;
+    color: #FFF;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .twitterContent, #carpool .header .dropdownContainer .calendarWrapper .calendarContent {
+    font-size: 15px;
+    color: #FFF;
+    margin-top: 21px;
+}
+
+#carpool .header .dropdownContainer .instagramWrapper .instagramContent {
+    margin-top: 21px;
+}
+
+#carpool .header .dropdownContainer .instagramWrapper .instagramContent img {
+    width: 112px;
+    float: left;
+}
+
+#carpool .header .dropdownContainer .closeContainer {
+    position: absolute;
+    top: 14px;
+    right: 28px;
+    cursor: pointer;
+}
+
+/*
+ * Footer
+ */
+#carpool .footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Message form */
+#carpool .footer .messageFormBackground {
+    background: #68bc47;
+    display: none;
+}
+
+#carpool .footer .messageFormBackground input {
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+#carpool .footer .messageFormBackground .nameInput {
+    width: 49%;
+    float: left;
+}
+
+#carpool .footer .messageFormBackground .emailInput {
+    width: 49%;
+    float: right;
+}
+
+#carpool .footer .messageFormBackground .topicInput {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    padding: 5px 10px;
+    font-size: 20px;
+    width: 49%;
+    color: #999;
+    /* -webkit-appearance: none; */
+    /* -webkit-border-radius: 0px; */
+}
+
+#carpool .footer .messageFormBackground .contentInput {
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    color: #999;
+}
+
+#carpool .footer .messageFormBackground .messageText {
+    color: #FFF;
+    font-size: 20px;
+}
+
+#carpool .footer .messageFormBackground .sendButton {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Location */
+#carpool .footer .location1 span, #carpool .footer .location2 span, #carpool .footer .location3 span, .footer .location4 span {
+    opacity: 0;
+}
+
+#carpool .footer .locationAddressBackground {
+    background: #68bc47;
+    padding: 30px 20px 20px 20px;
+}
+
+#carpool .footer .locationAddressBackground .locationAddress {
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+}
+
+#carpool .footer .locationAddressBackground .locationContact {
+    text-align: center;
+    margin-top: 10px;
+}
+            
+#carpool .footer .locationAddressBackground .locationContact a {
+   color: #FFF;
+   font-size: 20px;
+   text-decoration: underline;
+}
+
+#carpool .footer .locationDropdownContainer {
+    display: none;
+}
+
+#carpool .footer .locationDropdownContainer iframe {
+    margin-bottom: -3px;
+}
+
+#carpool .footerTopContainer {
+    position: relative;
+    -moz-box-shadow: 0px 50px 100px -70px rgba(0,0,0,0.3); -webkit-box-shadow: 0px 50px 100px -70px rgba(0,0,0,0.3); box-shadow: 0px 50px 100px -70px rgba(0,0,0,0.3);
+}
+
+#carpool .footerBottomContainer {
+    position: relative;
+}
+
+#carpool .footerTopContainer .textTop {
+    display: table;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#carpool .footerTopContainer .textBottom {
+    display: table;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#carpool .footerTopContainer .tableText {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+}
+
+#carpool .footerTopContainer table {
+    /*width: 100px;*/
+    width: 100%;
+    border-collapse: separate;
+    /*table-layout: fixed;*/
+}
+
+#carpool .footerTopContainer table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#carpool .footerTopContainer table .iconLink:hover {
+    background: #e5e500;
+    -ms-transform: scale(1.1); -webkit-transform: scale(1.1); transform: scale(1.1);
+    -moz-box-shadow: 10px 10px 100px -10px rgba(0,0,0,0.3); -webkit-box-shadow: 10px 10px 100px -10px rgba(0,0,0,0.3); box-shadow: 10px 10px 100px -10px rgba(0,0,0,0.3);
+}
+
+#carpool .footerTopContainer table td a {
+    color: #FFF;
+    font-size: 56px;
+    text-decoration: none;
+    line-height: 0;
+}
+
+#carpool .footerTopContainer table td span {
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#carpool .footerTopContainer .textTop {
+    color: #FFF;
+    position: absolute;
+}
+
+#carpool .footerTopContainer .textBottom {
+    color: #FFF;
+    position: absolute;
+    z-index: 1;
+}
+
+#carpool .footerBottomContainer  {
+    width: 100%;
+    padding: 75px 0 100px 0;
+    background: #000;
+    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
+    background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
+    background-image: -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
+    background-image: -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
+    background-image: repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
+}
+
+#carpool .footerLogo {
+    background: transparent url('/carpool/img/carpool_logo_wht.png') no-repeat;
+    background-size: contain;
+    width: 280px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+#carpool .footerCopyRightContainer {
+    text-align: center;
+    color: #FFF;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/*
+ * Welcome page
+ */
+#carpool #welcome {
+    overflow: hidden;
+}
+
+#carpool #welcome .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #welcome .inner-container {
+    position: relative;
+}
+
+#carpool #welcome .video-overlay {
+    position: absolute;
+    bottom: 182px;
+    left: 238px;
+    width: 406px;
+}
+
+#carpool #welcome .video-overlay .welcomeLogo {
+    background: transparent url('/carpool/img/carpool_logo_green.png') no-repeat;
+    background-size: contain;
+    height: 56px;
+    margin-bottom: 28px;
+}
+
+#carpool #welcome .video-overlay .welcomeText {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 21px;
+}
+
+#carpool #welcome .video-overlay .welcomeMenu a {
+    text-decoration: none;
+    color: #309600;
+    font-weight: 200;
+}
+
+#carpool #welcome .video-overlay .welcomeMenu li {
+    display: inline;
+    margin-right: 21px;
+    font-size: 16px;
+    list-style: none;
+    color: #309600;
+}
+
+#carpool #welcome .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #welcome .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+}
+
+/*
+ * Services page
+ */
+#carpool #services {
+    overflow: hidden;
+}
+
+#carpool #services .sectionTitle {
+    font-family: "Vollkorn";
+    font-size: 56px;
+    color: #999999;
+}
+
+#carpool #services .sectionText {
+    font-size: 16px;
+    color: #000;
+    line-height: 28px;
+}
+
+#carpool #services .animationContainer {
+    float: left;
+}
+
+#carpool #services .animationContainer .animationVideoContainer .animationVideo {
+    max-width: 100%;
+}
+
+#carpool #services .animationContainer .animationTextHeader {
+    font-family: "Vollkorn";
+    font-size: 40px;
+    color: #67bc46;
+    margin-bottom: 10px;
+}
+
+#carpool #services .animationContainer .animationTextContent {
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+}
+
+/*
+ * About page
+ */
+#carpool #about {
+    overflow: hidden;
+}
+
+#carpool #about .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #about .inner-container {
+    position: relative;
+}
+
+#carpool #about .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #about .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #about .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #about .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #about .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #about .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+}
+
+#carpool #about .sectionTitle {
+    font-family: "Vollkorn";
+    font-size: 56px;
+    color: #999999;
+}
+
+#carpool #about .sectionText {
+    font-size: 16px;
+    color: #000;
+    line-height: 28px;
+}
+
+#carpool #about .animationContainer {
+    float: left;
+}
+
+#carpool #about .animationContainer .animationVideoContainer .animationVideo {
+    max-width: 100%;
+}
+
+#carpool #about .animationContainer .animationTextHeader {
+    font-family: "Vollkorn";
+    font-size: 40px;
+    color: #67bc46;
+    margin-bottom: 10px;
+}
+
+#carpool #about .animationContainer .animationTextContent {
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+}
+
+/*
+ * Work page
+ */
+#carpool #work {
+    overflow: hidden;
+}
+
+#carpool #work .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #work .inner-container {
+    position: relative;
+}
+
+#carpool #work .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #work .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #work .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #work .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #work .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #work .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+}
+
+#carpool #work .sectionTitle {
+    font-family: "Vollkorn";
+    font-size: 56px;
+    color: #999999;
+}
+
+#carpool #work .sectionText {
+    font-size: 16px;
+    color: #000;
+    line-height: 28px;
+}
+
+#carpool #work .sectionDetailContainer, #carpool #work .sectionDetailContainer .sectionDetail {
+    overflow: hidden;
+}
+
+#carpool #work .sectionDetailContainer .sectionDetailImage {
+    width: 210px;
+    height: 210px;
+    padding: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 210px;
+}
+
+#carpool #work .sectionDetailContainer .animationTextHeader {
+    font-family: "Vollkorn";
+    font-size: 40px;
+    color: #67bc46;
+    margin-bottom: 10px;
+}
+
+#carpool #work .sectionDetailContainer .animationTextContent {
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+}
+
+
+/*
+ * Thoughts page
+ */
+#carpool #thoughts {
+    overflow: hidden;
+}
+
+#carpool #thoughts .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #thoughts .inner-container {
+    position: relative;
+}
+
+#carpool #thoughts .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #thoughts .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #thoughts .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #thoughts .video-overlay .overlayAuthor {
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 15px;
+}
+
+#carpool #thoughts .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #thoughts .video-overlay .overlayReadMore {
+    font-size: 16px;
+    color: #67bc46;
+    display: block;
+    margin-top: 15px;
+}
+
+#carpool #thoughts .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #thoughts .downArrowContainer .downArrowText {
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #thoughts .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+    color: #FFF;
+}
+
+#carpool #thoughts .btnTwitter img, #carpool #thoughts .btnLinkedIn img, #carpool #thoughts .btnFacebook img {
+  height: 21px;
+  margin-right: 14px;
+}
+
+#carpool #thoughts .sectionTitle {
+    font-family: "Vollkorn";
+    font-size: 56px;
+    color: #999999;
+}
+
+#carpool #thoughts .sectionText {
+    font-size: 16px;
+    color: #000;
+    line-height: 28px;
+}
+
+#carpool #thoughts .postList, #carpool #thoughts .postList .postItem {
+    overflow: hidden;
+}
+
+#carpool #thoughts .postTitle {
+    font-size: 28px;
+    line-height: 42px;
+}
+
+#carpool #thoughts .postAuthor {
+    padding: 7px 0;
+    font-size: 15px;
+    color: #999999;
+    line-height: 20px;
+}
+
+#carpool #thoughts .postBody {
+    line-height: 24px;
+}
+
+#carpool #thoughts .postDefaultImage {
+    width: 210px;
+    height: 210px;
+    padding: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 210px;
+}
+
+#carpool #thoughts .postSummary {
+    float: left;
+    width: 560px;
+}
+
+#carpool #thoughts .postSummary .readMore {
+    font-size: 15px;
+    line-height: 42px;
+}
+
+/*
+ * Connect page
+ */
+#carpool #connect {
+    overflow: hidden;
+}
+
+#carpool #connect .outer-container {
+    width: 100%;
+    height: 100%;
+}
+
+#carpool #connect .inner-container {
+    position: relative;
+}
+
+#carpool #connect .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+#carpool #connect .video-overlay .wrapper {
+    padding: 42px 28px 49px 28px;
+    background: #000;
+    -ms-filter:"alpha(Opacity=70)";filter:alpha(opacity=70);opacity: .70;
+}
+
+#carpool #connect .video-overlay .overlayTitle {
+    font-size: 56px;
+    font-family: "Vollkorn";
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#carpool #connect .video-overlay .overlayText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+}
+
+#carpool #connect .downArrowContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+}
+
+#carpool #connect .downArrowContainer .downArrow {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+}
+
+#carpool #connect .sectionTitle {
+    font-family: "Vollkorn";
+    font-size: 56px;
+    color: #999999;
+}
+
+#carpool #connect .sectionText {
+    font-size: 16px;
+    color: #000;
+    line-height: 28px;
+}
+
+#carpool #connect .apply a{
+    font-size: 28px;
+}
+
+#carpool #connect .memberList{
+    margin-left: -28px;
+    overflow: hidden;
+}
+
+#carpool #connect .memberList li {
+    margin: 0 0 56px 28px;
+}
+
+#carpool #connect .member-image, #carpool #connect .imagePlaceholder {
+    width: 182px;
+    height: 182px;
+    padding: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 182px;
+}
+
+#carpool #connect .member-image {
+    float: left;
+    z-index: 2;
+}
+
+#carpool #connect .imagePlaceholder {
+    background-image: url('/carpool/img/profile/Placeholder.png');
+}
+
+#carpool #connect .member-name {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+#carpool #connect .member-role {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#carpool #connect .contactLinks i {
+    font-size: 35px;
+    margin: 0 4px;
+    color: #999999;
+}
+
+/*
+ * Post Article page
+ */
+#postArticle {
+    overflow: hidden;
+}
+
+#postArticle ul, #postArticle li {
+    list-style: disc;
+    margin-left: 10px;
+}
+
+#postArticle .postWrapper {
+    padding: 56px;
+    background-color: rgba(255,255,255,0.95);
+    margin-top: -300px;
+    position: relative;
+}
+
+#postArticle .postTitle {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 70px;
+}
+
+#postArticle .defaultImage {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+#postArticle .postAuthor {
+    margin: 42px 0;
+}
+
+#postArticle .authorTable td.picture,
+#postArticle .authorTable .image,
+#postArticle .authorTable .imagePlaceholder {
+    width: 84px;
+    height: 84px;
+    padding: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 42px;
+}
+
+#postArticle .authorTable .imagePlaceholder {
+    background-image: url('/carpool/img/profile/Placeholder.png');
+}
+
+#postArticle .authorTable .image {
+    z-index: 2;
+    position: absolute;
+}
+
+#postArticle .authorTable td {
+    border: none;
+}
+
+#postArticle .authorTable .name {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#postArticle .authorTable .name div {
+    margin-left: 14px;
+}
+
+#postArticle .btnTwitter, #postArticle .btnLinkedIn, #postArticle .btnFacebook {
+    display: inline-block; margin-top: 20px;
+}
+
+#postArticle .btnTwitter img, #postArticle .btnLinkedIn img, #postArticle .btnFacebook img {
+    height: 21px;
+    margin-right: 14px;
+}
+
+#postArticle #postBody {
+    line-height: 24px;
+}
+
+#postArticle #related a {
+    color: #0000FF;
+}
+
+
+
+
+
+
+
+
