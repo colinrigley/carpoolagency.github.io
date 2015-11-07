@@ -29,14 +29,14 @@
                 <tr>
                     <td class="c-6 r-7 bg-lightGreen"></td>
                     <td class="c-8 r-7 bg-darkGreen"></td>
-                    <td class="c-8 r-7 bg-green iconLink"><a href="https://twitter.com/@carpooldigital" title="Carpool Agency Twitter" target="_blank"><i class="fa fa-twitter"></i></a></td>
-                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="https://www.linkedin.com/company/carpool-agency" title="Carpool Agency LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a></td>
-                    <td class="c-8 r-7 bg-green iconLink"><a href="" title="Send Carpool a Message" class="footerEmail"><i class="fa fa-envelope-o"></i></a></td>
-                    <td class="c-8 r-7 bg-lightGreen iconLink"><a href="https://instagram.com/carpooldigital" title="Carpool Agency Instagram" target="_blank"><i class="fa fa-instagram"></i></a></td>
-                    <td class="c-8 r-7 bg-green iconLink"><a href="https://www.facebook.com/carpooldigital" title="Carpool Agency Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a></td>
-                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="" title=""><i class="fa fa-map-marker"></i></a></td>
-                    <td class="c-8 r-7 bg-lightGreen iconLink"><a href="" title=""><i class="fa fa-google-plus"></i></a></td>
-                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="" title="" class="footerLocation"><i class="fa fa-map-pin"></i></a></td>
+                    <td class="c-8 r-7 bg-green iconLink"><a href="https://twitter.com/@carpooldigital" title="Carpool Agency Twitter" target="_blank"><img class="r-3" src='/carpool/img/svg_icons/twitter.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="https://www.linkedin.com/company/carpool-agency" title="Carpool Agency LinkedIn" target="_blank"><img class="r-3" src='/carpool/img/svg_icons/linkedin.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-green iconLink"><a href="" title="Send Carpool a Message" class="footerEmail"><img class="r-2" src='/carpool/img/svg_icons/envelope.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-lightGreen iconLink"><a href="https://instagram.com/carpooldigital" title="Carpool Agency Instagram" target="_blank"><img class="r-3" src='/carpool/img/svg_icons/instagram.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-green iconLink"><a href="https://www.facebook.com/carpooldigital" title="Carpool Agency Facebook" target="_blank"><img class="r-3" src='/carpool/img/svg_icons/facebook.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="" title=""><img class="r-3" src='/carpool/img/svg_icons/location.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-lightGreen iconLink"><a href="" title=""><img class="r-3" src='/carpool/img/svg_icons/google_plus.svg'></img></a></td>
+                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="" title="" class="footerLocation"><img class="r-3" src='/carpool/img/svg_icons/maps.svg'></img></a></td>
                     <td class="c-8 r-7 bg-green"></td>
                     <td class="c-6 r-7 bg-darkGreen"></td>
                 </tr>
@@ -76,13 +76,22 @@
                 <input type="text" placeholder="Name" class="nameInput">
                 <input type="text" placeholder="Email address" class="emailInput">
                 <div class="messageText">What you want to talk about?</div>
-                <select class="topicInput">
+                <!-- <select class="topicInput">
                     <option value="" disabled selected>Choose one...</option>
                     <option value="communication">Communication</option>
                     <option value="social">Social</option>
                     <option value="solution">Solution</option>
-                </select>
-                <div class="messageText">Blank space for your words</div>
+                </select> -->
+                <!-- <div class="topicInput">Choose one...</div> -->
+                <input type="text" placeholder="Choose one..." class="topicInput" readonly="readonly">
+                <div class="relative topicInputDropdownContainer">
+                    <ul class="topicInputDropdown">
+                        <li>Communication</li>
+                        <li>Social</li>
+                        <li>Solution</li>
+                    </ul>
+                </div>
+                <div class="messageText mt-2">Blank space for your words</div>
                 <textarea placeholder="Once upon a time..." class="contentInput"></textarea>
                 <div class="messageText sendButton">Send</div>
             </div>
@@ -98,4 +107,4 @@
 </footer>
 <!-- **
 *  Footer ends here
-* -->
+*

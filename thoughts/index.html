@@ -8,25 +8,29 @@ title: Thoughts
 * -->
 <section id="thoughts" class="carpool-page">
     <div class="topMediaContainer">
+    {% assign post = site.posts.first %}  
         <div class="innerContainer">
-            <video class="bgMedia" autoplay="autoplay" muted="muted" loop="loop" style="width: 100%; height: 100%;">
-                <source src="/carpool/videos/landing_video.mp4" type="video/mp4">
-                <!-- <source src="carpool/videos/landing_video.webm" type="video/webm">
+            <video class="bgMedia" autoplay="autoplay" muted="muted" loop="loop" poster="{{ post.defaultImage }}" style="width: 100%; height: 100%;">
+                <!-- <source src="/carpool/videos/landing_video.mp4" type="video/mp4">
+                <source src="carpool/videos/landing_video.webm" type="video/webm">
                 <source src="carpool/videos/landing_video.ogv" type="video/ogg"> -->
             </video>
             <div class="video-overlay">
-                <div class="wrapper c-58 center-margin">
-                    <div class="overlayTitle">How to Leverage the Butterfly Effect</div>
-                    <div class="overlayAuthor">By Colin Rigley</div>
-                    <div class="overlayText">
-                        Everything we do at Carpool is related to helping people make work a better place to be. This effort takes on many forms so our people have to be really good at experience design, community management, techonology and project management to name a few.
+                <div class="c-58 center-margin">
+                  <div class="wrapper">
+                    <div class="transparentBg"></div>
+                    <div class="overlayTitle relative">{{ post.title }}</div>
+                    <div class="overlayAuthor relative">By {{ post.author }}</div>
+                    <div class="overlayText relative">
+                        {{ post.excerpt }}
                     </div>
-                    <a class="overlayReadMore" href="/2015/10/20/How-to-Leverage-the-Butterfuly-Effect.html">Read more</a>
+                    <a class="overlayReadMore relative" href="{{ post.url }}">Read more</a>
+                  </div>
                 </div>
             </div>
             <div class="downArrowContainer">
                 <div class="downArrowText">More Thoughts</div>
-                <img class="downArrow" src="/carpool/img/arrow_white.svg"></img>
+                <img class="downArrow" src="/carpool/img/svg_icons/arrow_white.svg"></img>
             </div>
         </div>
     </div>
@@ -40,9 +44,8 @@ title: Thoughts
         <ul class="postList">
           {% for post in site.posts %}
            <li class="postItem mb-6">
-              <img class="postDefaultImage float-left mr-3" src="{{ post.defaultImage }}"></img>
-
-              <table class="postSummary">
+              <div class="postDefaultImage float-left mr-3 c-15 r-15" style="background-image: url('{{ post.defaultImage }}');"></div>
+              <table class="postSummary float-left c-40">
                  <tr>
                     <td class="postTitle"><a href="{{ post.url }}" class="green">{{ post.title }}</td>
                  </tr>
@@ -59,6 +62,7 @@ title: Thoughts
            </li>
           {% endfor %}
         </ul>
+        <div class="loadMoreArticlesContainer"><span class="loadMoreArticles">Load more articles</span></div>
     </div>
 </section>
 <!-- **

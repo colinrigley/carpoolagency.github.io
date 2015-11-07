@@ -9,25 +9,28 @@ title: Connect
 <section id="connect" class="carpool-page">
     <div class="topMediaContainer">
         <div class="innerContainer">
-            <video class="bgMedia" autoplay="autoplay" muted="muted" loop="loop" style="width: 100%; height: 100%;">
-                <source src="/carpool/videos/landing_video.mp4" type="video/mp4">
-                <!-- <source src="carpool/videos/landing_video.webm" type="video/webm">
+            <video class="bgMedia" autoplay="autoplay" muted="muted" loop="loop" poster="/carpool/img/background_images/connect.png" style="width: 100%; height: 100%;">
+                <!-- <source src="/carpool/videos/landing_video.mp4" type="video/mp4">
+                <source src="carpool/videos/landing_video.webm" type="video/webm">
                 <source src="carpool/videos/landing_video.ogv" type="video/ogg"> -->
             </video>
             <div class="video-overlay">
-                <div class="wrapper c-58 center-margin">
-                    <div class="overlayTitle">The People of Carpool</div>
-                    <div class="overlayText">
+                <div class="c-58 center-margin">
+                  <div class="wrapper">
+                    <div class="transparentBg"></div>
+                    <div class="overlayTitle relative">The People of Carpool</div>
+                    <div class="overlayText relative">
                         Everything we do at Carpool is related to helping people make work a better place to be. This effort takes on many forms so our people have to be really good at experience design, community management, techonology and project management to name a few.
                     </div>
+                  </div>
                 </div>
             </div>
             <div class="downArrowContainer">
-                <img class="downArrow" src="/carpool/img/arrow.svg"></img>
+                <img class="downArrow" src="/carpool/img/svg_icons/arrow_white.svg"></img>
             </div>
         </div>
     </div>
-    <div class="row center-margin c-58 pt-5 pb-8 overflow-hidden">
+    <div class="row center-margin c-58 pt-5 pb-4 overflow-hidden">
         <div class="sectionTitle">
             This is who works at Carpool
         </div>
@@ -43,7 +46,7 @@ title: Connect
         <ul class="memberList">
         {% for group in site.people %}
           {% for member in group.members %}
-          <li class="member float-left">
+          <li class="member float-left r-21">
             <table>
               <tbody>
                 <tr>
@@ -58,13 +61,13 @@ title: Connect
                 <tr class="contactLinks">
                   <td class="text-center">
                   {% if member.linkedin %}
-                    <a href="{{ member.linkedin }}" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="{{ member.linkedin }}" target="_blank"><img class="r-2" src='/carpool/img/svg_icons/linkedin_gray.svg'></img></a>
                   {% endif %}
                   {% if member.facebook %}
-                    <a href="{{ member.facebook }}" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="{{ member.facebook }}" target="_blank"><img class="r-2" src='/carpool/img/svg_icons/facebook_gray.svg'></img></a>
                   {% endif %}
                   {% if member.twitter %}
-                    <a href="{{ member.twitter }}" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    <a href="{{ member.twitter }}" target="_blank"><img class="r-2" src='/carpool/img/svg_icons/twitter_gray.svg'></img></a>
                   {% endif %}
                   </td>
                 </tr>

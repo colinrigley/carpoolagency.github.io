@@ -11,23 +11,6 @@ $(function() {
     var isArticlePage = false;
     var isScrollingAnimation = false;
 
-    // Check the page
-    if ($("#welcome").length > 0) {
-        currentPage = "welcome";
-        isWelcomePage = true;
-    } else if ($("#about").length > 0) {
-        currentPage = "about";
-    } else if ($("#work").length > 0) {
-        currentPage = "work";
-    } else if ($("#thoughts").length > 0) {
-        currentPage = "thoughts";
-    } else if ($("#connect").length > 0) {
-        currentPage = "connect";
-    } else if ($("#postArticle").length > 0) {
-        currentPage = "postArticle";
-        isArticlePage = true;
-    }
-
     // Set the active class for the navigation
     // Parameter is the href attribute for the navigation to be active
     var activeNavAnchors = function(href) {
@@ -36,6 +19,37 @@ $(function() {
         }
         $(".pageNavLink[href='" + href + "']").addClass("active");
     };
+
+    // Check the page
+    if ($("#welcome").length > 0) {
+        currentPage = "welcome";
+        isWelcomePage = true;
+        if (window.location.hash === "#services") {
+            activeNavAnchors("/#services");
+        }
+    } else if ($("#about").length > 0) {
+        currentPage = "about";
+    } else if ($("#work").length > 0) {
+        currentPage = "work";
+    } else if ($("#thoughts").length > 0) {
+        currentPage = "thoughts";
+
+        // Hide extra post for LoadMore function
+        var $postList = $(".postList li");
+        if ($postList.length < 4) { // Hide the loadMore if there is less than 4 posts
+            $(".loadMoreArticlesContainer").hide();
+        } else { // Bind click on loadMore to show all post
+            $(".loadMoreArticles").unbind('click').bind('click', function() {
+                $postList.show();
+                $(".loadMoreArticlesContainer").hide();
+            });
+        }
+    } else if ($("#connect").length > 0) {
+        currentPage = "connect";
+    } else if ($("#postArticle").length > 0) {
+        currentPage = "postArticle";
+        isArticlePage = true;
+    }
 
     // Smooth transition between pages
     $(".pageNavLink").unbind("click").bind("click", function(event) {        
@@ -54,6 +68,7 @@ $(function() {
             return;
         } else if (isWelcomePage && $(this).attr("href") === "/") {
             event.preventDefault();
+            isScrollingAnimation = true;
             $('html,body').animate( { scrollTop: 0 } , 1000, function() {
                 activeNavAnchors("/");
                 isScrollingAnimation = false;
@@ -63,15 +78,54 @@ $(function() {
     });
 
     // Hide the navigation logo and menu on start up for welcome page
-    if (isWelcomePage) {
-        $(".header .logoContainer").hide();
-        $(".header .menuContainer").hide();
-    }
+    // if (isWelcomePage) {
+    //     $(".header .logoContainer").hide();
+    //     $(".header .menuContainer").hide();
+    // }
 
     var lastScrollTop = 0; // Previous page position
 
     // Scrolling event binding
     $(window).scroll(function(event) {
+        var self = this;
+
+        if (isScrollingAnimation) {
+            event.preventDefault();
+            return false;
+        }
+
+        var st = $(this).scrollTop(); // Current page position
+
+        var topMediaAnchor = $(".topMediaContainer").height();
+        var lowerPageFooterAnchor = $(".carpool-page").height() - 100;
+
+        if (st > topMediaAnchor && st < lowerPageFooterAnchor) {
+            if ($(".header .navContainer .transparentBg").is(':hidden')) {
+                $(".header .navContainer .transparentBg").slideDown(200);
+            }
+            if ($(".header .logoContainer").is(':hidden')) {
+                $(".header .logoContainer").slideDown(200);
+            }
+            if ($(".header .menuContainer").is(':hidden')) {
+                $(".header .menuContainer").slideDown(200);
+            }
+        } else if (st > lowerPageFooterAnchor) {
+            if ($(".header .navContainer .transparentBg").is(':visible')) {
+                $(".header .navContainer .transparentBg").slideUp(200);
+            }
+        } else {
+            if ($(".header .navContainer .transparentBg").is(':visible')) {
+                $(".header .navContainer .transparentBg").slideUp(200);
+            }
+            if ($(".header .logoContainer").is(':visible')) {
+                $(".header .logoContainer").slideUp(200);
+            }
+            if ($(".header .menuContainer").is(':visible')) {
+                $(".header .menuContainer").slideUp(200);
+            }
+        }
+
+
 
         // if (isScrollingAnimation) {
         //     event.preventDefault();
@@ -341,22 +395,29 @@ $(function() {
     // Bind clicking to show menu dropdown container
     $(".header .rightContainer").unbind("click").bind("click", function() {
         $(".header .dropdownContainer").slideDown(200);
+        $(".header .dropDownCover").show();
     })
 
     $(".header .closeContainer").unbind("click").bind("click", function() {
         $(".header .dropdownContainer").slideUp(200);
+        $(".header .dropDownCover").hide();
     })
-
 
     // Footer Navigation binding
 
     var showMessageForm = function() {
+        $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
+            $(this).text("Send us a love letter").fadeIn(200);
+        });
         if ($(".footer .messageFormBackground").is(':hidden')) {
             $(".footer .messageFormBackground").slideDown(200);
         }
     };
 
     var hideMessageForm = function() {
+        $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
+            $(this).text("Stalk us on Instagram. We don't mind.").fadeIn(200);
+        });
         if ($(".footer .messageFormBackground").is(':visible')) {
             $(".footer .messageFormBackground").slideUp(200);
         }
@@ -407,7 +468,7 @@ $(function() {
             }, 200, function() {
                 $(".footer .footerTopContainer .textBottom").animate({
                     opacity: 1,
-                    "z-index": "1"
+                    "z-index": "0"
                 }, 200);
             });
         }
@@ -417,18 +478,39 @@ $(function() {
     $(".footer .footerEmail").unbind("click").bind("click", function(event) {
         event.preventDefault();
         hideLocationDropdown();
+        $(".footer .footerTopContainer table .iconLink").removeClass("active");
         if ($(".footer .messageFormBackground").is(':hidden')) {
+            $(".footer .footerEmail").parent().addClass("active");
             showMessageForm();
         } else {
             hideMessageForm();
         }
     });
 
+    // Topic dropdown
+    $(".footer .messageFormBackground .topicInput").unbind("click").bind("click", function(event) {
+        event.preventDefault();
+        if ($(".footer .messageFormBackground .topicInputDropdown").is(':hidden')) {
+            $(".footer .messageFormBackground .topicInputDropdown").slideDown(200);
+        } else {
+            $(".footer .messageFormBackground .topicInputDropdown").slideUp(200);
+        }
+    });
+
+    // Topic dropdown selection
+    $(".footer .messageFormBackground .topicInputDropdown li").unbind("click").bind("click", function(event) {
+        event.preventDefault();
+        $(".footer .messageFormBackground .topicInput").val($(this).html());
+        $(".footer .messageFormBackground .topicInputDropdown").slideUp(200);
+    });
+
     // Location
     $(".footer .footerLocation").unbind("click").bind("click", function(event) {
         event.preventDefault();
         hideMessageForm();
+        $(".footer .footerTopContainer table .iconLink").removeClass("active");
         if ($(".footer .footerTopContainer .textBottom").css("opacity") === "1") {
+            $(".footer .footerLocation").parent().addClass("active");
             showLocationDropdown();
         } else {
             hideLocationDropdown();

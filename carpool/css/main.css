@@ -1549,6 +1549,30 @@ body {
     position: relative;
 }
 
+#carpool .relative {
+    position: relative;
+}
+
+#carpool video {
+    display: block;
+}
+
+::-webkit-input-placeholder {
+   color: #999;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #999;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;  
+}
+
+:-ms-input-placeholder {  
+   color: #999;  
+}
+
 /*#carpool .bgMedia {
     background:transparent url('/carpool/img/video_poster.png') no-repeat 0 0; 
    -webkit-background-size:cover; 
@@ -1557,11 +1581,36 @@ body {
    background-size:cover;
 }*/
 
-#carpool #welcome .video-overlay {
+#carpool #welcome .welcomeVideo-overlay {
     position: absolute;
     bottom: 182px;
     left: 238px;
     width: 406px;
+}
+
+#carpool #welcome .welcomeVideo-overlay .welcomeLogo {
+    background: transparent url('/carpool/img/svg_icons/carpool_logo_full_color.svg') no-repeat;
+    background-size: contain;
+    height: 56px;
+    margin-bottom: 28px;
+}
+
+#carpool #welcome .welcomeVideo-overlay .welcomeText {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 21px;
+}
+
+#carpool #welcome .welcomeVideo-overlay .welcomeMenu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+#carpool #welcome .welcomeVideo-overlay .welcomeMenu li {
+    display: inline;
+    margin-right: 21px;
+    list-style: none;
 }
 
 #carpool .video-overlay {
@@ -1571,33 +1620,24 @@ body {
     top: 280px;
 }
 
-#carpool .video-overlay .welcomeLogo {
-    background: transparent url('/carpool/img/carpool_logo_green.png') no-repeat;
-    background-size: contain;
-    height: 56px;
-    margin-bottom: 28px;
-}
-
-#carpool .video-overlay .welcomeText {
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 21px;
-}
-
-#carpool .video-overlay .welcomeMenu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-}
-
-#carpool .video-overlay .welcomeMenu li {
-    display: inline;
-    margin-right: 21px;
-    list-style: none;
+#carpool #thoughts .video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 224px;
 }
 
 #carpool .video-overlay .wrapper {
     padding: 42px 28px 49px 28px;
+    position: relative;
+}
+
+#carpool .video-overlay .wrapper .transparentBg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #000;
     -ms-filter: "alpha(Opacity=70)";
     filter: alpha(opacity=70);
@@ -1639,8 +1679,6 @@ body {
 }
 
 #carpool .sectionDetailContainer .sectionDetailImage {
-    width: 210px;
-    height: 210px;
     padding: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1661,17 +1699,28 @@ body {
     line-height: 24px;
 }
 
+#carpool .sectionDetailContainer .animationTextContent a {
+    color: #67bc46;
+}
+
 #carpool .downArrowContainer {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 42px;
+    bottom: 70px;
 }
 
 #carpool .downArrowContainer .downArrow {
     display: block;
     margin: 0 auto;
-    width: 42px;
+    width: 50px;
+}
+
+#carpool .downArrowContainer .downArrowText {
+    display: block;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 15px;
 }
 
 #carpool .sectionTitle {
@@ -1722,30 +1771,33 @@ body {
     margin-right: 14px;
 }
 
+#carpool #thoughts .postList li:nth-child(n+5) {
+    display: none;
+}
+
 #carpool #thoughts .postList,
 #carpool #thoughts .postList .postItem {
     overflow: hidden;
 }
 
 #carpool #thoughts .postTitle {
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 40px;
+    line-height: 50px;
 }
 
 #carpool #thoughts .postAuthor {
     padding: 7px 0;
-    font-size: 15px;
+    font-size: 16px;
     color: #999999;
-    line-height: 20px;
+    line-height: 32px;
 }
 
 #carpool #thoughts .postBody {
     line-height: 24px;
+    font-size: 16px;
 }
 
 #carpool #thoughts .postDefaultImage {
-    width: 210px;
-    height: 210px;
     padding: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1753,14 +1805,19 @@ body {
     border-radius: 210px;
 }
 
-#carpool #thoughts .postSummary {
-    float: left;
-    width: 560px;
+#carpool #thoughts .postSummary .readMore {
+    font-size: 16px;
+    line-height: 42px;
 }
 
-#carpool #thoughts .postSummary .readMore {
-    font-size: 15px;
-    line-height: 42px;
+#carpool #thoughts .loadMoreArticlesContainer {
+    text-align: center;
+}
+
+#carpool #thoughts .loadMoreArticlesContainer .loadMoreArticles {
+    font-size: 16px;
+    color: #999999;
+    cursor: pointer;
 }
 
 #carpool #connect .apply a {
@@ -1789,7 +1846,6 @@ body {
 
 #carpool #connect .member-image {
     float: left;
-    z-index: 2;
 }
 
 #carpool #connect .imagePlaceholder {
@@ -1797,19 +1853,28 @@ body {
 }
 
 #carpool #connect .member-name {
+    font-family: "Vollkorn";
     font-size: 30px;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #carpool #connect .member-role {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+}
+
+#carpool #connect .contactLinks a {
+    margin-right: 20px;
 }
 
 #carpool #connect .contactLinks i {
     font-size: 35px;
-    margin: 0 4px;
     color: #999999;
+}
+
+#carpool #connect .contactLinks td a:last-of-type {
+    margin-right: 0;
 }
 
 
@@ -1872,7 +1937,6 @@ body {
 }
 
 #postArticle .authorTable .image {
-    z-index: 2;
     position: absolute;
 }
 
@@ -1929,25 +1993,57 @@ body {
     color: #000;
 }
 
+#carpool .header .dropDownCover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+#carpool .header .navContainer {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+}
+
+#carpool .header .navContainer .transparentBg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    -ms-filter: "alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    opacity: .90;
+    display: none;
+}
+
 #carpool .header .logoContainer {
     position: fixed;
+    display: none;
 }
 
 #carpool .header .logoContainer .logo {
-    background: transparent url('/carpool/img/logo.png') no-repeat scroll 0% 0%;
+    background: transparent url('/carpool/img/svg_icons/carpool_logo.svg') no-repeat scroll 0% 0%;
     display: inline-block;
     text-indent: -9999px;
     width: 50px;
-    height: 28px;
+    height: 35px;
     background-size: contain;
     margin-left: 28px;
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
 #carpool .header .menuContainer {
     position: fixed;
-    left: 98px;
-    top: 21px;
+    left: 88px;
+    top: 17px;
+    display: none;
 }
 
 #carpool .header .menuContainer .globalNav li {
@@ -1960,11 +2056,23 @@ body {
 
 #carpool .header .rightContainer {
     cursor: pointer;
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     position: fixed;
     top: 0;
     right: 28px;
+    background: #000;
+    -ms-filter: "alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    opacity: .70;
+}
+
+#carpool .header .rightContainer .transparentBg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #000;
     -ms-filter: "alpha(Opacity=70)";
     filter: alpha(opacity=70);
@@ -1975,11 +2083,12 @@ body {
     display: block;
     border-style: inset;
     border-width: 1px;
+    position: relative;
 }
 
 #carpool .header .rightContainer hr.green {
     border-color: #68bc47;
-    margin: 16px 15px 0 15px;
+    margin: 14px 15px 0 15px;
 }
 
 #carpool .header .rightContainer hr.lightGreen {
@@ -1988,7 +2097,7 @@ body {
 }
 
 #carpool .header .rightContainer hr.yellow {
-    border-color: #309600;
+    border-color: #f9ec31;
     margin: 10px 15px 0 15px;
 }
 
@@ -1999,7 +2108,23 @@ body {
     top: 0;
     width: 100%;
     height: 420px;
-    overflow: hidden;
+    z-index: 3;
+}
+
+#carpool .header .dropdownContainer:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
+    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
 }
 
 #carpool .header .dropdownContainer i {
@@ -2014,22 +2139,32 @@ body {
     width: 22%;
     height: 100%;
     float: left;
+}
+
+#carpool .header .dropdownContainer .navigationWrapper {
     padding: 70px 28px 42px 28px;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper,
+#carpool .header .dropdownContainer .calendarWrapper {
+    padding: 70px 42px 42px 42px;
 }
 
 #carpool .header .dropdownContainer .instagramWrapper {
     width: 34%;
     height: 100%;
     float: left;
-    padding: 70px 28px 42px 28px;
+    padding: 70px 42px 42px 42px;
 }
 
 #carpool .header .dropdownContainer .navigationWrapper .logoWhite {
-    background: transparent url('/carpool/img/carpool_logo_wht.png') no-repeat;
+    background: transparent url('/carpool/img/svg_icons/carpool_logo_white.svg') no-repeat;
     width: 168px;
-    height: 42px;
+    height: 50px;
     background-size: contain;
     margin-bottom: 28px;
+    margin-left: -6px;
+    margin-top: -12px;
 }
 
 #carpool .header .dropdownContainer .navigationWrapper .navigationMenu li {
@@ -2039,6 +2174,11 @@ body {
 #carpool .header .dropdownContainer .navigationWrapper .navigationMenu a {
     font-size: 20px;
     color: #FFF;
+}
+
+#carpool .header .dropdownContainer .svgIcon {
+    height: 2em;
+    margin-bottom: 15px;
 }
 
 #carpool .header .dropdownContainer .twitterWrapper .twitterContent,
@@ -2080,12 +2220,16 @@ body {
 /* Message form */
 
 #carpool .footer .messageFormBackground {
+    position: relative;
     background: #68bc47;
     display: none;
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
 }
 
 #carpool .footer .messageFormBackground input {
-    padding: 5px 10px;
+    padding: 10px 12px;
     font-size: 20px;
     margin-bottom: 20px;
     margin-top: 30px;
@@ -2105,26 +2249,52 @@ body {
 
 #carpool .footer .messageFormBackground .topicInput {
     margin-top: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    margin-bottom: 0;
+    width: 49%;
+    background-image: url('/carpool/img/svg_icons/down_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 96%;
+    background-size: 29px;
+    cursor: pointer;
+    /*border: 1px solid #ccc;
     background: #FFF;
     padding: 5px 10px;
     font-size: 20px;
-    width: 49%;
     color: #999;
-    /* -webkit-appearance: none; */
-    /* -webkit-border-radius: 0px; */
+    -webkit-appearance: none; 
+    -webkit-border-radius: 0px; */
+}
+
+#carpool .footer .messageFormBackground .topicInputDropdownContainer {
+    width: 49%;
+}
+
+#carpool .footer .messageFormBackground .topicInputDropdown {
+    padding: 10px 12px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    color: #999;
+    width: 100%;
+    background: #FFF;
+    display: none;
+    position: absolute;
+}
+
+#carpool .footer .messageFormBackground .topicInputDropdown li {
+    line-height: 28px;
+    cursor: pointer;
 }
 
 #carpool .footer .messageFormBackground .contentInput {
-    padding: 5px 10px;
+    padding: 10px 12px;
     font-size: 20px;
     margin-bottom: 30px;
     margin-top: 10px;
     width: 100%;
-    height: 100px;
+    height: 120px;
     border: 1px solid #ccc;
     color: #999;
+    resize: none;
 }
 
 #carpool .footer .messageFormBackground .messageText {
@@ -2150,6 +2320,9 @@ body {
 #carpool .footer .locationAddressBackground {
     background: #68bc47;
     padding: 30px 20px 20px 20px;
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
 }
 
 #carpool .footer .locationAddressBackground .locationAddress {
@@ -2170,22 +2343,23 @@ body {
 }
 
 #carpool .footer .locationDropdownContainer {
+    position: relative;
     display: none;
 }
 
 #carpool .footer .locationDropdownContainer iframe {
-    margin-bottom: -3px;
+    display: block;
 }
 
 #carpool .footerTopContainer {
     position: relative;
-    -moz-box-shadow: 0px 50px 100px -70px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 50px 100px -70px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 50px 100px -70px rgba(0, 0, 0, 0.3);
 }
 
 #carpool .footerBottomContainer {
     position: relative;
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
 }
 
 #carpool .footerTopContainer .textTop {
@@ -2228,17 +2402,14 @@ body {
 
 #carpool .footerTopContainer table .iconLink:hover {
     background: #e5e500;
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    -moz-box-shadow: 10px 10px 100px -10px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 10px 10px 100px -10px rgba(0, 0, 0, 0.3);
-    box-shadow: 10px 10px 100px -10px rgba(0, 0, 0, 0.3);
+}
+
+#carpool .footerTopContainer table .iconLink.active {
+    background: #e5e500;
 }
 
 #carpool .footerTopContainer table td a {
     color: #FFF;
-    font-size: 56px;
     text-decoration: none;
     line-height: 0;
 }
@@ -2257,25 +2428,24 @@ body {
 #carpool .footerTopContainer .textBottom {
     color: #FFF;
     position: absolute;
-    z-index: 1;
 }
 
 #carpool .footerBottomContainer {
     width: 100%;
     padding: 75px 0 100px 0;
     background: #000;
-    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
-    background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
-    background-image: -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
-    background-image: -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
-    background-image: repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 20px, #999999 20px, #999999 38px);
+    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
 }
 
 #carpool .footerLogo {
-    background: transparent url('/carpool/img/carpool_logo_wht.png') no-repeat;
+    background: transparent url('/carpool/img/svg_icons/carpool_logo_white.svg') no-repeat;
     background-size: contain;
     width: 280px;
-    height: 70px;
+    height: 85px;
     margin: 0 auto;
 }
 

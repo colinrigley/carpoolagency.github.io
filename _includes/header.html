@@ -3,25 +3,29 @@
 * -->
 <header class="header">
     <div class="headerInner center-margin">
-        <div class="logoContainer">
-            <a href="/" class="logo pageNavLink">Carpool Agency</a>
-        </div>
-        <div class="menuContainer">
-            <nav class="globalNav">
-                <ul class="carpool-nav">
-                    <li><a href="/" class="pageNavLink {% if page.title == 'Home' %}active{% endif %}">Home</a></li>
-                    <li><a href="/#services" class="pageNavLink">Services</a></li>
-                    <li><a href="/about/" class="pageNavLink {% if page.title == 'About' %}active{% endif %}">About</a></li>
-                    <li><a href="/work/" class="pageNavLink {% if page.title == 'Work' %}active{% endif %}">Work</a></li>
-                    <li><a href="/thoughts/" class="pageNavLink {% if page.title == 'Thoughts' %}active{% endif %}">Thoughts</a></li>
-                    <li><a href="/connect/" class="pageNavLink {% if page.title == 'Connect' %}active{% endif %}">Connect</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="rightContainer">
-            <hr class="green"></hr>
-            <hr class="lightGreen"></hr>
-            <hr class="yellow"></hr>
+        <div class="navContainer">
+            <div class="transparentBg"></div>
+            <div class="logoContainer">
+                <a href="/" class="logo pageNavLink">Carpool Agency</a>
+            </div>
+            <div class="menuContainer">
+                <nav class="globalNav">
+                    <ul class="carpool-nav">
+                        <li><a href="/" class="pageNavLink {% if page.title == 'Home' %}active{% endif %}">Home</a></li>
+                        <li><a href="/#services" class="pageNavLink">Services</a></li>
+                        <li><a href="/about/" class="pageNavLink {% if page.title == 'About' %}active{% endif %}">About</a></li>
+                        <li><a href="/work/" class="pageNavLink {% if page.title == 'Work' %}active{% endif %}">Work</a></li>
+                        <li><a href="/thoughts/" class="pageNavLink {% if page.title == 'Thoughts' %}active{% endif %}">Thoughts</a></li>
+                        <li><a href="/connect/" class="pageNavLink {% if page.title == 'Connect' %}active{% endif %}">Connect</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="rightContainer">
+                <div class="transparentBg"></div>
+                <hr class="green"></hr>
+                <hr class="lightGreen"></hr>
+                <hr class="yellow"></hr>
+            </div>
         </div>
         <div class="dropdownContainer d-none">
             <div class="navigationWrapper bg-darkGreen">
@@ -38,7 +42,7 @@
                 </div>
             </div>
             <div class="twitterWrapper bg-green">
-                <i class="fa fa-twitter"></i>
+                <img class="svgIcon" src='/carpool/img/svg_icons/twitter.svg'></img>
                 <div class="twitterContent">
                     &#64;carpooldigital Jul 31
                     <br>
@@ -47,7 +51,7 @@
                 </div>
             </div>
             <div class="calendarWrapper bg-lightGreen">
-                <i class="fa fa-calendar"></i>
+                <img class="svgIcon" src='/carpool/img/svg_icons/calendar.svg'></img>
                 <div class="calendarContent">
                     Responsive.Org Meet up
                     <br>
@@ -57,19 +61,21 @@
                 </div>
             </div>
             <div class="instagramWrapper bg-yellow">
-                <i class="fa fa-instagram"></i>
+                <img class="svgIcon" src='/carpool/img/svg_icons/instagram.svg'></img>
                 <div class="instagramContent">
-                    <img src="carpool/img/img_1.jpg"></img>
-                    <img src="carpool/img/img_2.jpg"></img>
-                    <img src="carpool/img/img_3.jpg"></img>
-                    <img src="carpool/img/img_4.jpg"></img>
-                    <img src="carpool/img/img_5.jpg"></img>
-                    <img src="carpool/img/img_6.jpg"></img>
+                    <img src="/carpool/img/img_1.jpg"></img>
+                    <img src="/carpool/img/img_2.jpg"></img>
+                    <img src="/carpool/img/img_3.jpg"></img>
+                    <img src="/carpool/img/img_4.jpg"></img>
+                    <img src="/carpool/img/img_5.jpg"></img>
+                    <img src="/carpool/img/img_6.jpg"></img>
                 </div>
             </div>
             <div class="closeContainer">
-                <i class="fa fa-close"></i>
+                <img class="c-2" src='/carpool/img/svg_icons/close.svg'></img>
             </div>
+        </div>
+        <div class="dropDownCover">
         </div>
     </div>
 </header>
