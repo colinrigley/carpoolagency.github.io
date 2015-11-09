@@ -89,7 +89,10 @@ $(function() {
     $(window).scroll(function(event) {
         var self = this;
 
-        if (isScrollingAnimation) {
+        if (isScrollingAnimation || $(".header .dropdownContainer").is(':visible')) {
+            console.log("Prevent scroll!");
+            event.stopPropagation();
+
             event.preventDefault();
             return false;
         }
@@ -99,9 +102,9 @@ $(function() {
         var topMediaAnchor = $(".topMediaContainer").height();
         var lowerPageFooterAnchor = $(".carpool-page").height() - 100;
 
-        console.log("current st: ", st);
-        console.log("topMediaAnchor: ", topMediaAnchor);
-        console.log("lowerPageFooterAnchor: ", lowerPageFooterAnchor);
+        // console.log("current st: ", st);
+        // console.log("topMediaAnchor: ", topMediaAnchor);
+        // console.log("lowerPageFooterAnchor: ", lowerPageFooterAnchor);
 
         if (st > topMediaAnchor && st < lowerPageFooterAnchor) {
             if ($(".header .navContainer .transparentBg").is(':hidden')) {
@@ -407,6 +410,19 @@ $(function() {
         $(".header .dropDownCover").hide();
     })
 
+    // Bind clicking outside the the dropdown to close the dropdown
+    $(document).mouseup(function (e) {
+        var container = $("header .dropdownContainer");
+
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $(".header .dropdownContainer").slideUp(200);
+            $(".header .dropDownCover").hide();
+        }
+    });
+
+
     // Footer Navigation binding
 
     var showMessageForm = function() {
@@ -520,5 +536,6 @@ $(function() {
             hideLocationDropdown();
         }
     });
+
 
 });
