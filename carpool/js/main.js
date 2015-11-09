@@ -99,6 +99,10 @@ $(function() {
         var topMediaAnchor = $(".topMediaContainer").height();
         var lowerPageFooterAnchor = $(".carpool-page").height() - 100;
 
+        console.log("current st: ", st);
+        console.log("topMediaAnchor: ", topMediaAnchor);
+        console.log("lowerPageFooterAnchor: ", lowerPageFooterAnchor);
+
         if (st > topMediaAnchor && st < lowerPageFooterAnchor) {
             if ($(".header .navContainer .transparentBg").is(':hidden')) {
                 $(".header .navContainer .transparentBg").slideDown(200);
@@ -113,7 +117,7 @@ $(function() {
             if ($(".header .navContainer .transparentBg").is(':visible')) {
                 $(".header .navContainer .transparentBg").slideUp(200);
             }
-        } else {
+        } else if (st < topMediaAnchor) {
             if ($(".header .navContainer .transparentBg").is(':visible')) {
                 $(".header .navContainer .transparentBg").slideUp(200);
             }

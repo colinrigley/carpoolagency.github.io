@@ -42,8 +42,9 @@ title: Thoughts
             Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
         </div>
         <ul class="postList">
-          {% for post in site.posts %}
-           <li class="postItem mb-6">
+          {% for post in site.posts limit:10 %}
+            {% if forloop.first != true %}
+            <li class="postItem mb-6">
               <div class="postDefaultImage float-left mr-3 c-15 r-15" style="background-image: url('{{ post.defaultImage }}');"></div>
               <table class="postSummary float-left c-40">
                  <tr>
@@ -59,7 +60,8 @@ title: Thoughts
                     <td><a href="{{ post.url }}" class="readMore green">Read more</a></td>
                  </tr>
               </table>
-           </li>
+            </li>
+            {% endif %}
           {% endfor %}
         </ul>
         <div class="loadMoreArticlesContainer"><span class="loadMoreArticles">Load more articles</span></div>

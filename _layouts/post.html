@@ -2,7 +2,7 @@
 layout: main
 ---
 
-<div id="postArticle" class="pb-5">
+<div id="postArticle" class="carpool-page">
 	<div class="defaultImage topMediaContainer" style="background-image: url('{{ page.defaultImage }}');"></div>
 	<div class="postWrapper c-58 center-margin">
 		<div class="postTitle green">{{ page.title }}</div>
@@ -27,7 +27,7 @@ layout: main
 		</div>
 	</div>
 	
-	<div id="related" class="c-50 center-margin">
+	<div id="related" class="c-50 center-margin pb-8">
 	  <h2>Related Posts</h2>
 	  <ul class="posts">
 	    {% for post in site.related_posts limit:3 %}

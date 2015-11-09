@@ -10,11 +10,43 @@ Everything we do at Carpool is related to helping people make work a better plac
 
 <!--more-->
 
-<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor euismod quam, id dignissim enim consectetur eget. Proin ornare nunc ac magna tempor, non aliquam turpis vehicula. Aenean bibendum at mi semper efficitur. Sed porta urna non arcu malesuada varius. Aliquam erat volutpat. Ut dui lorem, bibendum aliquam pulvinar sed, posuere nec ipsum. Ut pulvinar augue arcu, ac viverra lacus efficitur vitae. Vestibulum malesuada sodales erat lacinia convallis. Sed eget diam tincidunt, porta dolor vel, varius urna. Integer rhoncus ex sit amet massa scelerisque, vitae ultricies ex porttitor. Donec blandit at dui non finibus. Donec tincidunt ut mi quis sollicitudin.
-<br>
-<br>
-Donec id semper massa, vel imperdiet augue. Nam nec placerat nisi. Nullam consequat sed diam vitae aliquet. Donec dapibus sem nec convallis vehicula. Etiam id ante maximus, sodales orci in, eleifend diam. Aliquam vitae maximus nulla. Ut placerat faucibus metus, nec laoreet orci porttitor ac. Nullam sit amet mollis ex. Etiam in porttitor quam. Cras vel faucibus lacus. Suspendisse at magna aliquam, rhoncus sem a, sodales diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus facilisis vehicula dictum. Praesent lorem nibh, egestas ut leo in, posuere hendrerit nunc. Curabitur risus magna, imperdiet a tempus id, dignissim sit amet felis. Donec bibendum suscipit placerat.
-<br>
-<br>
-Integer vel fermentum ligula. Donec ac elit vel nibh luctus rutrum at mollis lectus. In lectus augue, eleifend nec tellus ut, cursus molestie diam. Aliquam vitae ante nec tellus vehicula ultrices eget et lorem. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum vestibulum augue, et molestie justo convallis ac. Integer malesuada ornare odio id dapibus. Duis at metus rutrum, rhoncus purus sed, pretium sapien. Suspendisse sagittis odio nec nunc sodales, sit amet porta metus ultrices. 
+A First Level Header
+====================
+
+A Second Level Header
+---------------------
+
+Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.
+
+The quick brown fox jumped over the lazy
+dog's back.
+
+### Header 3
+
+> This is a blockquote.
+> 
+> This is the second paragraph in the blockquote.
+>
+> ## This is an H2 in a blockquote
+
+Some of these words *are emphasized*.
+Some of these words _are emphasized also_.
+
+Use two asterisks for **strong emphasis**.
+Or, if you prefer, __use two underscores instead__.
+
+*   Candy.
+*   Gum.
+*   Booze.
+
+1.  Red
+2.  Green
+3.  Blue
+
+This is an [example link](http://example.com/ "With a Title").
+
+![alt text](/carpool/img/posts_images/connect.png "Carpool App Party")
+
+<iframe src="https://player.vimeo.com/video/92786416" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

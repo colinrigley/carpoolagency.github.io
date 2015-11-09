@@ -19,7 +19,7 @@ body {
     font-weight: 400;
 }
 
-#carpool html,
+/*#carpool html,
 #carpool body,
 #carpool div,
 #carpool span,
@@ -95,9 +95,13 @@ body {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+}*/
+
+#carpool ul, ol {
+    margin: 0;
+    padding: 0;
 }
 
-#carpool ul,
 #carpool li {
     margin: 0;
     padding: 0;
@@ -1536,6 +1540,11 @@ body {
     font-weight: 700;
 }
 
+#carpool .header .dropdownContainer .pageNavLink.active,
+#carpool .welcomeMenu .pageNavLink.active {
+    font-weight: 400;
+}
+
 #carpool .carpool-page {
     overflow: hidden;
 }
@@ -1886,23 +1895,43 @@ body {
     overflow: hidden;
 }
 
-#postArticle ul,
-#postArticle li {
+#postArticle a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+#postArticle img, iframe {
+    max-width: 100%;
+}
+
+#postArticle ul li {
     list-style: disc;
-    margin-left: 10px;
+    margin-left: 42px;
+}
+
+#postArticle ol li {
+    list-style: decimal;
+    margin-left: 42px;
 }
 
 #postArticle .postWrapper {
-    padding: 56px;
+    padding: 40px 56px;
     background-color: rgba(255, 255, 255, 0.95);
-    margin-top: -300px;
+    margin-top: -238px;
     position: relative;
+}
+
+#postArticle #postBody {
+    line-height: 24px;
+    font-size: 16px;
 }
 
 #postArticle .postTitle {
     font-size: 56px;
     font-weight: 500;
     line-height: 70px;
+    height: 140px;
+    overflow: hidden;
 }
 
 #postArticle .defaultImage {
@@ -1917,19 +1946,19 @@ body {
 }
 
 #postArticle .postAuthor {
-    margin: 42px 0;
+    margin: 34px 0 42px 0;
 }
 
 #postArticle .authorTable td.picture,
 #postArticle .authorTable .image,
 #postArticle .authorTable .imagePlaceholder {
-    width: 84px;
-    height: 84px;
+    width: 70px;
+    height: 70px;
     padding: 0;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 42px;
+    border-radius: 70px;
 }
 
 #postArticle .authorTable .imagePlaceholder {
@@ -1965,14 +1994,6 @@ body {
 #postArticle .btnFacebook img {
     height: 21px;
     margin-right: 14px;
-}
-
-#postArticle #postBody {
-    line-height: 24px;
-}
-
-#postArticle #related a {
-    color: #0000FF;
 }
 
 
