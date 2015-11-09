@@ -50,3 +50,5 @@ This is an [example link](http://example.com/ "With a Title").
 ![alt text](/carpool/img/posts_images/connect.png "Carpool App Party")
 
 <iframe src="https://player.vimeo.com/video/92786416" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<span style="color:#BF5FFF;">This color is violet</span>

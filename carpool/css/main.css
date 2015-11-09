@@ -19,18 +19,18 @@ body {
     font-weight: 400;
 }
 
-/*#carpool html,
+#carpool html,
 #carpool body,
 #carpool div,
 #carpool span,
 #carpool object,
 #carpool iframe,
-#carpool h1,
+/*#carpool h1,
 #carpool h2,
 #carpool h3,
 #carpool h4,
 #carpool h5,
-#carpool h6,
+#carpool h6,*/
 #carpool p,
 #carpool blockquote,
 #carpool pre,
@@ -56,9 +56,9 @@ body {
 #carpool dl,
 #carpool dt,
 #carpool dd,
-#carpool ol,
+/*#carpool ol,
 #carpool ul,
-#carpool li,
+#carpool li,*/
 #carpool fieldset,
 #carpool form,
 #carpool label,
@@ -95,7 +95,7 @@ body {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-}*/
+}
 
 #carpool ul, ol {
     margin: 0;
@@ -1833,6 +1833,17 @@ body {
     font-size: 28px;
 }
 
+#carpool #connect ul, #carpool #connect ol, #carpool #connect li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
 #carpool #connect .memberList {
     margin-left: -28px;
     overflow: hidden;
@@ -1885,6 +1896,9 @@ body {
 #carpool #connect .contactLinks td a:last-of-type {
     margin-right: 0;
 }
+
+
+
 
 
 /*
