@@ -1570,56 +1570,56 @@ body {
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light";
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool input:-moz-placeholder { /* Firefox 18- */
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light";
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool input::-moz-placeholder {  /* Firefox 19+ */
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light"; 
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif; 
 }
 
 #carpool input:-ms-input-placeholder {  
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light";
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool textarea::-webkit-input-placeholder {
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light";
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool textarea:-moz-placeholder { /* Firefox 18- */
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light";
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool textarea::-moz-placeholder {  /* Firefox 19+ */
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light"; 
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif; 
 }
 
 #carpool textarea:-ms-input-placeholder {  
    color: #999;
    font-size: 20px;
    font-weight: 400;
-   font-family: "HelveticaNeue-Light";
+   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 /*#carpool .bgMedia {
