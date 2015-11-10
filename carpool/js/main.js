@@ -77,28 +77,84 @@ $(function() {
         } 
     });
 
+    // DownArrow click event
+    $(".topMediaContainer .downArrow").unbind("click").bind("click", function(event) { 
+        $('html,body').animate( { scrollTop:$(".topMediaContainer").height() } , 1000, function() {
+            isScrollingAnimation = false;
+        });
+        return;
+    });
+
     // Hide the navigation logo and menu on start up for welcome page
-    // if (isWelcomePage) {
-    //     $(".header .logoContainer").hide();
-    //     $(".header .menuContainer").hide();
-    // }
+    if (isWelcomePage) {
+        $(".header .logoContainer").hide();
+        $(".header .menuContainer").hide();
+    }
+
+    var showNavLogo = function() {
+        if ($(".header .logoContainer").is(':hidden')) {
+            $(".header .logoContainer").slideDown(200);
+        }
+    }
+
+    var hideNavLogo = function() {
+        if ($(".header .logoContainer").is(':visible')) {
+            $(".header .logoContainer").slideUp(200);
+        }
+    }
+
+    var showNavMenu = function() {
+        if ($(".header .menuContainer").is(':hidden')) {
+            $(".header .menuContainer").slideDown(200);
+        }
+    }
+
+    var hideNavMenu = function() {
+        if ($(".header .menuContainer").is(':visible')) {
+            $(".header .menuContainer").slideUp(200);
+        }
+    }
+
+    var showNavTransparentBackground = function() {
+        if ($(".header .navContainer .transparentBg").is(':hidden')) {
+            $(".header .navContainer .transparentBg").slideDown(200);
+        }
+    }
+
+    var hideNavTransparentBackground = function() {
+        if ($(".header .navContainer .transparentBg").is(':visible')) {
+            $(".header .navContainer .transparentBg").slideUp(200);
+        }
+    }
+
+    var showArrow = function() {
+        if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
+            $(".downArrowContainer .downArrow").fadeTo(100, 1);
+        }
+    }
+
+    var blurArrow = function() {
+        if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
+            $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
+        }
+    }
 
     var lastScrollTop = 0; // Previous page position
+    var minScrollEffectDistance = 50;
 
     // Scrolling event binding
     $(window).scroll(function(event) {
         var self = this;
 
-        if (isScrollingAnimation || $(".header .dropdownContainer").is(':visible')) {
-            console.log("Prevent scroll!");
-            event.stopPropagation();
-
+        if (isScrollingAnimation) {
+            //console.log("Prevent scroll!");
             event.preventDefault();
             return false;
         }
 
         var st = $(this).scrollTop(); // Current page position
 
+        var upperTopMediaAnchor = $(".topMediaContainer").height() - 180;
         var topMediaAnchor = $(".topMediaContainer").height();
         var lowerPageFooterAnchor = $(".carpool-page").height() - 100;
 
@@ -106,33 +162,59 @@ $(function() {
         // console.log("topMediaAnchor: ", topMediaAnchor);
         // console.log("lowerPageFooterAnchor: ", lowerPageFooterAnchor);
 
-        if (st > topMediaAnchor && st < lowerPageFooterAnchor) {
-            if ($(".header .navContainer .transparentBg").is(':hidden')) {
-                $(".header .navContainer .transparentBg").slideDown(200);
+
+        // if (st > lastScrollTop) {            
+        //     // Downscroll
+        //     if (st > (lastScrollTop + 50)) { // scroll down more than 50 pixels
+        //         hideNavTransparentBackground();
+        //         hideNavLogo();
+        //         hideNavMenu();
+        //     } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) {
+        //         showNavTransparentBackground();
+        //         showNavLogo();
+        //         showNavMenu();
+        //     } else if (st > lowerPageFooterAnchor) {
+        //         showNavTransparentBackground();
+        //     } else if (st < topMediaAnchor) {
+        //         hideNavTransparentBackground();
+        //         if (isWelcomePage) {
+        //             hideNavLogo();
+        //             hideNavMenu();
+        //         }
+        //     }
+        // } else if (st < lastScrollTop) {
+        //     // Upscroll
+            
+        // }
+
+        if (st < upperTopMediaAnchor) { // Top media portion
+            hideNavTransparentBackground();
+            showArrow();
+            if (isWelcomePage) {
+                hideNavLogo();
+                hideNavMenu();
             }
-            if ($(".header .logoContainer").is(':hidden')) {
-                $(".header .logoContainer").slideDown(200);
+        } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
+            hideNavTransparentBackground();
+            blurArrow();
+            showNavLogo();
+            showNavMenu();
+        } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) { // Content portion
+            if (st > lastScrollTop) { // Downscroll 
+                hideNavTransparentBackground();
+                hideNavMenu();
+            } else if (st < lastScrollTop) { // Upscroll
+                showNavTransparentBackground();
+                showNavLogo();
+                showNavMenu();
             }
-            if ($(".header .menuContainer").is(':hidden')) {
-                $(".header .menuContainer").slideDown(200);
-            }
-        } else if (st > lowerPageFooterAnchor) {
-            if ($(".header .navContainer .transparentBg").is(':visible')) {
-                $(".header .navContainer .transparentBg").slideUp(200);
-            }
-        } else if (st < topMediaAnchor) {
-            if ($(".header .navContainer .transparentBg").is(':visible')) {
-                $(".header .navContainer .transparentBg").slideUp(200);
-            }
-            if ($(".header .logoContainer").is(':visible')) {
-                $(".header .logoContainer").slideUp(200);
-            }
-            if ($(".header .menuContainer").is(':visible')) {
-                $(".header .menuContainer").slideUp(200);
+        } else if (st > lowerPageFooterAnchor) { // Footer portion
+            if ($(".header .logoContainer").is(':visible') || $(".header .menuContainer").is(':visible')) {
+                showNavTransparentBackground();
             }
         }
 
-
+        lastScrollTop = st;
 
         // if (isScrollingAnimation) {
         //     event.preventDefault();

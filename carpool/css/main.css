@@ -1723,6 +1723,7 @@ body {
     display: block;
     margin: 0 auto;
     width: 50px;
+    cursor: pointer;
 }
 
 #carpool .downArrowContainer .downArrowText {
@@ -2060,7 +2061,6 @@ body {
 
 #carpool .header .logoContainer {
     position: fixed;
-    display: none;
 }
 
 #carpool .header .logoContainer .logo {
@@ -2078,7 +2078,6 @@ body {
     position: fixed;
     left: 88px;
     top: 17px;
-    display: none;
 }
 
 #carpool .header .menuContainer .globalNav li {
