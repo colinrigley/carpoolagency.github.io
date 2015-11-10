@@ -1566,20 +1566,60 @@ body {
     display: block;
 }
 
-::-webkit-input-placeholder {
+#carpool input::-webkit-input-placeholder {
    color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light";
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: #999;  
+#carpool input:-moz-placeholder { /* Firefox 18- */
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light";
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #999;  
+#carpool input::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light"; 
 }
 
-:-ms-input-placeholder {  
-   color: #999;  
+#carpool input:-ms-input-placeholder {  
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light";
+}
+
+#carpool textarea::-webkit-input-placeholder {
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light";
+}
+
+#carpool textarea:-moz-placeholder { /* Firefox 18- */
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light";
+}
+
+#carpool textarea::-moz-placeholder {  /* Firefox 19+ */
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light"; 
+}
+
+#carpool textarea:-ms-input-placeholder {  
+   color: #999;
+   font-size: 20px;
+   font-weight: 400;
+   font-family: "HelveticaNeue-Light";
 }
 
 /*#carpool .bgMedia {
@@ -1722,7 +1762,7 @@ body {
 #carpool .downArrowContainer .downArrow {
     display: block;
     margin: 0 auto;
-    width: 50px;
+    width: 42px;
     cursor: pointer;
 }
 
@@ -2330,6 +2370,7 @@ body {
     border: 1px solid #ccc;
     color: #999;
     resize: none;
+    overflow: auto;
 }
 
 #carpool .footer .messageFormBackground .messageText {
@@ -2404,6 +2445,9 @@ body {
     left: 0;
     right: 0;
     top: 0;
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
 }
 
 #carpool .footerTopContainer .textBottom {
