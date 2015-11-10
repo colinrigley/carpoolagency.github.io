@@ -1641,6 +1641,7 @@ body {
     background: transparent url('/carpool/img/svg_icons/carpool_logo_full_color.svg') no-repeat;
     background-size: contain;
     height: 56px;
+    width: 210px;
     margin-bottom: 28px;
 }
 
