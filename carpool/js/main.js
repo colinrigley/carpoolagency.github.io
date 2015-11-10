@@ -85,6 +85,13 @@ $(function() {
         return;
     });
 
+    $(".topMediaContainer .downArrowText").unbind("click").bind("click", function(event) { 
+        $('html,body').animate( { scrollTop:$(".topMediaContainer").height() } , 1000, function() {
+            isScrollingAnimation = false;
+        });
+        return;
+    });
+
     // Hide the navigation logo and menu on start up for welcome page
     if (isWelcomePage) {
         $(".header .logoContainer").hide();
@@ -128,12 +135,20 @@ $(function() {
     }
 
     var showArrow = function() {
+        if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "0.3") {
+            $(".downArrowContainer .downArrowText").fadeTo(100, 1);
+        }
+
         if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
             $(".downArrowContainer .downArrow").fadeTo(100, 1);
         }
     }
 
     var blurArrow = function() {
+        if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "1") {
+            $(".downArrowContainer .downArrowText").fadeTo(100, 0.3);
+        }
+
         if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
             $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
         }
@@ -141,6 +156,8 @@ $(function() {
 
     var lastScrollTop = 0; // Previous page position
     var minScrollEffectDistance = 50;
+    var upperTopMediaAnchorMark = 210;
+    var lowerPageFooterAnchorMark = 100;
 
     // Scrolling event binding
     $(window).scroll(function(event) {
@@ -154,9 +171,9 @@ $(function() {
 
         var st = $(this).scrollTop(); // Current page position
 
-        var upperTopMediaAnchor = $(".topMediaContainer").height() - 180;
+        var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
         var topMediaAnchor = $(".topMediaContainer").height();
-        var lowerPageFooterAnchor = $(".carpool-page").height() - 100;
+        var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
         // console.log("current st: ", st);
         // console.log("topMediaAnchor: ", topMediaAnchor);

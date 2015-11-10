@@ -1731,6 +1731,7 @@ body {
     text-align: center;
     color: #FFF;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 #carpool .sectionTitle {
