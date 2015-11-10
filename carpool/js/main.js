@@ -521,9 +521,7 @@ $(function() {
         }
     });
 
-
     // Footer Navigation binding
-
     var showMessageForm = function() {
         $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
             $(this).text("Send us a love letter").fadeIn(200);

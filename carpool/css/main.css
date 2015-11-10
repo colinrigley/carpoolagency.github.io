@@ -1894,6 +1894,7 @@ body {
 
 #carpool #connect .memberList li {
     margin: 0 0 56px 28px;
+    width: 182px;
 }
 
 #carpool #connect .member-image,
