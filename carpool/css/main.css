@@ -2322,7 +2322,7 @@ body {
     background-image: url('/carpool/img/svg_icons/down_arrow.svg');
     background-repeat: no-repeat;
     background-position: 96%;
-    background-size: 29px;
+    background-size: 28px 16px;
     cursor: pointer;
     /*border: 1px solid #ccc;
     background: #FFF;
