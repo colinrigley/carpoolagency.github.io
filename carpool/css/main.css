@@ -2002,9 +2002,12 @@ body {
     margin: 34px 0 42px 0;
 }
 
-#postArticle .authorTable td.picture,
-#postArticle .authorTable .image,
-#postArticle .authorTable .imagePlaceholder {
+#postArticle .authorTable td.picture {
+    width: 70px;
+    height: 70px;
+}
+
+#postArticle .authorTable .image {
     width: 70px;
     height: 70px;
     padding: 0;
@@ -2012,13 +2015,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 70px;
-}
-
-#postArticle .authorTable .imagePlaceholder {
-    background-image: url('/carpool/img/profile/Placeholder.png');
-}
-
-#postArticle .authorTable .image {
     position: absolute;
 }
 

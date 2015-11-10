@@ -10,7 +10,7 @@ layout: main
 			<table class="authorTable">
 				<tbody>
 					<tr>
-						<td class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{{ page.authorImage }}');"></div><div class="imagePlaceholder"></div></td>
+						<td class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{% if page.authorImage %}{{ page.authorImage }}{% else %}Placeholder.png{% endif %}');"></div></td>
 						<td class="name gray"><div>By {{ page.author }}</div></td>
 					</tr>
 				</tbody>
