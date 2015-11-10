@@ -2484,6 +2484,20 @@ body {
     color: #FFF;
     text-decoration: none;
     line-height: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#carpool .footerTopContainer table td a .centerer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#carpool .footerTopContainer table td a .centered {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #carpool .footerTopContainer table td span {
