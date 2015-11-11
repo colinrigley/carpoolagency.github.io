@@ -2254,10 +2254,14 @@ body {
     font-size: 15px;
     color: #FFF;
     margin-top: 21px;
+    max-height: 238px;
+    overflow: hidden;
 }
 
 #carpool .header .dropdownContainer .instagramWrapper .instagramContent {
     margin-top: 21px;
+    max-height: 238px;
+    overflow: hidden;
 }
 
 #carpool .header .dropdownContainer .instagramWrapper .instagramContent img {
@@ -2270,6 +2274,41 @@ body {
     top: 14px;
     right: 28px;
     cursor: pointer;
+}
+
+/*
+ * Twitter styling
+ */
+#carpool .header .dropdownContainer .twitterWrapper .twitterContent iframe {
+    display: none !important;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .tweetTopHeader,
+#carpool .header .dropdownContainer .calendarWrapper .calendarTopHeader {
+    margin-bottom: 20px;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .userLink,
+#carpool .header .dropdownContainer .twitterWrapper .dateLink,
+#carpool .header .dropdownContainer .twitterWrapper .tweetContent,
+#carpool .header .dropdownContainer .twitterWrapper .tweetContent a {
+    color: #FFF;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .userLink {
+    margin-right: 10px;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .tweetContent a {
+    text-decoration: underline;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .tweetContent a b {
+    font-weight: 400;
+}
+
+#carpool .header .dropdownContainer .twitterWrapper .tweetContent a .tco-hidden {
+    display: none;
 }
 
 

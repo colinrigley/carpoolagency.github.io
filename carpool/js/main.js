@@ -69,6 +69,9 @@ $(function() {
         } else if (isWelcomePage && $(this).attr("href") === "/") {
             event.preventDefault();
             isScrollingAnimation = true;
+            hideNavTransparentBackground();
+            hideNavLogo();
+            hideNavMenu();
             $('html,body').animate( { scrollTop: 0 } , 1000, function() {
                 activeNavAnchors("/");
                 isScrollingAnimation = false;

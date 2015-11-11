@@ -44,20 +44,25 @@
             <div class="twitterWrapper bg-green">
                 <img class="svgIcon" src='/carpool/img/svg_icons/twitter.svg'>
                 <div class="twitterContent">
-                    &#64;carpooldigital Jul 31
-                    <br>
-                    <br>
-                    Carpool will be helping host the internal Microsoft Windows 10 reaction event next week. A lot of solid buzz so it's going to be a good one.
+                    <a class="twitter-timeline" data-tweet-limit="1" href="https://twitter.com/carpooldigital" data-widget-id="664169459557380096" data-chrome="nofooter noheader transparent">Tweets by @carpooldigital</a>
+                    <div class="tweetTopHeader">
+                        <a class="userLink" href="https://twitter.com/@carpooldigital" target="_blank">@carpooldigital</a>
+                        <a class="dateLink" target="_blank"></a>
+                    </div>
+                    <div class="tweetContent"></div>
                 </div>
             </div>
             <div class="calendarWrapper bg-lightGreen">
                 <img class="svgIcon" src='/carpool/img/svg_icons/calendar.svg'>
                 <div class="calendarContent">
-                    Responsive.Org Meet up
-                    <br>
-                    <br> Carpool will be helping host a meet up for those interest- ed in discussing the respon- sive.org movement next week. A lot of solid buzz so it's going to be a good one.
-                    <br>
-                    <br> Learn more...
+                    <div class="calendarTopHeader">
+                        Responsive.Org Meet up
+                    </div>
+                    <div class="calendarContentBottom">
+                        Carpool will be helping host a meet up for those interest- ed in discussing the respon- sive.org movement next week. A lot of solid buzz so it's going to be a good one.
+                        <br>
+                        <br> Learn more...
+                    </div>
                 </div>
             </div>
             <div class="instagramWrapper bg-yellow">
@@ -82,3 +87,6 @@
 <!-- **
 *  Header ends here
 * -->
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {$('.header .twitterContent .dateLink').attr('href',$('#twitter-widget-0').contents().find('.stream .h-feed li time').parent().attr('href'));var tweetDateOriginal = $('#twitter-widget-0').contents().find('.stream .h-feed li time').html().split(' ');var tweetDateNew = tweetDateOriginal[1] + ' ' + tweetDateOriginal[0];$('.header .twitterContent .dateLink').html(tweetDateNew);$('.header .twitterContent .tweetContent').html($('#twitter-widget-0').contents().find('.stream .h-feed li .e-entry-title').html());$('.header .twitterContent .tweetContent a').attr('target','_blank');$('#twitter-widget-0').remove();});");fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
