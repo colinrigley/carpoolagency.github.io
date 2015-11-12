@@ -188,7 +188,6 @@ $(function() {
             closeHamburgerMenu();
             showArrow();
             $('html,body').animate( { scrollTop: 0 } , 1000, function() {
-                activeNavAnchors("/");
                 isScrollingAnimation = false;
             });     
             return;
@@ -251,7 +250,6 @@ $(function() {
             if (isWelcomePage) {
                 hideNavLogo();
                 hideNavMenu();
-                activeNavAnchors("/");
             }
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
             hideNavTransparentBackground();
