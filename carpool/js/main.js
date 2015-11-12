@@ -251,12 +251,16 @@ $(function() {
             if (isWelcomePage) {
                 hideNavLogo();
                 hideNavMenu();
+                activeNavAnchors("/");
             }
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
             hideNavTransparentBackground();
             blurArrow();
             showNavLogo();
             showNavMenu();
+            if (isWelcomePage) {
+                activeNavAnchors("/");
+            }
         } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) { // Content portion
             if (st > lastScrollTop) { // Downscroll 
                 hideNavTransparentBackground();
@@ -266,9 +270,18 @@ $(function() {
                 showNavLogo();
                 showNavMenu();
             }
+
+            // Activate service nav anchor for welcome page
+            if (isWelcomePage) {
+                activeNavAnchors("/#services");
+            }
         } else if (st > lowerPageFooterAnchor) { // Footer portion
             if ($(".header .logoContainer").is(':visible') || $(".header .menuContainer").is(':visible')) {
                 showNavTransparentBackground();
+            }
+
+            if (isWelcomePage) {
+                activeNavAnchors("/#services");
             }
         }
 
