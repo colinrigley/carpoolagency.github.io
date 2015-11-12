@@ -197,7 +197,7 @@ $(function() {
 
     var lastScrollTop = 0; // Previous page position
     var minScrollEffectDistance = 50;
-    var upperTopMediaAnchorMark = 210;
+    var upperTopMediaAnchorMark = 180;
     var lowerPageFooterAnchorMark = 100;
 
     // Scrolling event binding
