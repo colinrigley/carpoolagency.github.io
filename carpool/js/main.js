@@ -85,37 +85,6 @@ $(function() {
         }
     });
 
-    // Smooth transition between pages
-    $(".pageNavLink").unbind("click").bind("click", function(event) {        
-        // Smooth transition to services on Welcome page
-        if (isWelcomePage && $(this).attr("href") === "/#services") {
-            event.preventDefault();
-            isScrollingAnimation = true;
-            closeHamburgerMenu();
-            $('html,body').animate( { scrollTop:$("#services").offset().top } , 1000, function() {
-                activeNavAnchors("/#services");
-                isScrollingAnimation = false;
-            });
-            return;
-        } else if (!isWelcomePage && $(this).attr("href") === "/#services") {
-            event.preventDefault();
-            window.location.href = "/#services";
-            return;
-        } else if (isWelcomePage && $(this).attr("href") === "/") {
-            event.preventDefault();
-            isScrollingAnimation = true;
-            hideNavTransparentBackground();
-            hideNavLogo();
-            hideNavMenu();
-            closeHamburgerMenu();
-            $('html,body').animate( { scrollTop: 0 } , 1000, function() {
-                activeNavAnchors("/");
-                isScrollingAnimation = false;
-            });     
-            return;
-        } 
-    });
-
     // DownArrow click event
     $(".topMediaContainer .downArrow").unbind("click").bind("click", function(event) { 
         $('html,body').animate( { scrollTop:$(".topMediaContainer").height() } , 1000, function() {
@@ -192,6 +161,39 @@ $(function() {
             $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
         }
     }
+
+    // Smooth transition between pages
+    $(".pageNavLink").unbind("click").bind("click", function(event) {        
+        // Smooth transition to services on Welcome page
+        if (isWelcomePage && $(this).attr("href") === "/#services") {
+            event.preventDefault();
+            isScrollingAnimation = true;
+            closeHamburgerMenu();
+            blurArrow();
+            $('html,body').animate( { scrollTop:$("#services").offset().top } , 1000, function() {
+                activeNavAnchors("/#services");
+                isScrollingAnimation = false;
+            });
+            return;
+        } else if (!isWelcomePage && $(this).attr("href") === "/#services") {
+            event.preventDefault();
+            window.location.href = "/#services";
+            return;
+        } else if (isWelcomePage && $(this).attr("href") === "/") {
+            event.preventDefault();
+            isScrollingAnimation = true;
+            hideNavTransparentBackground();
+            hideNavLogo();
+            hideNavMenu();
+            closeHamburgerMenu();
+            showArrow();
+            $('html,body').animate( { scrollTop: 0 } , 1000, function() {
+                activeNavAnchors("/");
+                isScrollingAnimation = false;
+            });     
+            return;
+        } 
+    });
 
     var lastScrollTop = 0; // Previous page position
     var minScrollEffectDistance = 50;
