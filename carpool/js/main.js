@@ -259,7 +259,7 @@ $(function() {
             showNavLogo();
             showNavMenu();
             if (isWelcomePage) {
-                activeNavAnchors("/");
+                activeNavAnchors("/#services");
             }
         } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) { // Content portion
             if (st > lastScrollTop) { // Downscroll 
