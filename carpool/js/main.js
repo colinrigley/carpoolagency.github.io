@@ -51,12 +51,47 @@ $(function() {
         isArticlePage = true;
     }
 
+    var showHamburgerMenu = function() {
+        if ($(".header .dropdownContainer").is(':hidden')) {
+            $(".header .dropdownContainer").slideDown(200);
+            $(".header .dropDownCover").show();
+        }
+    }
+
+    var closeHamburgerMenu = function() {
+        if ($(".header .dropdownContainer").is(':visible')) {
+            $(".header .dropdownContainer").slideUp(200);
+            $(".header .dropDownCover").hide();
+        }
+    }
+
+    // Bind clicking to show menu dropdown container
+    $(".header .rightContainer").unbind("click").bind("click", function() {
+        showHamburgerMenu();
+    })
+
+    $(".header .closeContainer").unbind("click").bind("click", function() {
+        closeHamburgerMenu();
+    })
+
+    // Bind clicking outside the the dropdown to close the dropdown
+    $(document).mouseup(function (e) {
+        var container = $("header .dropdownContainer");
+
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            closeHamburgerMenu();
+        }
+    });
+
     // Smooth transition between pages
     $(".pageNavLink").unbind("click").bind("click", function(event) {        
         // Smooth transition to services on Welcome page
         if (isWelcomePage && $(this).attr("href") === "/#services") {
             event.preventDefault();
             isScrollingAnimation = true;
+            closeHamburgerMenu();
             $('html,body').animate( { scrollTop:$("#services").offset().top } , 1000, function() {
                 activeNavAnchors("/#services");
                 isScrollingAnimation = false;
@@ -72,6 +107,7 @@ $(function() {
             hideNavTransparentBackground();
             hideNavLogo();
             hideNavMenu();
+            closeHamburgerMenu();
             $('html,body').animate( { scrollTop: 0 } , 1000, function() {
                 activeNavAnchors("/");
                 isScrollingAnimation = false;
@@ -501,28 +537,7 @@ $(function() {
     //     }
     // });
 
-    // Bind clicking to show menu dropdown container
-    $(".header .rightContainer").unbind("click").bind("click", function() {
-        $(".header .dropdownContainer").slideDown(200);
-        $(".header .dropDownCover").show();
-    })
 
-    $(".header .closeContainer").unbind("click").bind("click", function() {
-        $(".header .dropdownContainer").slideUp(200);
-        $(".header .dropDownCover").hide();
-    })
-
-    // Bind clicking outside the the dropdown to close the dropdown
-    $(document).mouseup(function (e) {
-        var container = $("header .dropdownContainer");
-
-        if (!container.is(e.target) // if the target of the click isn't the container...
-            && container.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            $(".header .dropdownContainer").slideUp(200);
-            $(".header .dropDownCover").hide();
-        }
-    });
 
     // Footer Navigation binding
     var showMessageForm = function() {
