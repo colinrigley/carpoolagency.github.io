@@ -101,10 +101,8 @@ $(function() {
     });
 
     // Hide the navigation logo and menu on start up for welcome page
-    if (isWelcomePage) {
-        $(".header .logoContainer").hide();
-        $(".header .menuContainer").hide();
-    }
+    $(".header .logoContainer").hide();
+    $(".header .menuContainer").hide();
 
     var showNavLogo = function() {
         if ($(".header .logoContainer").is(':hidden')) {
@@ -247,10 +245,8 @@ $(function() {
         if (st < upperTopMediaAnchor) { // Top media portion
             hideNavTransparentBackground();
             showArrow();
-            if (isWelcomePage) {
-                hideNavLogo();
-                hideNavMenu();
-            }
+            hideNavLogo();
+            hideNavMenu();
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
             hideNavTransparentBackground();
             blurArrow();

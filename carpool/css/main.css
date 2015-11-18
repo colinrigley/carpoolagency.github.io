@@ -1622,13 +1622,15 @@ body {
    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-/*#carpool .bgMedia {
-    background:transparent url('/carpool/img/video_poster.png') no-repeat 0 0; 
-   -webkit-background-size:cover; 
-   -moz-background-size:cover; 
-   -o-background-size:cover; 
-   background-size:cover;
-}*/
+#carpool .bgMedia {
+    width: 100%;
+    height: 100vh;
+    -webkit-background-size:cover; 
+    -moz-background-size:cover; 
+    -o-background-size:cover; 
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 
 #carpool #welcome .welcomeVideo-overlay {
     position: absolute;
@@ -1953,8 +1955,10 @@ body {
     text-decoration: underline;
 }
 
-#postArticle img, iframe {
+#postArticle #postBody img, #postArticle #postBody iframe {
     max-width: 100%;
+    display: block;
+    margin: 10px auto;
 }
 
 #postArticle ul li {

@@ -4,7 +4,7 @@ title: What Responsive Design Can Teach Us About Syndicated Content
 author: Darren Litchfield
 authorImage: darren.jpg
 defaultImage: /carpool/img/posts_images/about.png
-permalink: /What-Responsive-Design-Can-Teach-Us-About-Syndicated-Content.html
+permalink: /articles/What-Responsive-Design-Can-Teach-Us-About-Syndicated-Content.html
 ---
 Everything we do at Carpool is related to helping people make work a better place to be. This effort takes on many forms so our people have to be really good at experience design, community management, techonology and project management to name a few.
 
