@@ -1634,7 +1634,14 @@ body {
 #carpool #welcome .welcomeVideo-overlay {
     position: absolute;
     bottom: 182px;
-    left: 238px;
+    left: 0;
+    right: 0;
+    /*left: 238px;
+    width: 435px;
+    height: 280px;*/
+}
+
+#carpool #welcome .welcomeVideo-overlay .welcomeWrapper {
     width: 435px;
     height: 280px;
 }
@@ -2102,8 +2109,7 @@ body {
 }
 
 #carpool .header .logoContainer {
-    position: fixed;
-    left: 180px;
+    margin-left: -60px;
 }
 
 #carpool .header .logoContainer .logo {
@@ -2117,9 +2123,7 @@ body {
 }
 
 #carpool .header .menuContainer {
-    position: fixed;
-    left: 238px;
-    top: 17px;
+    padding-top: 17px;
 }
 
 #carpool .header .menuContainer .globalNav li {
