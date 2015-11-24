@@ -1540,8 +1540,7 @@ body {
     font-weight: 700;
 }
 
-#carpool .header .dropdownContainer .pageNavLink.active,
-#carpool .welcomeMenu .pageNavLink.active {
+#carpool .header .dropdownContainer .pageNavLink.active {
     font-weight: 400;
 }
 
@@ -1636,7 +1635,8 @@ body {
     position: absolute;
     bottom: 182px;
     left: 238px;
-    width: 406px;
+    width: 435px;
+    height: 280px;
 }
 
 #carpool #welcome .welcomeVideo-overlay .welcomeLogo {
@@ -1663,6 +1663,10 @@ body {
     display: inline;
     margin-right: 21px;
     list-style: none;
+}
+
+#carpool #welcome .welcomeVideo-overlay .welcomeMenu li:last-child {
+    margin-right: 0;
 }
 
 #carpool .video-overlay {
@@ -2099,6 +2103,7 @@ body {
 
 #carpool .header .logoContainer {
     position: fixed;
+    left: 180px;
 }
 
 #carpool .header .logoContainer .logo {
@@ -2108,20 +2113,19 @@ body {
     width: 50px;
     height: 35px;
     background-size: contain;
-    margin-left: 28px;
     margin-top: 10px;
 }
 
 #carpool .header .menuContainer {
     position: fixed;
-    left: 88px;
+    left: 238px;
     top: 17px;
 }
 
 #carpool .header .menuContainer .globalNav li {
     display: inline;
     margin-right: 21px;
-    font-size: 17px;
+    font-size: 16px;
     list-style: none;
     color: #000;
 }

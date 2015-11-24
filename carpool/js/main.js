@@ -56,23 +56,23 @@ $(function() {
             $(".header .dropdownContainer").slideDown(200);
             $(".header .dropDownCover").show();
         }
-    }
+    };
 
     var closeHamburgerMenu = function() {
         if ($(".header .dropdownContainer").is(':visible')) {
             $(".header .dropdownContainer").slideUp(200);
             $(".header .dropDownCover").hide();
         }
-    }
+    };
 
     // Bind clicking to show menu dropdown container
     $(".header .rightContainer").unbind("click").bind("click", function() {
         showHamburgerMenu();
-    })
+    });
 
     $(".header .closeContainer").unbind("click").bind("click", function() {
         closeHamburgerMenu();
-    })
+    });
 
     // Bind clicking outside the the dropdown to close the dropdown
     $(document).mouseup(function (e) {
@@ -108,37 +108,73 @@ $(function() {
         if ($(".header .logoContainer").is(':hidden')) {
             $(".header .logoContainer").slideDown(200);
         }
-    }
+    };
 
     var hideNavLogo = function() {
         if ($(".header .logoContainer").is(':visible')) {
             $(".header .logoContainer").slideUp(200);
         }
-    }
+    };
+
+    var instantShowNavLogo = function() {
+        if ($(".header .logoContainer").is(':hidden')) {
+            $(".header .logoContainer").show();
+        }
+    };
+
+    var instantHideNavLogo = function() {
+        if ($(".header .logoContainer").is(':visible')) {
+            $(".header .logoContainer").hide();
+        }
+    };
 
     var showNavMenu = function() {
         if ($(".header .menuContainer").is(':hidden')) {
             $(".header .menuContainer").slideDown(200);
         }
-    }
+    };
 
     var hideNavMenu = function() {
         if ($(".header .menuContainer").is(':visible')) {
             $(".header .menuContainer").slideUp(200);
         }
-    }
+    };
+
+    var instantShowNavMenu = function() {
+        if ($(".header .menuContainer").is(':hidden')) {
+            $(".header .menuContainer").show();
+        }
+    };
+
+    var instantHideNavMenu = function() {
+        if ($(".header .menuContainer").is(':visible')) {
+            $(".header .menuContainer").hide();
+        }
+    };
 
     var showNavTransparentBackground = function() {
         if ($(".header .navContainer .transparentBg").is(':hidden')) {
             $(".header .navContainer .transparentBg").slideDown(200);
         }
-    }
+    };
 
     var hideNavTransparentBackground = function() {
         if ($(".header .navContainer .transparentBg").is(':visible')) {
             $(".header .navContainer .transparentBg").slideUp(200);
         }
-    }
+    };
+
+    var instantShowNavTransparentBackground = function() {
+        if ($(".header .navContainer .transparentBg").is(':hidden')) {
+            $(".header .navContainer .transparentBg").show();
+        }
+    };
+
+    var instantHideNavTransparentBackground = function() {
+        if ($(".header .navContainer .transparentBg").is(':visible')) {
+            $(".header .navContainer .transparentBg").hide();
+        }
+    };
 
     var showArrow = function() {
         if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "0.3") {
@@ -148,7 +184,7 @@ $(function() {
         if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
             $(".downArrowContainer .downArrow").fadeTo(100, 1);
         }
-    }
+    };
 
     var blurArrow = function() {
         if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "1") {
@@ -158,7 +194,7 @@ $(function() {
         if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
             $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
         }
-    }
+    };
 
     // Smooth transition between pages
     $(".pageNavLink").unbind("click").bind("click", function(event) {        
@@ -210,6 +246,11 @@ $(function() {
         var st = $(this).scrollTop(); // Current page position
 
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
+
+        if (isWelcomePage) {
+            upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark - $("#welcome .welcomeMenu").height() - 20;
+        }
+
         var topMediaAnchor = $(".topMediaContainer").height();
         var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
@@ -245,36 +286,55 @@ $(function() {
         if (st < upperTopMediaAnchor) { // Top media portion
             hideNavTransparentBackground();
             showArrow();
-            hideNavLogo();
-            hideNavMenu();
-        } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
-            hideNavTransparentBackground();
-            blurArrow();
-            showNavLogo();
-            showNavMenu();
+            instantHideNavLogo();
+            instantHideNavMenu();
             if (isWelcomePage) {
-                activeNavAnchors("/#services");
+                if ($("#welcome .welcomeMenu").is(':hidden')) {
+                    $("#welcome .welcomeMenu").show();
+                }
+                activeNavAnchors("/");
+            }
+        } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
+            instantHideNavTransparentBackground();
+            blurArrow();
+            instantShowNavLogo();
+            instantShowNavMenu();
+            if (isWelcomePage) {
+                if ($("#welcome .welcomeMenu").is(':visible')) {
+                    $("#welcome .welcomeMenu").hide();
+                }
+                activeNavAnchors("/");
             }
         } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) { // Content portion
-            if (st > lastScrollTop) { // Downscroll 
-                hideNavTransparentBackground();
-                hideNavMenu();
-            } else if (st < lastScrollTop) { // Upscroll
-                showNavTransparentBackground();
-                showNavLogo();
-                showNavMenu();
-            }
+            instantShowNavTransparentBackground();
+            instantShowNavLogo();
+            instantShowNavMenu();
+
+            // if (st > lastScrollTop) { // Downscroll 
+            //     hideNavTransparentBackground();
+            //     hideNavMenu();
+            // } else if (st < lastScrollTop) { // Upscroll
+            //     showNavTransparentBackground();
+            //     showNavLogo();
+            //     showNavMenu();
+            // }
 
             // Activate service nav anchor for welcome page
             if (isWelcomePage) {
+                if ($("#welcome .welcomeMenu").is(':visible')) {
+                    $("#welcome .welcomeMenu").hide();
+                }
                 activeNavAnchors("/#services");
             }
         } else if (st > lowerPageFooterAnchor) { // Footer portion
             if ($(".header .logoContainer").is(':visible') || $(".header .menuContainer").is(':visible')) {
-                showNavTransparentBackground();
+                instantShowNavTransparentBackground();
             }
 
             if (isWelcomePage) {
+                if ($("#welcome .welcomeMenu").is(':visible')) {
+                    $("#welcome .welcomeMenu").hide();
+                }
                 activeNavAnchors("/#services");
             }
         }
