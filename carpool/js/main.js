@@ -8,6 +8,7 @@
 $(function() {
     var currentPage = "";
     var isWelcomePage = false;
+    var isAboutPage = false;
     var isArticlePage = false;
     var isScrollingAnimation = false;
 
@@ -29,6 +30,7 @@ $(function() {
         }
     } else if ($("#about").length > 0) {
         currentPage = "about";
+        isAboutPage = true;
     } else if ($("#work").length > 0) {
         currentPage = "work";
     } else if ($("#thoughts").length > 0) {
@@ -232,19 +234,57 @@ $(function() {
     var minScrollEffectDistance = 50;
     var upperTopMediaAnchorMark = 180;
     var lowerPageFooterAnchorMark = 100;
-    var firstFooterAnimationMark = $(".topMediaContainer").height() + 
+
+    // video framerate animation
+    // select video element 
+    var iconVideo1;
+    var iconVideo2;
+    var iconVideo3;
+
+    if (isWelcomePage || isAboutPage) {
+        iconVideo1 = document.getElementById('iconVideo1');
+        iconVideo2 = document.getElementById('iconVideo2');
+        iconVideo3 = document.getElementById('iconVideo3');
+
+        // pause video on load
+        iconVideo1.pause();
+        iconVideo2.pause();
+        iconVideo3.pause();
+    }
 
     // Scrolling event binding
     $(window).scroll(function(event) {
         var self = this;
+        var st = $(this).scrollTop(); // Current page position
+
+        // Icons Videos animation
+        if (isWelcomePage || isAboutPage) {
+            var iconVideo1Mark = $("#iconVideo1").offset().top - $(window).height();
+            var iconVideo2Mark = $("#iconVideo2").offset().top - $(window).height();
+            var iconVideo3Mark = $("#iconVideo3").offset().top - $(window).height();
+
+            if (st > iconVideo1Mark) {
+                var iconVideo1Time = (window.pageYOffset - (iconVideo1Mark + 100)) / 50;
+                iconVideo1.currentTime = iconVideo1Time;
+            }
+
+            if (st > iconVideo2Mark) {
+                var iconVideo2Time = (window.pageYOffset - (iconVideo2Mark + 100)) / 50;
+                iconVideo2.currentTime = iconVideo2Time;
+            }
+
+            if (st > iconVideo3Mark) {
+                var iconVideo3Time = (window.pageYOffset - (iconVideo3Mark + 100)) / 50;
+                iconVideo3.currentTime = iconVideo3Time;
+            }
+            //console.log("pageYOffset: ", window.pageYOffset);
+        }
 
         if (isScrollingAnimation) {
             //console.log("Prevent scroll!");
             event.preventDefault();
             return false;
         }
-
-        var st = $(this).scrollTop(); // Current page position
 
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
 
@@ -341,53 +381,53 @@ $(function() {
         }
 
         // Footer paper clip animation
-        if (st > topMediaAnchor) {
-            // Get the anchor when the footer start coming into view
-            var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
-            var topFooterContainerAnchor = $(".footer .footerTopContainer").offset().top - ($(window).height() - $(".footer .footerTopContainer").height());
+        // if (st > topMediaAnchor) {
+        //     // Get the anchor when the footer start coming into view
+        //     var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
+        //     var topFooterContainerAnchor = $(".footer .footerTopContainer").offset().top - ($(window).height() - $(".footer .footerTopContainer").height());
 
-            var bottomFooterViewAnchor = $(".footer .footerBottomContainer").offset().top - $(window).height() + 50;
-            var bottomFooterContainerAnchor = $(".footer .footerBottomContainer").offset().top - ($(window).height() - $(".footer .footerBottomContainer").outerHeight());
+        //     var bottomFooterViewAnchor = $(".footer .footerBottomContainer").offset().top - $(window).height() + 50;
+        //     var bottomFooterContainerAnchor = $(".footer .footerBottomContainer").offset().top - ($(window).height() - $(".footer .footerBottomContainer").outerHeight());
             
-            // Animation when downscroll only
-            // Top footer
-            if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
-                event.preventDefault();
-                if (!isScrollingAnimation) {
-                    isScrollingAnimation = true;
-                    // Scroll above the video background and pull up the content of the page
-                    $("html, body").animate({
-                        scrollTop: topFooterContainerAnchor
-                    }, {
-                        duration: 600,
-                        complete: function() {
-                            lastScrollTop = $(window).scrollTop();
-                            isScrollingAnimation = false;
-                        }
-                    });
-                }
-            }
+        //     // Animation when downscroll only
+        //     // Top footer
+        //     if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
+        //         event.preventDefault();
+        //         if (!isScrollingAnimation) {
+        //             isScrollingAnimation = true;
+        //             // Scroll above the video background and pull up the content of the page
+        //             $("html, body").animate({
+        //                 scrollTop: topFooterContainerAnchor
+        //             }, {
+        //                 duration: 600,
+        //                 complete: function() {
+        //                     lastScrollTop = $(window).scrollTop();
+        //                     isScrollingAnimation = false;
+        //                 }
+        //             });
+        //         }
+        //     }
 
-            // Animation when downscroll only
-            // Bottom Footer
-            if (st > lastScrollTop && st > bottomFooterViewAnchor && st < (bottomFooterViewAnchor + 200)) {
-                event.preventDefault();
-                if (!isScrollingAnimation) {
-                    isScrollingAnimation = true;
-                    // Scroll above the video background and pull up the content of the page
-                    $("html, body").animate({
-                        scrollTop: bottomFooterContainerAnchor
-                    }, {
-                        duration: 600,
-                        complete: function() {
-                            lastScrollTop = $(window).scrollTop();
-                            isScrollingAnimation = false;
-                        }
-                    });
-                }
-            }
+        //     // Animation when downscroll only
+        //     // Bottom Footer
+        //     if (st > lastScrollTop && st > bottomFooterViewAnchor && st < (bottomFooterViewAnchor + 200)) {
+        //         event.preventDefault();
+        //         if (!isScrollingAnimation) {
+        //             isScrollingAnimation = true;
+        //             // Scroll above the video background and pull up the content of the page
+        //             $("html, body").animate({
+        //                 scrollTop: bottomFooterContainerAnchor
+        //             }, {
+        //                 duration: 600,
+        //                 complete: function() {
+        //                     lastScrollTop = $(window).scrollTop();
+        //                     isScrollingAnimation = false;
+        //                 }
+        //             });
+        //         }
+        //     }
 
-        }
+        // }
 
 
         lastScrollTop = st;
