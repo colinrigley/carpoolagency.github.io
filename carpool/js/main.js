@@ -234,13 +234,21 @@ $(function() {
     var lowerPageFooterAnchorMark = 100;
     var firstFooterAnimationMark = $(".topMediaContainer").height() + 
 
+
+    $(".pb-312px").css("transition","all 1s ease-in-out");
+    $(".footerBottomContainer").css("transition","all 1s ease-in-out");
+    $(".footerBottomContainer").css("transition-delay","0.5s");
+    $(".footerBottomContainer").css("padding-top","0px");
+
     // Scrolling event binding
     $(window).scroll(function(event) {
         var self = this;
 
         if (isScrollingAnimation) {
             //console.log("Prevent scroll!");
+            event.stopPropagation();
             event.preventDefault();
+            event.returnValue = false;
             return false;
         }
 
@@ -340,51 +348,84 @@ $(function() {
             }
         }
 
+
+        console.log("topMediaAnchor: ", topMediaAnchor);
         // Footer paper clip animation
         if (st > topMediaAnchor) {
             // Get the anchor when the footer start coming into view
-            var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
+            //var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
+            var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() - 100;
             var topFooterContainerAnchor = $(".footer .footerTopContainer").offset().top - ($(window).height() - $(".footer .footerTopContainer").height());
 
             var bottomFooterViewAnchor = $(".footer .footerBottomContainer").offset().top - $(window).height() + 50;
             var bottomFooterContainerAnchor = $(".footer .footerBottomContainer").offset().top - ($(window).height() - $(".footer .footerBottomContainer").outerHeight());
             
+            console.log("scrollTop: ",st);
+            console.log(($(".footer").offset().top - $(window).height()));
+
             // Animation when downscroll only
             // Top footer
-            if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
+            //if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
+            if (st > lastScrollTop && st > topFooterViewAnchor) {
+                console.log("down");
+                event.stopPropagation();
                 event.preventDefault();
-                if (!isScrollingAnimation) {
-                    isScrollingAnimation = true;
-                    // Scroll above the video background and pull up the content of the page
-                    $("html, body").animate({
-                        scrollTop: topFooterContainerAnchor
-                    }, {
-                        duration: 600,
-                        complete: function() {
-                            lastScrollTop = $(window).scrollTop();
-                            isScrollingAnimation = false;
-                        }
-                    });
+                // if (!isScrollingAnimation) {
+                //     isScrollingAnimation = true;
+                //     // Scroll above the video background and pull up the content of the page
+                //     $("html, body").animate({
+                //         scrollTop: topFooterContainerAnchor
+                //     }, {
+                //         duration: 600,
+                //         complete: function() {
+                //             lastScrollTop = $(window).scrollTop();
+                //             isScrollingAnimation = false;
+                //         }
+                //     });
+                // }
+                // $(".footer").css("transform","translateY(-190px)");
+                // $(".footer").css("transition","all 1s ease-in-out");
+
+                if ($(".pb-312px").css("padding-bottom") === "312px" ) {
+                    $(".pb-312px").css("padding-bottom","98px");
+                }
+                
+                
+                if ($(".footerBottomContainer").css("padding-top") === "0px" ) {
+                    $(".footerBottomContainer").css("padding-top","75px");
+                }
+
+                // $(".carpool-page").css("margin-bottom","0");
+                // $(".carpool-page").css("transition","all 1s ease-in-out");
+            } else if (st < lastScrollTop && st < ($(".footer").offset().top - $(window).height())) {
+                console.log("up");
+                if ($(".pb-312px").css("padding-bottom") === "98px" ) {
+                    $(".pb-312px").css("padding-bottom","312px");
+                }
+
+                if ($(".footerBottomContainer").css("padding-top") === "75px" ) {
+                    $(".footerBottomContainer").css("padding-top","0px");
                 }
             }
 
             // Animation when downscroll only
             // Bottom Footer
             if (st > lastScrollTop && st > bottomFooterViewAnchor && st < (bottomFooterViewAnchor + 200)) {
+                event.stopPropagation();
                 event.preventDefault();
-                if (!isScrollingAnimation) {
-                    isScrollingAnimation = true;
-                    // Scroll above the video background and pull up the content of the page
-                    $("html, body").animate({
-                        scrollTop: bottomFooterContainerAnchor
-                    }, {
-                        duration: 600,
-                        complete: function() {
-                            lastScrollTop = $(window).scrollTop();
-                            isScrollingAnimation = false;
-                        }
-                    });
-                }
+                // if (!isScrollingAnimation) {
+                //     isScrollingAnimation = true;
+                //     // Scroll above the video background and pull up the content of the page
+                //     $("html, body").animate({
+                //         scrollTop: bottomFooterContainerAnchor
+                //     }, {
+                //         duration: 600,
+                //         complete: function() {
+                //             lastScrollTop = $(window).scrollTop();
+                //             isScrollingAnimation = false;
+                //         }
+                //     });
+                // }
             }
 
         }
