@@ -93,8 +93,8 @@ body {
     border: 0;
     outline: 0;
     font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+    /* vertical-align: baseline; */
+    background: rgba(255, 255, 255, 0);
 }
 
 #carpool ul, ol {
@@ -1545,7 +1545,11 @@ body {
 }
 
 #carpool .carpool-page {
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 0px 35px #000;
 }
 
 #carpool .topMediaContainer {
@@ -2329,10 +2333,12 @@ body {
  */
 
 #carpool .footer {
-    position: relative;
+    /* position: fixed; */
     left: 0;
     right: 0;
-    bottom: 0;
+    /* bottom: 0; */
+    /* height: 294px; */
+    z-index: 23;
 }
 
 
@@ -2345,6 +2351,7 @@ body {
     -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
     box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    z-index: 7;
 }
 
 #carpool .footer .messageFormBackground input {
@@ -2463,7 +2470,7 @@ body {
 }
 
 #carpool .footer .locationDropdownContainer {
-    position: relative;
+    /* position: relative; */
     display: none;
 }
 
@@ -2472,11 +2479,16 @@ body {
 }
 
 #carpool .footerTopContainer {
-    position: relative;
+    position: fixed;
+    height: 294px;
+    z-index:5;
+    bottom:0;
+    width: 100%;
+    box-shadow: 0 6px 35px #000;
 }
 
 #carpool .footerBottomContainer {
-    position: relative;
+    position: fixed;
     -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
     box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
@@ -2529,6 +2541,10 @@ body {
 
 #carpool .footerTopContainer table .iconLink.active {
     background: #e5e500;
+    box-shadow: 1px 2px 18px #000;
+    position: relative;
+    top: -1px;
+    border: 2px;
 }
 
 #carpool .footerTopContainer table td a {
@@ -2571,11 +2587,24 @@ body {
     width: 100%;
     padding: 75px 0 100px 0;
     background: #000;
-    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: 
+    
+    
+    -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: 
+    
+    
+    -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: 
+    
+    
+    -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    background-image: 
+    
+    
+    -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
     background-image: repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    bottom: 0px;
 }
 
 #carpool .footerLogo {
@@ -2591,4 +2620,16 @@ body {
     color: #FFF;
     font-size: 15px;
     margin-top: 20px;
+}
+.debugStuff
+{
+    position:fixed;
+    top: 50%;
+    background: red !importnat;
+    z-index:100;
+    color:blue;
+    height:100px;
+    font-size:large;
+    font-weight: bolder;
+    font-size: 140% !important;
 }

@@ -8,7 +8,6 @@
 $(function() {
     var currentPage = "";
     var isWelcomePage = false;
-    var isAboutPage = false;
     var isArticlePage = false;
     var isScrollingAnimation = false;
 
@@ -30,7 +29,6 @@ $(function() {
         }
     } else if ($("#about").length > 0) {
         currentPage = "about";
-        isAboutPage = true;
     } else if ($("#work").length > 0) {
         currentPage = "work";
     } else if ($("#thoughts").length > 0) {
@@ -234,57 +232,19 @@ $(function() {
     var minScrollEffectDistance = 50;
     var upperTopMediaAnchorMark = 180;
     var lowerPageFooterAnchorMark = 100;
-
-    // video framerate animation
-    // select video element 
-    var iconVideo1;
-    var iconVideo2;
-    var iconVideo3;
-
-    if (isWelcomePage || isAboutPage) {
-        iconVideo1 = document.getElementById('iconVideo1');
-        iconVideo2 = document.getElementById('iconVideo2');
-        iconVideo3 = document.getElementById('iconVideo3');
-
-        // pause video on load
-        iconVideo1.pause();
-        iconVideo2.pause();
-        iconVideo3.pause();
-    }
+    var firstFooterAnimationMark = $(".topMediaContainer").height() + 
 
     // Scrolling event binding
     $(window).scroll(function(event) {
         var self = this;
-        var st = $(this).scrollTop(); // Current page position
-
-        // Icons Videos animation
-        if (isWelcomePage || isAboutPage) {
-            var iconVideo1Mark = $("#iconVideo1").offset().top - $(window).height();
-            var iconVideo2Mark = $("#iconVideo2").offset().top - $(window).height();
-            var iconVideo3Mark = $("#iconVideo3").offset().top - $(window).height();
-
-            if (st > iconVideo1Mark) {
-                var iconVideo1Time = (window.pageYOffset - (iconVideo1Mark + 100)) / 50;
-                iconVideo1.currentTime = iconVideo1Time;
-            }
-
-            if (st > iconVideo2Mark) {
-                var iconVideo2Time = (window.pageYOffset - (iconVideo2Mark + 100)) / 50;
-                iconVideo2.currentTime = iconVideo2Time;
-            }
-
-            if (st > iconVideo3Mark) {
-                var iconVideo3Time = (window.pageYOffset - (iconVideo3Mark + 100)) / 50;
-                iconVideo3.currentTime = iconVideo3Time;
-            }
-            //console.log("pageYOffset: ", window.pageYOffset);
-        }
 
         if (isScrollingAnimation) {
             //console.log("Prevent scroll!");
             event.preventDefault();
             return false;
         }
+
+        var st = $(this).scrollTop(); // Current page position
 
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
 
@@ -379,59 +339,59 @@ $(function() {
                 activeNavAnchors("/#services");
             }
         }
-
+/*
         // Footer paper clip animation
-        // if (st > topMediaAnchor) {
-        //     // Get the anchor when the footer start coming into view
-        //     var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
-        //     var topFooterContainerAnchor = $(".footer .footerTopContainer").offset().top - ($(window).height() - $(".footer .footerTopContainer").height());
+        if (st > topMediaAnchor) {
+            // Get the anchor when the footer start coming into view
+            var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
+            var topFooterContainerAnchor = $(".footer .footerTopContainer").offset().top - ($(window).height() - $(".footer .footerTopContainer").height());
 
-        //     var bottomFooterViewAnchor = $(".footer .footerBottomContainer").offset().top - $(window).height() + 50;
-        //     var bottomFooterContainerAnchor = $(".footer .footerBottomContainer").offset().top - ($(window).height() - $(".footer .footerBottomContainer").outerHeight());
+            var bottomFooterViewAnchor = $(".footer .footerBottomContainer").offset().top - $(window).height() + 50;
+            var bottomFooterContainerAnchor = $(".footer .footerBottomContainer").offset().top - ($(window).height() - $(".footer .footerBottomContainer").outerHeight());
             
-        //     // Animation when downscroll only
-        //     // Top footer
-        //     if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
-        //         event.preventDefault();
-        //         if (!isScrollingAnimation) {
-        //             isScrollingAnimation = true;
-        //             // Scroll above the video background and pull up the content of the page
-        //             $("html, body").animate({
-        //                 scrollTop: topFooterContainerAnchor
-        //             }, {
-        //                 duration: 600,
-        //                 complete: function() {
-        //                     lastScrollTop = $(window).scrollTop();
-        //                     isScrollingAnimation = false;
-        //                 }
-        //             });
-        //         }
-        //     }
+            // Animation when downscroll only
+            // Top footer
+            if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
+                event.preventDefault();
+                if (!isScrollingAnimation) {
+                    isScrollingAnimation = true;
+                    // Scroll above the video background and pull up the content of the page
+                    $("html, body").animate({
+                        scrollTop: topFooterContainerAnchor
+                    }, {
+                        duration: 600,
+                        complete: function() {
+                            lastScrollTop = $(window).scrollTop();
+                            isScrollingAnimation = false;
+                        }
+                    });
+                }
+            }
 
-        //     // Animation when downscroll only
-        //     // Bottom Footer
-        //     if (st > lastScrollTop && st > bottomFooterViewAnchor && st < (bottomFooterViewAnchor + 200)) {
-        //         event.preventDefault();
-        //         if (!isScrollingAnimation) {
-        //             isScrollingAnimation = true;
-        //             // Scroll above the video background and pull up the content of the page
-        //             $("html, body").animate({
-        //                 scrollTop: bottomFooterContainerAnchor
-        //             }, {
-        //                 duration: 600,
-        //                 complete: function() {
-        //                     lastScrollTop = $(window).scrollTop();
-        //                     isScrollingAnimation = false;
-        //                 }
-        //             });
-        //         }
-        //     }
+            // Animation when downscroll only
+            // Bottom Footer
+            if (st > lastScrollTop && st > bottomFooterViewAnchor && st < (bottomFooterViewAnchor + 200)) {
+                event.preventDefault();
+                if (!isScrollingAnimation) {
+                    isScrollingAnimation = true;
+                    // Scroll above the video background and pull up the content of the page
+                    $("html, body").animate({
+                        scrollTop: bottomFooterContainerAnchor
+                    }, {
+                        duration: 600,
+                        complete: function() {
+                            lastScrollTop = $(window).scrollTop();
+                            isScrollingAnimation = false;
+                        }
+                    });
+                }
+            }
 
-        // }
+        }
 
 
         lastScrollTop = st;
-
+*/
         // if (isScrollingAnimation) {
         //     event.preventDefault();
         //     return false;
@@ -800,7 +760,7 @@ $(function() {
     });
 
     // Location
-    $(".footer .footerLocation").unbind("click").bind("click", function(event) {
+   $(".footer .footerLocation").unbind("click").bind("click", function(event) {
         event.preventDefault();
         hideMessageForm();
         $(".footer .footerTopContainer table .iconLink").removeClass("active");
@@ -814,3 +774,69 @@ $(function() {
 
 
 });
+
+
+;
+(function() {
+    var throttle = function(type, name, obj) {
+        obj = obj || window;
+        var running = false;
+        var func = function() {
+            if (running) {
+                return;
+            }
+            running = true;
+            requestAnimationFrame(function() {
+                obj.dispatchEvent(new CustomEvent(name));
+                running = false;
+            });
+        };
+        obj.addEventListener(type, func);
+    };
+    //   var myint=0;
+    /* init - you can init any event */
+    throttle("scroll", "optimizedScroll");
+})();
+
+
+// handle event
+window.addEventListener("optimizedScroll", function() {
+ 
+ 
+    var variable = 70;//$('input.u-full-width').val();
+        var contentTop = int($('.carpool-page').offset().top);
+        var contentOutter = int($('.carpool-page').outerHeight(true));
+        var footerTopTop = int($('.footerTopContainer').offset().top);
+        var footerBottomTop = int($('.footerBottomContainer').offset().top);
+        var footertopHeight = int($('.footerTopContainer').outerHeight(true));
+         var footerOuterHeight = int($('.footerBottomContainer').outerHeight(true));
+        var moveSize = int((contentOutter + footerOuterHeight));
+        var scrollMax = int(footertopHeight + footerTopTop);
+        var scrollY = int(window.scrollY);
+        var fmove = (moveSize < footerTopTop) ? footerTopTop - ($('.carpool-page').outerHeight() + $('.carpool-page').offset().top) : 0;
+        if(!$('.debugStuff')) {
+             $('#carpool').prepend("<div class='debugStuff'></div>");
+        } else { 
+        $('.debugStuff').html('Debug: contentTop' + contentTop + " | scrollY" + scrollY + " | scrollYB" + (scrollY+window.outerHeight) + " | footertopHeight" + footertopHeight + " | footerOuterHeight" + footerOuterHeight + " | fmove" + fmove + " | scrollMax" + scrollMax + " |  moveSize" + moveSize + " | footerBottomTop " + footerBottomTop + " | contentOutter " + contentOutter + " | footerTopTop " + footerTopTop + " <<<<")
+        }
+         if ((scrollMax == contentOutter) ) {
+       $('.footerTopContainer').css({'position': 'relative','margin-bottom': (footerOuterHeight)+'px'});
+            $('.carpool-page').css('margin-bottom','0px');
+        console.log('blah');
+        }else {
+            
+           //  if (((scrollY+window.outerHeight) < (footerOuterHeight+contentOutter) > (scrollY+window.outerHeight-100)) || (1 == 0 )) {
+           if (footerTopTop > footerBottomTop) {
+              $('.footerTopContainer').css('position','fixed').css('margin-bottom', '1px');
+               $('.carpool-page').css('margin-bottom',footerOuterHeight+'px');
+             };
+ 
+//            console.log(fmove + ' con-' + $('.carpool-page').outerHeight() + ' ft-' + $('footer').offset().top);
+        }
+    
+
+});
+
+function int(val){
+  return parseInt(val);
+}
