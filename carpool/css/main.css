@@ -1631,6 +1631,7 @@ body {
 #carpool .bgMedia {
     width: 100%;
     height: 100vh;
+    min-height: 800px;
     -webkit-background-size:cover; 
     -moz-background-size:cover; 
     -o-background-size:cover; 
