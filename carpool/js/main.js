@@ -5,6 +5,96 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * Date: Friday Oct 16 2015
  */
+
+// Footer Navigation binding
+var showMessageForm = function() {
+    // Do nothing if whole top footer not showing
+    if ($('.footerTopContainer').css('position') === "fixed") {
+        return;
+    }
+
+    if ($(".footer .footerTopContainer .textBottom .tableText").text() === "Stalk us on Instagram. We don't mind.") {
+        $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
+            $(this).text("Send us a love letter").fadeIn(200);
+        });
+    }
+    if ($(".footer .messageFormBackground").is(':hidden')) {
+        $(".footer .messageFormBackground").slideDown(200);
+    }
+    $(".footerTopContainer").css("height","auto");
+};
+
+var hideMessageForm = function() {
+    if ($(".footer .footerTopContainer .textBottom .tableText").text() === "Send us a love letter") {
+        $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
+            $(this).text("Stalk us on Instagram. We don't mind.").fadeIn(200);
+        });
+    }
+
+    if ($(".footer .messageFormBackground").is(':visible')) {
+        $(".footer .messageFormBackground").slideUp(200);
+    }
+    $(".footerTopContainer").css("height","294px");
+};
+
+var showLocationDropdown = function() {
+    // Do nothing if whole top footer not showing
+    if ($('.footerTopContainer').css('position') === "fixed") {
+        return;
+    }
+
+    if ($(".footer .footerTopContainer .textBottom").css("opacity") === "1") {
+        $(".footer .footerTopContainer .textBottom").animate({
+            opacity: 0,
+            "z-index": "-1"
+        }, 200, function() {
+            $(".footer .location1 span").animate({
+                opacity: 1,
+                "font-weight": 700
+            }, 200);
+            $(".footer .location2 span").animate({
+                opacity: 1
+            }, 200);
+            $(".footer .location3 span").animate({
+                opacity: 1
+            }, 200);
+            $(".footer .location4 span").animate({
+                opacity: 1
+            }, 200);
+            if ($(".footer .locationDropdownContainer").is(':hidden')) {
+                $(".footer .locationDropdownContainer").slideDown(200);
+            }
+        });
+        $(".footerTopContainer").css("height","auto");
+    }
+};
+
+var hideLocationDropdown = function() {
+    if ($(".footer .footerTopContainer .textBottom").css("opacity") === "0") {
+        if ($(".footer .locationDropdownContainer").is(':visible')) {
+            $(".footer .locationDropdownContainer").slideUp(200);
+        }
+        $(".footer .location1 span").animate({
+            opacity: 0
+        }, 200);
+        $(".footer .location2 span").animate({
+            opacity: 0
+        }, 200);
+        $(".footer .location3 span").animate({
+            opacity: 0
+        }, 200);
+        $(".footer .location4 span").animate({
+            opacity: 0
+        }, 200, function() {
+            $(".footer .footerTopContainer .textBottom").animate({
+                opacity: 1,
+                "z-index": "0"
+            }, 200);
+        });
+    }
+    $(".footerTopContainer").css("height","294px");
+};
+
 $(function() {
     var currentPage = "";
     var isWelcomePage = false;
@@ -697,78 +787,6 @@ $(function() {
     //     }
     // });
 
-
-
-    // Footer Navigation binding
-    var showMessageForm = function() {
-        $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
-            $(this).text("Send us a love letter").fadeIn(200);
-        });
-        if ($(".footer .messageFormBackground").is(':hidden')) {
-            $(".footer .messageFormBackground").slideDown(200);
-        }
-    };
-
-    var hideMessageForm = function() {
-        $(".footer .footerTopContainer .textBottom .tableText").fadeOut(200, function() {
-            $(this).text("Stalk us on Instagram. We don't mind.").fadeIn(200);
-        });
-        if ($(".footer .messageFormBackground").is(':visible')) {
-            $(".footer .messageFormBackground").slideUp(200);
-        }
-    };
-
-    var showLocationDropdown = function() {
-        if ($(".footer .footerTopContainer .textBottom").css("opacity") === "1") {
-            $(".footer .footerTopContainer .textBottom").animate({
-                opacity: 0,
-                "z-index": "-1"
-            }, 200, function() {
-                $(".footer .location1 span").animate({
-                    opacity: 1,
-                    "font-weight": 700
-                }, 200);
-                $(".footer .location2 span").animate({
-                    opacity: 1
-                }, 200);
-                $(".footer .location3 span").animate({
-                    opacity: 1
-                }, 200);
-                $(".footer .location4 span").animate({
-                    opacity: 1
-                }, 200);
-                if ($(".footer .locationDropdownContainer").is(':hidden')) {
-                    $(".footer .locationDropdownContainer").slideDown(200);
-                }
-            });
-        }
-    };
-
-    var hideLocationDropdown = function() {
-        if ($(".footer .footerTopContainer .textBottom").css("opacity") === "0") {
-            if ($(".footer .locationDropdownContainer").is(':visible')) {
-                $(".footer .locationDropdownContainer").slideUp(200);
-            }
-            $(".footer .location1 span").animate({
-                opacity: 0
-            }, 200);
-            $(".footer .location2 span").animate({
-                opacity: 0
-            }, 200);
-            $(".footer .location3 span").animate({
-                opacity: 0
-            }, 200);
-            $(".footer .location4 span").animate({
-                opacity: 0
-            }, 200, function() {
-                $(".footer .footerTopContainer .textBottom").animate({
-                    opacity: 1,
-                    "z-index": "0"
-                }, 200);
-            });
-        }
-    };
-
     // Email Message
     $(".footer .footerEmail").unbind("click").bind("click", function(event) {
         event.preventDefault();
@@ -811,6 +829,95 @@ $(function() {
             hideLocationDropdown();
         }
     });
+});
 
+
+(function() {
+    var throttle = function(type, name, obj) {
+        obj = obj || window;
+        var running = false;
+        var func = function() {
+            if (running) {
+                return;
+            }
+            running = true;
+            requestAnimationFrame(function() {
+                obj.dispatchEvent(new CustomEvent(name));
+                running = false;
+            });
+        };
+        obj.addEventListener(type, func);
+    };
+    //   var myint=0;
+    /* init - you can init any event */
+    throttle("scroll", "optimizedScroll");
+})();
+
+
+// handle event
+window.addEventListener("optimizedScroll", function() {
+ 
+ 
+    var variable = 70;//$('input.u-full-width').val();
+    var contentTop = int($('.carpool-page').offset().top);
+    var contentOutter = int($('.carpool-page').outerHeight(true));
+    var footerTopTop = int($('.footerTopContainer').offset().top);
+    var footerBottomTop = int($('.footerBottomContainer').offset().top);
+    var footertopHeight = int($('.footerTopContainer').outerHeight(true));
+    var footerOuterHeight = int($('.footerBottomContainer').outerHeight(true));
+    var moveSize = int((contentOutter + footerOuterHeight));
+    var scrollMax = int(footertopHeight + footerTopTop);
+    var scrollY = int(window.scrollY);
+    var fmove = (moveSize < footerTopTop) ? footerTopTop - ($('.carpool-page').outerHeight() + $('.carpool-page').offset().top) : 0;
+    if(!$('.debugStuff')) {
+        $('#carpool').prepend("<div class='debugStuff'></div>");
+    } else { 
+        $('.debugStuff').html('Debug: contentTop' + contentTop + " | scrollY" + scrollY + " | scrollYB" + (scrollY+window.outerHeight) + " | footertopHeight" + footertopHeight + " | footerOuterHeight" + footerOuterHeight + " | fmove" + fmove + " | scrollMax" + scrollMax + " |  moveSize" + moveSize + " | footerBottomTop " + footerBottomTop + " | contentOutter " + contentOutter + " | footerTopTop " + footerTopTop + " <<<<")
+    }
+    if ((scrollMax == contentOutter) ) {
+        enableFooterIcons();
+        $('.footerTopContainer').css({'position': 'relative','margin-bottom': (footerOuterHeight)+'px'});
+        $('.carpool-page').css('margin-bottom','0px');
+        //console.log('blah');
+    } else {
+
+        //  if (((scrollY+window.outerHeight) < (footerOuterHeight+contentOutter) > (scrollY+window.outerHeight-100)) || (1 == 0 )) {
+        if (footerTopTop > footerBottomTop) {
+            // Hide the dropdow when scroll up 
+            $(".footer .footerTopContainer table .iconLink").removeClass("active");
+            hideMessageForm();
+            hideLocationDropdown();
+            disableFooterIcons();
+
+            $('.footerTopContainer').css('position','fixed').css('margin-bottom', '1px');
+            $('.carpool-page').css('margin-bottom',footerOuterHeight+'px');
+        }
+
+        // console.log(fmove + ' con-' + $('.carpool-page').outerHeight() + ' ft-' + $('footer').offset().top);
+    }
+    
 
 });
+
+function int(val){
+    return parseInt(val);
+}
+
+function switchFooterRelative() {
+    var footerOuterHeight = int($('.footerBottomContainer').outerHeight(true));
+    if ($('.footerTopContainer').css('position') === "fixed") {
+        $('.footerTopContainer').css({'position': 'relative','margin-bottom': (footerOuterHeight)+'px'});
+        $('.carpool-page').css('margin-bottom','0px');
+    }
+}
+
+function enableFooterIcons() {
+    $(".footer .footerTopContainer .iconLink").removeClass("noPointerEvent");
+}
+
+function disableFooterIcons() {
+    $(".footer .footerTopContainer .iconLink").addClass("noPointerEvent");
+}
+
+
+
