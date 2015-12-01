@@ -385,35 +385,6 @@ $(function() {
         var topMediaAnchor = $(".topMediaContainer").height();
         var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
-        // console.log("current st: ", st);
-        // console.log("topMediaAnchor: ", topMediaAnchor);
-        // console.log("lowerPageFooterAnchor: ", lowerPageFooterAnchor);
-
-
-        // if (st > lastScrollTop) {            
-        //     // Downscroll
-        //     if (st > (lastScrollTop + 50)) { // scroll down more than 50 pixels
-        //         hideNavTransparentBackground();
-        //         hideNavLogo();
-        //         hideNavMenu();
-        //     } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) {
-        //         showNavTransparentBackground();
-        //         showNavLogo();
-        //         showNavMenu();
-        //     } else if (st > lowerPageFooterAnchor) {
-        //         showNavTransparentBackground();
-        //     } else if (st < topMediaAnchor) {
-        //         hideNavTransparentBackground();
-        //         if (isWelcomePage) {
-        //             hideNavLogo();
-        //             hideNavMenu();
-        //         }
-        //     }
-        // } else if (st < lastScrollTop) {
-        //     // Upscroll
-            
-        // }
-
         if (st < upperTopMediaAnchor) { // Top media portion
             hideNavTransparentBackground();
             showArrow();
@@ -470,322 +441,8 @@ $(function() {
             }
         }
 
-        // Footer paper clip animation
-        // if (st > topMediaAnchor) {
-        //     // Get the anchor when the footer start coming into view
-        //     var topFooterViewAnchor = $(".footer .footerTopContainer").offset().top - $(window).height() + $(".footer .footerTopContainer .textTop").height() + 10;
-        //     var topFooterContainerAnchor = $(".footer .footerTopContainer").offset().top - ($(window).height() - $(".footer .footerTopContainer").height());
-
-        //     var bottomFooterViewAnchor = $(".footer .footerBottomContainer").offset().top - $(window).height() + 50;
-        //     var bottomFooterContainerAnchor = $(".footer .footerBottomContainer").offset().top - ($(window).height() - $(".footer .footerBottomContainer").outerHeight());
-            
-        //     // Animation when downscroll only
-        //     // Top footer
-        //     if (st > lastScrollTop && st > topFooterViewAnchor && st < (topFooterViewAnchor + 100)) {
-        //         event.preventDefault();
-        //         if (!isScrollingAnimation) {
-        //             isScrollingAnimation = true;
-        //             // Scroll above the video background and pull up the content of the page
-        //             $("html, body").animate({
-        //                 scrollTop: topFooterContainerAnchor
-        //             }, {
-        //                 duration: 600,
-        //                 complete: function() {
-        //                     lastScrollTop = $(window).scrollTop();
-        //                     isScrollingAnimation = false;
-        //                 }
-        //             });
-        //         }
-        //     }
-
-        //     // Animation when downscroll only
-        //     // Bottom Footer
-        //     if (st > lastScrollTop && st > bottomFooterViewAnchor && st < (bottomFooterViewAnchor + 200)) {
-        //         event.preventDefault();
-        //         if (!isScrollingAnimation) {
-        //             isScrollingAnimation = true;
-        //             // Scroll above the video background and pull up the content of the page
-        //             $("html, body").animate({
-        //                 scrollTop: bottomFooterContainerAnchor
-        //             }, {
-        //                 duration: 600,
-        //                 complete: function() {
-        //                     lastScrollTop = $(window).scrollTop();
-        //                     isScrollingAnimation = false;
-        //                 }
-        //             });
-        //         }
-        //     }
-
-        // }
-
-
         lastScrollTop = st;
-
-        // if (isScrollingAnimation) {
-        //     event.preventDefault();
-        //     return false;
-        // }
-
-        // var self = this;
-
-        // var st = $(this).scrollTop(); // Current page position
-
-        // var upper_anchor_offset = $(".topMediaContainer").height() - 200;
-        // var lower_anchor_offset = $(".topMediaContainer").height();
-
-        // // for Home page only
-        // if (isWelcomePage) {
-        //     var servicesAnchor = $("#services").offset().top - 200; 
-
-        //     // Switch active nav anchor for home page and services
-        //     if (!isScrollingAnimation) {
-        //         if (st > servicesAnchor) { // services section
-        //             activeNavAnchors("/#services");            
-        //         } else { // welcome section
-        //             activeNavAnchors("/");
-        //         }
-        //     }
-        // }
-        
-        // if (st > lastScrollTop) {            
-        //     // Downscroll
-            
-        //     lastScrollTop = st; 
-            
-        //     // Paper clip animation
-        //     if (st > upper_anchor_offset && st < lower_anchor_offset) {
-        //         if (!isScrollingAnimation) {
-        //             isScrollingAnimation = true;
-        //             // Scroll above the video background and pull up the content of the page
-        //             $("html, body").animate({
-        //                 scrollTop: lower_anchor_offset
-        //             }, {
-        //                 duration: 600,
-        //                 complete: function() {
-        //                     if ($(".header .logoContainer").is(':hidden')) {
-        //                         $(".header .logoContainer").slideDown(200);
-        //                     }
-        //                     if ($(".header .menuContainer").is(':hidden')) {
-        //                         $(".header .menuContainer").slideDown(200);
-        //                     }
-        //                     lastScrollTop = $(window).scrollTop();
-        //                     isScrollingAnimation = false;
-        //                 }
-        //             });
-        //         }
-        //         return;
-        //     }
-
-        //     // Downscroll in content section
-        //     // Other pages hide menu when not at the top
-        //     if (currentPage !== "welcome") { // Other pages
-        //         if ($(".header .menuContainer").is(':visible') && st > 0) {
-        //             $(".header .menuContainer").slideUp(200);
-        //         }
-        //         if (st > upper_anchor_offset) {
-        //             if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-        //                 $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
-        //             }
-        //         }
-        //     } else { // Home page
-        //         if (st > upper_anchor_offset) {
-        //             if ($(".header .logoContainer").is(':hidden')) {
-        //                 $(".header .logoContainer").slideDown(200);
-        //             }
-        //             if ($(".header .menuContainer").is(':visible') && st > lower_anchor_offset) {
-        //                 $(".header .menuContainer").slideUp(200);
-        //             } else if ($(".header .menuContainer").is(':hidden')) {
-        //                 $(".header .menuContainer").slideDown(200);
-        //             }
-        //             if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-        //                 $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
-        //             }
-        //         }
-        //     }
-        // } else if (st < lastScrollTop) {
-        //     // Upscroll
-        //     // Show navigation logo and show navigation menu
-        //     if (st > upper_anchor_offset) {
-        //         if ($(".header .logoContainer").is(':hidden')) {
-        //             $(".header .logoContainer").slideDown(200);
-        //         }
-        //         if ($(".header .menuContainer").is(':hidden')) {
-        //             $(".header .menuContainer").slideDown(200);
-        //         }
-        //         if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-        //             $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
-        //         }
-        //     } else { // Hide navigation logo and hide navigation menu if close to top
-        //         if (currentPage === "welcome") {
-        //             if ($(".header .logoContainer").is(':visible')) {
-        //                 $(".header .logoContainer").slideUp(200);
-        //             }
-        //             if ($(".header .menuContainer").is(':visible')) {
-        //                 $(".header .menuContainer").slideUp(200);
-        //             }
-        //         } else {
-        //             if ($(".header .logoContainer").is(':hidden')) {
-        //                 $(".header .logoContainer").slideDown(200);
-        //             }
-        //             if ($(".header .menuContainer").is(':hidden')) {
-        //                 $(".header .menuContainer").slideDown(200);
-        //             }
-        //         }
-
-        //         if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
-        //             $(".downArrowContainer .downArrow").fadeTo(100, 1);
-        //         }
-        //     }
-
-        //     lastScrollTop = st;
-        // }
-
-        
-
     });
-
-
-
-    // $(window).scroll(function() {
-    //     var self = this;
-    //     var anchor_offset;
-
-    //     if (isWelcomePage) {
-
-    //     }
-
-    //     anchor_offset = $("#postArticle .defaultImage").height() / 2;
-
-    //     if (!isPostArticlePage) {
-
-    //         // Show the navigation on scrolling
-    //         // Anchor offset with extra 100 height for unloaded image
-    //         anchor_offset = $("#welcome .video-overlay").offset().top + $("#welcome .video-overlay").height() + 100;
-    //         upper_anchor_offset = $("#welcome .outer-container").height() / 2;
-    //         lower_anchor_offset = $("#welcome .outer-container").height();
-    //         // var lower_anchor_offset = $("#welcome .outer-container").height();
-    //     } else {
-    //         anchor_offset = $("#postArticle .defaultImage").height() / 2;
-    //         upper_anchor_offset = $("#postArticle .defaultImage").height() / 2;
-    //         lower_anchor_offset = $("#postArticle .defaultImage").height();
-    //     }
-
-    //     //console.log("currentPageName: ", currentPageName);
-    //     //$(".header .logoContainer").slideDown(200);
-    //     //$(".header .menuContainer").slideDown(200);
-    //     var video1Time = (window.pageYOffset - animationVideo1_offset) / 200;
-    //     var video2Time = (window.pageYOffset - animationVideo2_offset) / 200;
-    //     // var videoTime = window.pageYOffset / 400;
-    //     //console.log("pageYOffset: ", window.pageYOffset);
-    //     //console.log("video1Time: ", video1Time);
-    //     //console.log("video2Time: ", video2Time);
-    //     if (currentPageName === "welcome") {
-    //         vid1.currentTime = video1Time;
-    //     }
-
-    //     if (currentPageName === "about") {
-    //         vid2.currentTime = video2Time;
-    //     }
-
-    //     // Detect scroll up or down
-    //     var st = $(this).scrollTop();
-
-    //     //console.log("scrollTop: ", st);
-    //     //console.log("lastScrollTop: ", lastScrollTop);
-
-    //     if (st > lastScrollTop) {
-    //         //console.log("downscroll!");
-    //         lastScrollTop = st;
-    //         // Downscroll
-    //         // Show navigation logo and hide navigation menu
-    //         //console.log("scrollTop: ", st);
-    //         if (st > upper_anchor_offset && st < lower_anchor_offset) {
-    //             if (!State.InTransition) {
-    //                 State.InTransition = true;
-    //                 // Scroll above the video background and pull up the content of the page
-    //                 $("html, body").animate({
-    //                     scrollTop: lower_anchor_offset
-    //                 }, {
-    //                     duration: 600,
-    //                     complete: function() {
-    //                         if ($(".header .logoContainer").is(':hidden')) {
-    //                             $(".header .logoContainer").slideDown(200);
-    //                         }
-    //                         if ($(".header .menuContainer").is(':hidden')) {
-    //                             $(".header .menuContainer").slideDown(200);
-    //                         }
-    //                         //console.log("animate complete: ", $(self).scrollTop());
-    //                         //console.log("window: ", $(window).scrollTop());
-    //                         lastScrollTop = $(window).scrollTop();
-    //                         State.InTransition = false;
-    //                     }
-    //                 });
-    //             }
-    //             return false;
-    //         }
-
-    //         if (currentPageName !== "welcome") {
-    //             if ($(".header .menuContainer").is(':visible') && st > (lower_anchor_offset + 20)) {
-    //                 $(".header .menuContainer").slideUp(200);
-    //             }
-    //             if (st > anchor_offset) {
-    //                 if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-    //                     $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
-    //                 }
-    //             }
-    //         } else {
-    //             if (st > anchor_offset) {
-    //                 if ($(".header .logoContainer").is(':hidden')) {
-    //                     $(".header .logoContainer").slideDown(200);
-    //                 }
-    //                 if ($(".header .menuContainer").is(':visible') && st > (lower_anchor_offset + 20)) {
-    //                     $(".header .menuContainer").slideUp(200);
-    //                 }
-    //                 if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-    //                     $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
-    //                 }
-    //             }
-    //         }
-    //     } else if (st < lastScrollTop) {
-    //         //console.log("upscroll!");
-    //         // Upscroll
-    //         // Show navigation logo and show navigation menu
-    //         if (st > anchor_offset) {
-    //             if ($(".header .logoContainer").is(':hidden')) {
-    //                 $(".header .logoContainer").slideDown(200);
-    //             }
-    //             if ($(".header .menuContainer").is(':hidden')) {
-    //                 $(".header .menuContainer").slideDown(200);
-    //             }
-    //             if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-    //                 $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
-    //             }
-    //         } else { // Hide navigation logo and hide navigation menu if close to top
-    //             if (currentPageName === "welcome") {
-    //                 if ($(".header .logoContainer").is(':visible')) {
-    //                     $(".header .logoContainer").slideUp(200);
-    //                 }
-    //                 if ($(".header .menuContainer").is(':visible')) {
-    //                     $(".header .menuContainer").slideUp(200);
-    //                 }
-    //             } else {
-    //                 if ($(".header .logoContainer").is(':hidden')) {
-    //                     $(".header .logoContainer").slideDown(200);
-    //                 }
-    //                 if ($(".header .menuContainer").is(':hidden')) {
-    //                     $(".header .menuContainer").slideDown(200);
-    //                 }
-    //             }
-
-    //             if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
-    //                 $(".downArrowContainer .downArrow").fadeTo(100, 1);
-    //             }
-    //         }
-
-    //         lastScrollTop = st;
-    //     }
-    // });
 
     // Email Message
     $(".footer .footerEmail").unbind("click").bind("click", function(event) {
@@ -831,7 +488,6 @@ $(function() {
     });
 });
 
-
 (function() {
     var throttle = function(type, name, obj) {
         obj = obj || window;
@@ -853,11 +509,8 @@ $(function() {
     throttle("scroll", "optimizedScroll");
 })();
 
-
 // handle event
 window.addEventListener("optimizedScroll", function() {
- 
- 
     var variable = 70;//$('input.u-full-width').val();
     var contentTop = int($('.carpool-page').offset().top);
     var contentOutter = int($('.carpool-page').outerHeight(true));
@@ -869,19 +522,16 @@ window.addEventListener("optimizedScroll", function() {
     var scrollMax = int(footertopHeight + footerTopTop);
     var scrollY = int(window.scrollY);
     var fmove = (moveSize < footerTopTop) ? footerTopTop - ($('.carpool-page').outerHeight() + $('.carpool-page').offset().top) : 0;
-    if(!$('.debugStuff')) {
-        $('#carpool').prepend("<div class='debugStuff'></div>");
-    } else { 
-        $('.debugStuff').html('Debug: contentTop' + contentTop + " | scrollY" + scrollY + " | scrollYB" + (scrollY+window.outerHeight) + " | footertopHeight" + footertopHeight + " | footerOuterHeight" + footerOuterHeight + " | fmove" + fmove + " | scrollMax" + scrollMax + " |  moveSize" + moveSize + " | footerBottomTop " + footerBottomTop + " | contentOutter " + contentOutter + " | footerTopTop " + footerTopTop + " <<<<")
-    }
+    // if(!$('.debugStuff')) {
+    //     $('#carpool').prepend("<div class='debugStuff'></div>");
+    // } else { 
+    //     $('.debugStuff').html('Debug: contentTop' + contentTop + " | scrollY" + scrollY + " | scrollYB" + (scrollY+window.outerHeight) + " | footertopHeight" + footertopHeight + " | footerOuterHeight" + footerOuterHeight + " | fmove" + fmove + " | scrollMax" + scrollMax + " |  moveSize" + moveSize + " | footerBottomTop " + footerBottomTop + " | contentOutter " + contentOutter + " | footerTopTop " + footerTopTop + " <<<<")
+    // }
     if ((scrollMax == contentOutter) ) {
         enableFooterIcons();
         $('.footerTopContainer').css({'position': 'relative','margin-bottom': (footerOuterHeight)+'px'});
         $('.carpool-page').css('margin-bottom','0px');
-        //console.log('blah');
     } else {
-
-        //  if (((scrollY+window.outerHeight) < (footerOuterHeight+contentOutter) > (scrollY+window.outerHeight-100)) || (1 == 0 )) {
         if (footerTopTop > footerBottomTop) {
             // Hide the dropdow when scroll up 
             $(".footer .footerTopContainer table .iconLink").removeClass("active");
@@ -892,11 +542,7 @@ window.addEventListener("optimizedScroll", function() {
             $('.footerTopContainer').css('position','fixed').css('margin-bottom', '1px');
             $('.carpool-page').css('margin-bottom',footerOuterHeight+'px');
         }
-
-        // console.log(fmove + ' con-' + $('.carpool-page').outerHeight() + ' ft-' + $('footer').offset().top);
     }
-    
-
 });
 
 function int(val){
@@ -918,6 +564,3 @@ function enableFooterIcons() {
 function disableFooterIcons() {
     $(".footer .footerTopContainer .iconLink").addClass("noPointerEvent");
 }
-
-
-
