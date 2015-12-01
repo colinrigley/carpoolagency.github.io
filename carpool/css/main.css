@@ -1547,7 +1547,7 @@ body {
 #carpool .carpool-page {
     overflow: hidden;
     position: relative;
-    z-index: 10;
+    z-index: 5;
     background-color: #FFF;
     -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
     -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.8);
@@ -2076,7 +2076,7 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 8;
 }
 
 #carpool .header a {
@@ -2092,7 +2092,7 @@ body {
     right: 0;
     bottom: 0;
     background:rgba(0,0,0,0.6);
-    z-index: 2;
+    z-index: 10;
 }
 
 #carpool .header .navContainer {
@@ -2194,7 +2194,7 @@ body {
     top: 0;
     width: 100%;
     height: 420px;
-    z-index: 3;
+    z-index: 15;
 }
 
 #carpool .header .dropdownContainer:after {
@@ -2339,7 +2339,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 20;
+    z-index: 7;
 }
 
 
@@ -2352,7 +2352,7 @@ body {
     -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
     box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
-    z-index: 7;
+    z-index: 3;
 }
 
 #carpool .footer .messageFormBackground input {
@@ -2483,7 +2483,7 @@ body {
     /*position: relative;*/
     position: fixed;
     height: 294px;
-    z-index: 5;
+    z-index: 2;
     bottom: 0;
     width: 100%;
     -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
