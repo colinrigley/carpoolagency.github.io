@@ -399,8 +399,13 @@ $(function() {
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
             instantHideNavTransparentBackground();
             blurArrow();
-            instantShowNavLogo();
-            instantShowNavMenu();
+            if (isArticlePage) { // Don't show nav on background media for article page
+                instantHideNavLogo();
+                instantHideNavMenu();
+            } else {
+                instantShowNavLogo();
+                instantShowNavMenu();
+            }
             if (isWelcomePage) {
                 if ($("#welcome .welcomeMenu").is(':visible')) {
                     $("#welcome .welcomeMenu").hide();
@@ -411,15 +416,6 @@ $(function() {
             instantShowNavTransparentBackground();
             instantShowNavLogo();
             instantShowNavMenu();
-
-            // if (st > lastScrollTop) { // Downscroll 
-            //     hideNavTransparentBackground();
-            //     hideNavMenu();
-            // } else if (st < lastScrollTop) { // Upscroll
-            //     showNavTransparentBackground();
-            //     showNavLogo();
-            //     showNavMenu();
-            // }
 
             // Activate service nav anchor for welcome page
             if (isWelcomePage) {
