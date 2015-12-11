@@ -1639,6 +1639,14 @@ body {
     background-repeat: no-repeat;
 }
 
+
+#carpool #welcome .topMediaContainer video {
+    display: block;
+    object-fit: fill;
+    min-width: 100%;
+    height: 100vh !important;
+}
+
 #carpool #welcome .welcomeVideo-overlay {
     position: absolute;
     bottom: 182px;
