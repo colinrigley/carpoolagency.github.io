@@ -1555,13 +1555,14 @@ body {
 }
 
 #carpool .topMediaContainer {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
 #carpool .innerContainer {
     position: relative;
+    height: 100vh;
 }
 
 #carpool .relative {
@@ -1629,22 +1630,27 @@ body {
 }
 
 #carpool .bgMedia {
-    width: 100%;
+  /*  width: 100%;
     height: 100vh;
     min-height: 800px;
     -webkit-background-size:cover; 
     -moz-background-size:cover; 
     -o-background-size:cover; 
     background-size:cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 
 
 #carpool #welcome .topMediaContainer video {
-    display: block;
-    object-fit: fill;
-    min-width: 100%;
-    height: 100vh !important;
+      display: block;
+    /* object-fit: fill; */
+    height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
 }
 
 #carpool #welcome .welcomeVideo-overlay {
