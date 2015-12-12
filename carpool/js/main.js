@@ -379,7 +379,7 @@ $(function() {
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
 
         if (isWelcomePage) {
-            upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark - $("#welcome .welcomeMenu").height() - 20;
+            upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark - $("#welcome .welcomeMenu").height() - 40;
         }
 
         var topMediaAnchor = $(".topMediaContainer").height();
