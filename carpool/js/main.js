@@ -379,7 +379,7 @@ $(function() {
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
 
         if (isWelcomePage) {
-            upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark - $("#welcome .welcomeMenu").height() - 40;
+            upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark - $("#welcome .welcomeMenu").height() - 25;
         }
 
         var topMediaAnchor = $(".topMediaContainer").height();
@@ -438,6 +438,7 @@ $(function() {
         }
 
         lastScrollTop = st;
+        footerEffect();
     });
 
     // Email Message
@@ -484,37 +485,38 @@ $(function() {
     });
 });
 
-(function() {
-    var throttle = function(type, name, obj) {
-        obj = obj || window;
-        var running = false;
-        var func = function() {
-            if (running) {
-                return;
-            }
-            running = true;
-            requestAnimationFrame(function() {
-                obj.dispatchEvent(new CustomEvent(name));
-                running = false;
-            });
-        };
-        obj.addEventListener(type, func);
-    };
-    //   var myint=0;
-    /* init - you can init any event */
-    throttle("scroll", "optimizedScroll");
-})();
+// (function() {
+//     var throttle = function(type, name, obj) {
+//         obj = obj || window;
+//         var running = false;
+//         var func = function() {
+//             if (running) {
+//                 return;
+//             }
+//             running = true;
+//             requestAnimationFrame(function() {
+//                 obj.dispatchEvent(new CustomEvent(name));
+//                 running = false;
+//             });
+//         };
+//         obj.addEventListener(type, func);
+//     };
+//     //   var myint=0;
+//     // init - you can init any event
+//     throttle("scroll", "optimizedScroll");
+// })();
 
 // handle event
-window.addEventListener("optimizedScroll", function() {
+//window.addEventListener("optimizedScroll", function() {
+function footerEffect(){
     // var contentTop = int($('.carpool-page').offset().top);
-    var contentOutter = int($('.carpool-page').outerHeight(true));
-    var footerTopTop = int($('.footerTopContainer').offset().top);
-    var footerBottomTop = int($('.footerBottomContainer').offset().top);
-    var footertopHeight = int($('.footerTopContainer').outerHeight(true));
-    var footerOuterHeight = int($('.footerBottomContainer').outerHeight(true));
+    var contentOutter = parseInt($('.carpool-page').outerHeight(true));
+    var footerTopTop = parseInt($('.footerTopContainer').offset().top);
+    var footerBottomTop = parseInt($('.footerBottomContainer').offset().top);
+    //var footertopHeight = parseInt($('.footerTopContainer').outerHeight(true));
+    var footerOuterHeight = parseInt($('.footerBottomContainer').outerHeight(true));
     //var moveSize = int((contentOutter + footerOuterHeight));
-    var scrollMax = int(footertopHeight + footerTopTop);
+    var scrollMax = parseInt(($('.footerTopContainer').outerHeight(true)) + footerTopTop);
     //var scrollY = int(window.scrollY);
     //var fmove = (moveSize < footerTopTop) ? footerTopTop - ($('.carpool-page').outerHeight() + $('.carpool-page').offset().top) : 0;
     // if(!$('.debugStuff')) {
@@ -538,10 +540,7 @@ window.addEventListener("optimizedScroll", function() {
             $('.carpool-page').css('margin-bottom', footerOuterHeight + 'px');
         }
     }
-});
-
-function int(val){
-    return parseInt(val);
+//});
 }
 
 function enableFooterIcons() {
