@@ -2366,6 +2366,14 @@ body {
     z-index: 7;
 }
 
+#carpool .footerLinksContainer {
+    background-image: url('/carpool/img/footer.jpg');
+    background-size: 100% auto;
+    height: 30em;
+    background-position-y: -18em;
+    color:#FFF;
+    text-align: center;
+}
 
 /* Message form */
 
