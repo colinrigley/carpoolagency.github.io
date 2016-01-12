@@ -4,49 +4,23 @@
 <footer class="footer">
     <nav class="footerNav">
         <!-- Footer Nav -->
-        <div class="footerTopContainer bg-lightGreen">
-            <div class="row c-72 center-margin">
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="https://twitter.com/@carpooldigital" title="Carpool Agency Twitter" target="_blank">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/twitter.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="https://www.linkedin.com/company/carpool-agency" title="Carpool Agency LinkedIn" target="_blank">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/linkedin.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="" title="Send Carpool a Message" class="footerEmail">
-                        <img class="r-2 centered" src='/carpool/img/svg_icons/envelope.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="https://instagram.com/carpooldigital" title="Carpool Agency Instagram" target="_blank">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/instagram.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="https://www.facebook.com/carpooldigital" title="Carpool Agency Facebook" target="_blank">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/facebook.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="" title="">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/location.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="" title="">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/google_plus.svg'>
-                    </a>
-                </div>
-                <div class="c-9 r-7 iconLink float-left">
-                    <a href="" title="" class="footerLocation float-left">
-                        <img class="r-3 centered" src='/carpool/img/svg_icons/maps.svg'>
-                    </a>
-                </div>
-            </div>
+        <div class="footerTopContainer">
+            <table>
+                <tr>
+                    <td class="c-6 r-7 bg-lightGreen"></td>
+                    <td class="c-8 r-7 bg-darkGreen"></td>
+                    <td class="c-8 r-7 bg-green iconLink"><a href="https://twitter.com/@carpooldigital" title="Carpool Agency Twitter" target="_blank"><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/twitter.svg'></a></td>
+                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="https://www.linkedin.com/company/carpool-agency" title="Carpool Agency LinkedIn" target="_blank"><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/linkedin.svg'></a></td>
+                    <td class="c-8 r-7 bg-green iconLink"><a href="" title="Send Carpool a Message" class="footerEmail"><div class="centerer"></div><img class="r-2 centered" src='/carpool/img/svg_icons/envelope.svg'></a></td>
+                    <td class="c-8 r-7 bg-lightGreen iconLink"><a href="https://instagram.com/carpooldigital" title="Carpool Agency Instagram" target="_blank"><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/instagram.svg'></a></td>
+                    <td class="c-8 r-7 bg-green iconLink"><a href="https://www.facebook.com/carpooldigital" title="Carpool Agency Facebook" target="_blank"><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/facebook.svg'></a></td>
+                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="" title=""><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/location.svg'></a></td>
+                    <td class="c-8 r-7 bg-lightGreen iconLink"><a href="" title=""><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/google_plus.svg'></a></td>
+                    <td class="c-8 r-7 bg-darkGreen iconLink"><a href="" title="" class="footerLocation"><div class="centerer"></div><img class="r-3 centered" src='/carpool/img/svg_icons/maps.svg'></a></td>
+                    <td class="c-8 r-7 bg-green"></td>
+                    <td class="c-6 r-7 bg-darkGreen"></td>
+                </tr>
+            </table>
             
             <!-- Location and Google Map -->
             <div class="locationDropdownContainer">

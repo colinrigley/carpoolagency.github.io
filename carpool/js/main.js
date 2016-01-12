@@ -157,25 +157,6 @@ $(function() {
         }
     };
 
-    // Bind clicking to show menu dropdown container
-    $(".header .rightContainer").unbind("click").bind("click", function() {
-        showHamburgerMenu();
-    });
-
-    $(".header .closeContainer").unbind("click").bind("click", function() {
-        closeHamburgerMenu();
-    });
-
-    // Bind clicking outside the the dropdown to close the dropdown
-    $(document).mouseup(function (e) {
-        var container = $("header .dropdownContainer");
-
-        if (!container.is(e.target) // if the target of the click isn't the container...
-            && container.has(e.target).length === 0) // ... nor a descendant of the container
-        {
-            closeHamburgerMenu();
-        }
-    });
 
     // DownArrow click event
     $(".topMediaContainer .downArrow").unbind("click").bind("click", function(event) { 
@@ -193,80 +174,6 @@ $(function() {
     });
 
     // Hide the navigation logo and menu on start up for welcome page
-    $(".header .logoContainer").hide();
-    $(".header .menuContainer").hide();
-
-    var showNavLogo = function() {
-        if ($(".header .logoContainer").is(':hidden')) {
-            $(".header .logoContainer").slideDown(200);
-        }
-    };
-
-    var hideNavLogo = function() {
-        if ($(".header .logoContainer").is(':visible')) {
-            $(".header .logoContainer").slideUp(200);
-        }
-    };
-
-    var instantShowNavLogo = function() {
-        if ($(".header .logoContainer").is(':hidden')) {
-            $(".header .logoContainer").show();
-        }
-    };
-
-    var instantHideNavLogo = function() {
-        if ($(".header .logoContainer").is(':visible')) {
-            $(".header .logoContainer").hide();
-        }
-    };
-
-    var showNavMenu = function() {
-        if ($(".header .menuContainer").is(':hidden')) {
-            $(".header .menuContainer").slideDown(200);
-        }
-    };
-
-    var hideNavMenu = function() {
-        if ($(".header .menuContainer").is(':visible')) {
-            $(".header .menuContainer").slideUp(200);
-        }
-    };
-
-    var instantShowNavMenu = function() {
-        if ($(".header .menuContainer").is(':hidden')) {
-            $(".header .menuContainer").show();
-        }
-    };
-
-    var instantHideNavMenu = function() {
-        if ($(".header .menuContainer").is(':visible')) {
-            $(".header .menuContainer").hide();
-        }
-    };
-
-    var showNavTransparentBackground = function() {
-        if ($(".header .navContainer .transparentBg").is(':hidden')) {
-            $(".header .navContainer .transparentBg").slideDown(200);
-        }
-    };
-
-    var hideNavTransparentBackground = function() {
-        if ($(".header .navContainer .transparentBg").is(':visible')) {
-            $(".header .navContainer .transparentBg").slideUp(200);
-        }
-    };
-
-    var instantShowNavTransparentBackground = function() {
-        if ($(".header .navContainer .transparentBg").is(':hidden')) {
-            $(".header .navContainer .transparentBg").show();
-        }
-    };
-
-    var instantHideNavTransparentBackground = function() {
-        if ($(".header .navContainer .transparentBg").is(':visible')) {
-            $(".header .navContainer .transparentBg").hide();
-        }
-    };
 
     var showArrow = function() {
         if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "0.3") {
@@ -308,10 +215,6 @@ $(function() {
         } else if (isWelcomePage && $(this).attr("href") === "/") {
             event.preventDefault();
             isScrollingAnimation = true;
-            hideNavTransparentBackground();
-            hideNavLogo();
-            hideNavMenu();
-            closeHamburgerMenu();
             showArrow();
             $('html,body').animate( { scrollTop: 0 } , 1000, function() {
                 isScrollingAnimation = false;
@@ -325,50 +228,10 @@ $(function() {
     var upperTopMediaAnchorMark = 180;
     var lowerPageFooterAnchorMark = 100;
 
-    // video framerate animation
-    // select video element 
-    var iconVideo1;
-    var iconVideo2;
-    var iconVideo3;
-
-    if (isWelcomePage || isAboutPage) {
-        iconVideo1 = document.getElementById('iconVideo1');
-        iconVideo2 = document.getElementById('iconVideo2');
-        iconVideo3 = document.getElementById('iconVideo3');
-
-        // pause video on load
-        iconVideo1.pause();
-        iconVideo2.pause();
-        iconVideo3.pause();
-    }
-
     // Scrolling event binding
     $(window).scroll(function(event) {
         var self = this;
         var st = $(this).scrollTop(); // Current page position
-
-        // Icons Videos animation
-        if (isWelcomePage || isAboutPage) {
-            var iconVideo1Mark = $("#iconVideo1").offset().top - $(window).height();
-            var iconVideo2Mark = $("#iconVideo2").offset().top - $(window).height();
-            var iconVideo3Mark = $("#iconVideo3").offset().top - $(window).height();
-
-            if (st > iconVideo1Mark) {
-                var iconVideo1Time = (window.pageYOffset - (iconVideo1Mark + 100)) / 50;
-                iconVideo1.currentTime = (iconVideo1Time > iconVideo1.duration) ? iconVideo1.duration : iconVideo1Time;
-            }
-
-            if (st > iconVideo2Mark) {
-                var iconVideo2Time = (window.pageYOffset - (iconVideo2Mark + 100)) / 50;
-                iconVideo2.currentTime = (iconVideo2Time > iconVideo2.duration) ? iconVideo2.duration : iconVideo2Time;
-            }
-
-            if (st > iconVideo3Mark) {
-                var iconVideo3Time = (window.pageYOffset - (iconVideo3Mark + 100)) / 50;
-                iconVideo3.currentTime = (iconVideo3Time > iconVideo3.duration) ? iconVideo3.duration : iconVideo3Time;
-            }
-            //console.log("pageYOffset: ", window.pageYOffset);
-        }
 
         if (isScrollingAnimation) {
             //console.log("Prevent scroll!");
@@ -386,10 +249,7 @@ $(function() {
         var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
         if (st < upperTopMediaAnchor) { // Top media portion
-            hideNavTransparentBackground();
             showArrow();
-            instantHideNavLogo();
-            instantHideNavMenu();
             if (isWelcomePage) {
                 if ($("#welcome .welcomeMenu").is(':hidden')) {
                     $("#welcome .welcomeMenu").show();
@@ -397,14 +257,9 @@ $(function() {
                 activeNavAnchors("/");
             }
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
-            instantHideNavTransparentBackground();
             blurArrow();
             if (isArticlePage) { // Don't show nav on background media for article page
-                instantHideNavLogo();
-                instantHideNavMenu();
             } else {
-                instantShowNavLogo();
-                instantShowNavMenu();
             }
             if (isWelcomePage) {
                 if ($("#welcome .welcomeMenu").is(':visible')) {
@@ -413,9 +268,6 @@ $(function() {
                 activeNavAnchors("/");
             }
         } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) { // Content portion
-            instantShowNavTransparentBackground();
-            instantShowNavLogo();
-            instantShowNavMenu();
 
             // Activate service nav anchor for welcome page
             if (isWelcomePage) {
@@ -438,7 +290,6 @@ $(function() {
         }
 
         lastScrollTop = st;
-        footerEffect();
     });
 
     // Email Message
@@ -508,45 +359,45 @@ $(function() {
 
 // handle event
 //window.addEventListener("optimizedScroll", function() {
-function footerEffect(){
-    // var contentTop = int($('.carpool-page').offset().top);
-    var contentOutter = parseInt($('.carpool-page').outerHeight(true));
-    var footerTopTop = parseInt($('.footerTopContainer').offset().top);
-    var footerBottomTop = parseInt($('.footerBottomContainer').offset().top);
-    //var footertopHeight = parseInt($('.footerTopContainer').outerHeight(true));
-    var footerOuterHeight = parseInt($('.footerBottomContainer').outerHeight(true));
-    //var moveSize = int((contentOutter + footerOuterHeight));
-    var scrollMax = parseInt(($('.footerTopContainer').outerHeight(true)) + footerTopTop);
-    //var scrollY = int(window.scrollY);
-    //var fmove = (moveSize < footerTopTop) ? footerTopTop - ($('.carpool-page').outerHeight() + $('.carpool-page').offset().top) : 0;
-    // if(!$('.debugStuff')) {
-    //     $('#carpool').prepend("<div class='debugStuff'></div>");
-    // } else { 
-    //     $('.debugStuff').html('Debug: contentTop' + contentTop + " | scrollY" + scrollY + " | scrollYB" + (scrollY+window.outerHeight) + " | footertopHeight" + footertopHeight + " | footerOuterHeight" + footerOuterHeight + " | fmove" + fmove + " | scrollMax" + scrollMax + " |  moveSize" + moveSize + " | footerBottomTop " + footerBottomTop + " | contentOutter " + contentOutter + " | footerTopTop " + footerTopTop + " <<<<")
-    // }
-    if ((scrollMax == contentOutter) ) {
-        enableFooterIcons();
-        $('.footerTopContainer').css({'position': 'relative', 'margin-bottom': (footerOuterHeight) + 'px'});
-        $('.carpool-page').css('margin-bottom', '0px');
-    } else {
-        if (footerTopTop > footerBottomTop) {
-            // Hide the dropdow when scroll up 
-            $(".footer .footerTopContainer table .iconLink").removeClass("active");
-            hideMessageForm();
-            hideLocationDropdown();
-            disableFooterIcons();
+// function footerEffect(){
+//     // var contentTop = int($('.carpool-page').offset().top);
+//     var contentOutter = parseInt($('.carpool-page').outerHeight(true));
+//     var footerTopTop = parseInt($('.footerTopContainer').offset().top);
+//     var footerBottomTop = parseInt($('.footerBottomContainer').offset().top);
+//     //var footertopHeight = parseInt($('.footerTopContainer').outerHeight(true));
+//     var footerOuterHeight = parseInt($('.footerBottomContainer').outerHeight(true));
+//     //var moveSize = int((contentOutter + footerOuterHeight));
+//     var scrollMax = parseInt(($('.footerTopContainer').outerHeight(true)) + footerTopTop);
+//     //var scrollY = int(window.scrollY);
+//     //var fmove = (moveSize < footerTopTop) ? footerTopTop - ($('.carpool-page').outerHeight() + $('.carpool-page').offset().top) : 0;
+//     // if(!$('.debugStuff')) {
+//     //     $('#carpool').prepend("<div class='debugStuff'></div>");
+//     // } else { 
+//     //     $('.debugStuff').html('Debug: contentTop' + contentTop + " | scrollY" + scrollY + " | scrollYB" + (scrollY+window.outerHeight) + " | footertopHeight" + footertopHeight + " | footerOuterHeight" + footerOuterHeight + " | fmove" + fmove + " | scrollMax" + scrollMax + " |  moveSize" + moveSize + " | footerBottomTop " + footerBottomTop + " | contentOutter " + contentOutter + " | footerTopTop " + footerTopTop + " <<<<")
+//     // }
+//     if ((scrollMax == contentOutter) ) {
+//         enableFooterIcons();
+//         $('.footerTopContainer').css({'position': 'relative', 'margin-bottom': (footerOuterHeight) + 'px'});
+//         $('.carpool-page').css('margin-bottom', '0px');
+//     } else {
+//         if (footerTopTop > footerBottomTop) {
+//             // Hide the dropdow when scroll up 
+//             $(".footer .footerTopContainer table .iconLink").removeClass("active");
+//             hideMessageForm();
+//             hideLocationDropdown();
+//             disableFooterIcons();
 
-            $('.footerTopContainer').css('position', 'fixed').css('margin-bottom', '1px');
-            $('.carpool-page').css('margin-bottom', footerOuterHeight + 'px');
-        }
-    }
-//});
-}
+//             $('.footerTopContainer').css('position', 'fixed').css('margin-bottom', '1px');
+//             $('.carpool-page').css('margin-bottom', footerOuterHeight + 'px');
+//         }
+//     }
+// //});
+// }
 
-function enableFooterIcons() {
-    $(".footer .footerTopContainer .iconLink").removeClass("noPointerEvent");
-}
+// function enableFooterIcons() {
+//     $(".footer .footerTopContainer .iconLink").removeClass("noPointerEvent");
+// }
 
-function disableFooterIcons() {
-    $(".footer .footerTopContainer .iconLink").addClass("noPointerEvent");
-}
+// function disableFooterIcons() {
+//     $(".footer .footerTopContainer .iconLink").addClass("noPointerEvent");
+// }
