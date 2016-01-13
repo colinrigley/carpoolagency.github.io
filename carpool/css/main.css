@@ -2622,5 +2622,27 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    color: #FFF;
+    text-align: center;
+}
 
+#carpool .aboutSectionPicture h1 {
+    font-size: 48px;
+    font-weight: lighter;    
+}
+
+#carpool #about .topMediaContainer {
+    height: 40vh;
+}
+
+#carpool #about .topMediaContainer .innerContainer .aboutTopPicture {
+    color: #FFF;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
+    font-size: 48px;
+    font-weight: lighter;    
 }
