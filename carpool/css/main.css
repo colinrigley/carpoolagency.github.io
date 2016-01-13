@@ -2513,11 +2513,12 @@ body {
 
 #carpool .footerTopContainer {
     position:relative;
-    height: 12em;
+    height: auto;
     bottom: 0;
     width: 100%;
     padding-top: 4.5em;
 }
+
 
 #carpool .footerBottomContainer {
     position: relative;
