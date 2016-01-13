@@ -39,7 +39,7 @@ var hideMessageForm = function() {
 
 var showLocationDropdown = function() {
     // Do nothing if whole top footer not showing
-    if ($('.footerTopContainer').css('position') === "fixed") {
+    if ($('.footerTopContainer').css('position') === "relative") {
         return;
     }
 

@@ -1739,7 +1739,7 @@ body {
 
 #carpool .video-overlay .overlayTitle {
     font-size: 56px;
-    font-family: "Vollkorn";
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;;
     color: #FFF;
     margin-bottom: 15px;
 }
@@ -1780,7 +1780,7 @@ body {
 }
 
 #carpool .sectionDetailContainer .animationTextHeader {
-    font-family: "Vollkorn";
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
     font-size: 40px;
     color: #67bc46;
     margin-bottom: 10px;
@@ -1819,7 +1819,7 @@ body {
 }
 
 #carpool .sectionTitle {
-    font-family: "Vollkorn";
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;;
     font-size: 56px;
     color: #999999;
 }
@@ -1839,7 +1839,7 @@ body {
 }
 
 #carpool .animationContainer .animationTextHeader {
-    font-family: "Vollkorn";
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
     font-size: 40px;
     color: #67bc46;
     margin-bottom: 10px;
@@ -1955,7 +1955,7 @@ body {
 }
 
 #carpool #connect .member-name {
-    font-family: "Vollkorn";
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
     font-size: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -2593,4 +2593,22 @@ body {
 
 #carpool .noPointerEvent {
     pointer-events: none;
+}
+
+#carpool .welcomeButton {
+    color:#FFF;
+    text-align: center;
+    padding-top: .75em;
+}
+
+#carpool .footerButton {
+    padding-top: .75em;
+}
+
+#carpool .welcomeMessage {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFF;
 }
