@@ -38,61 +38,11 @@ var hideMessageForm = function() {
 };
 
 var showLocationDropdown = function() {
-    // Do nothing if whole top footer not showing
-    if ($('.footerTopContainer').css('position') === "relative") {
-        return;
-    }
-
-    if ($(".footer .footerTopContainer .textBottom").css("opacity") === "1") {
-        $(".footer .footerTopContainer .textBottom").animate({
-            opacity: 0,
-            "z-index": "-1"
-        }, 200, function() {
-            $(".footer .location1 span").animate({
-                opacity: 1,
-                "font-weight": 700
-            }, 200);
-            $(".footer .location2 span").animate({
-                opacity: 1
-            }, 200);
-            $(".footer .location3 span").animate({
-                opacity: 1
-            }, 200);
-            $(".footer .location4 span").animate({
-                opacity: 1
-            }, 200);
-            if ($(".footer .locationDropdownContainer").is(':hidden')) {
-                $(".footer .locationDropdownContainer").slideDown(200);
-            }
-        });
-        $(".footerTopContainer").css("height","auto");
-    }
+    $(".footer .locationDropdownContainer").slideDown(200);
 };
 
 var hideLocationDropdown = function() {
-    if ($(".footer .footerTopContainer .textBottom").css("opacity") === "0") {
-        if ($(".footer .locationDropdownContainer").is(':visible')) {
-            $(".footer .locationDropdownContainer").slideUp(200);
-        }
-        $(".footer .location1 span").animate({
-            opacity: 0
-        }, 200);
-        $(".footer .location2 span").animate({
-            opacity: 0
-        }, 200);
-        $(".footer .location3 span").animate({
-            opacity: 0
-        }, 200);
-        $(".footer .location4 span").animate({
-            opacity: 0
-        }, 200, function() {
-            $(".footer .footerTopContainer .textBottom").animate({
-                opacity: 1,
-                "z-index": "0"
-            }, 200);
-        });
-    }
-    $(".footerTopContainer").css("height","294px");
+    $(".footer .locationDropdownContainer").slideUp(200);
 };
 
 $(function() {
@@ -306,8 +256,8 @@ $(function() {
     $(".footer .footerLocation").unbind("click").bind("click", function(event) {
         event.preventDefault();
         hideMessageForm();
-        $(".footer .footerTopContainer table .iconLink").removeClass("active");
-        if ($(".footer .footerTopContainer .textBottom").css("opacity") === "1") {
+        $(".footer .footerTopContainer .iconLink").removeClass("active");
+        if ($(".footer .locationDropdownContainer").is(':hidden'))  {
             $(".footer .footerLocation").parent().addClass("active");
             showLocationDropdown();
         } else {
