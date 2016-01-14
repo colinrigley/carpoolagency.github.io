@@ -1553,10 +1553,6 @@ body {
     font-weight: 700;
 }
 
-#carpool .header .dropdownContainer .pageNavLink.active {
-    font-weight: 400;
-}
-
 #carpool .carpool-page {
     overflow: hidden;
     position: relative;
@@ -1784,7 +1780,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 210px;
+    /*border-radius: 210px;*/
 }
 
 #carpool .sectionDetailContainer .animationTextHeader {
@@ -2098,9 +2094,9 @@ body {
 }
 
 
-/*
- * Header
- */
+/**********
+ * HEADER *
+ **********/
 
 #carpool .header {
     position: absolute;
@@ -2108,8 +2104,6 @@ body {
     right: 0;
     top: 0;
     z-index: 8;
-    -webkit-transition: all 0.4s ease-in-out
-    -moz-transition: all 0.4s ease-in-out 
 }
 
 #carpool .header a {
@@ -2117,35 +2111,12 @@ body {
     color: #FFF;
 }
 
-#carpool .header .dropDownCover {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:rgba(0,0,0,0.6);
-    z-index: 10;
-}
-
 #carpool .header .navContainer {
+    margin: 0 auto;
     position: fixed;
     height: auto;
     width: 100%;
     background-color: rgba(0,0,0,.8);
-}
-
-#carpool .header .navContainer .transparentBg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #000;
-    -ms-filter: "alpha(Opacity=90)";
-    filter: alpha(opacity=90);
-    opacity: .90;
-    
 }
 
 #carpool .header .logoContainer {
@@ -2153,13 +2124,15 @@ body {
 }
 
 #carpool .header .logoContainer .logo {
-    background: transparent url('/carpool/img/svg_icons/carpool_logo_white.svg') no-repeat scroll 0% 0%;
+    background: url('/carpool/img/svg_icons/carpool_logo_white.svg');
+    background-repeat: no-repeat;
     display: inline-block;
-    text-indent: -9999px;
     width: 175px;
     height: 55px;
     background-size: contain;
-    margin-top: 24px;
+    margin-top: 2rem;
+    will-change: height;
+    transition: all 300ms ease;
 }
 
 #carpool .header .menuContainer {
@@ -2177,198 +2150,8 @@ body {
     font-size: 16px;
     list-style: none;
     color: #FFF;
-    text-transform: lowercase;
+    text-transform: uppercase;
 }
-
-#carpool .header .rightContainer {
-    cursor: pointer;
-    width: 56px;
-    height: 56px;
-    position: fixed;
-    top: 0;
-    right: 28px;
-    background: #000;
-    -ms-filter: "alpha(Opacity=70)";
-    filter: alpha(opacity=70);
-    opacity: .70;
-}
-
-#carpool .header .rightContainer .transparentBg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #000;
-    -ms-filter: "alpha(Opacity=70)";
-    filter: alpha(opacity=70);
-    opacity: .70;
-}
-
-#carpool .header .rightContainer hr {
-    display: block;
-    border-style: inset;
-    border-width: 1px;
-    position: relative;
-}
-
-#carpool .header .rightContainer hr.green {
-    border-color: #68bc47;
-    margin: 14px 15px 0 15px;
-}
-
-#carpool .header .rightContainer hr.lightGreen {
-    border-color: #a2e03f;
-    margin: 10px 15px 0 15px;
-}
-
-#carpool .header .rightContainer hr.yellow {
-    border-color: #f9ec31;
-    margin: 10px 15px 0 15px;
-}
-
-#carpool .header .dropdownContainer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 420px;
-    z-index: 15;
-}
-
-#carpool .header .dropdownContainer:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
-    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.8);
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 10%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-}
-
-#carpool .header .dropdownContainer i {
-    font-size: 36px;
-    color: #FFF;
-    margin-bottom: 10px;
-}
-
-#carpool .header .dropdownContainer .navigationWrapper,
-#carpool .header .dropdownContainer .twitterWrapper,
-#carpool .header .dropdownContainer .calendarWrapper {
-    width: 22%;
-    height: 100%;
-    float: left;
-}
-
-#carpool .header .dropdownContainer .navigationWrapper {
-    padding: 70px 28px 42px 28px;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper,
-#carpool .header .dropdownContainer .calendarWrapper {
-    padding: 70px 42px 42px 42px;
-}
-
-#carpool .header .dropdownContainer .instagramWrapper {
-    width: 34%;
-    height: 100%;
-    float: left;
-    padding: 70px 42px 42px 42px;
-}
-
-#carpool .header .dropdownContainer .navigationWrapper .logoWhite {
-    background: transparent url('/carpool/img/svg_icons/carpool_logo_white.svg') no-repeat;
-    width: 168px;
-    height: 50px;
-    background-size: contain;
-    margin-bottom: 28px;
-    margin-left: -6px;
-    margin-top: -12px;
-}
-
-#carpool .header .dropdownContainer .navigationWrapper .navigationMenu li {
-    margin-bottom: 14px;
-}
-
-#carpool .header .dropdownContainer .navigationWrapper .navigationMenu a {
-    font-size: 20px;
-    color: #FFF;
-}
-
-#carpool .header .dropdownContainer .svgIcon {
-    height: 2em;
-    margin-bottom: 15px;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .twitterContent,
-#carpool .header .dropdownContainer .calendarWrapper .calendarContent {
-    font-size: 15px;
-    color: #FFF;
-    margin-top: 21px;
-    max-height: 238px;
-    overflow: hidden;
-}
-
-#carpool .header .dropdownContainer .instagramWrapper .instagramContent {
-    margin-top: 21px;
-    max-height: 238px;
-    overflow: hidden;
-}
-
-#carpool .header .dropdownContainer .instagramWrapper .instagramContent img {
-    width: 112px;
-    float: left;
-}
-
-#carpool .header .dropdownContainer .closeContainer {
-    position: absolute;
-    top: 14px;
-    right: 28px;
-    cursor: pointer;
-}
-
-/*
- * Twitter styling
- */
-#carpool .header .dropdownContainer .twitterWrapper .twitterContent iframe {
-    display: none !important;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .tweetTopHeader,
-#carpool .header .dropdownContainer .calendarWrapper .calendarTopHeader {
-    margin-bottom: 20px;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .userLink,
-#carpool .header .dropdownContainer .twitterWrapper .dateLink,
-#carpool .header .dropdownContainer .twitterWrapper .tweetContent,
-#carpool .header .dropdownContainer .twitterWrapper .tweetContent a {
-    color: #FFF;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .userLink {
-    margin-right: 10px;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .tweetContent a {
-    text-decoration: underline;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .tweetContent a b {
-    font-weight: 400;
-}
-
-#carpool .header .dropdownContainer .twitterWrapper .tweetContent a .tco-hidden {
-    display: none;
-}
-
 
 /*
  * Footer
@@ -2668,4 +2451,16 @@ body {
     background: url('/carpool/img/welcomeBg.jpg');
     background-size: cover;
     height: 100vh;
+}
+
+#carpool .enviroDesignImage {
+    margin: 50px 0 0 0;
+}
+
+#carpool .implementationImage {
+    margin: 35px 14px 0 0;
+}
+
+#carpool .supportImage {
+    margin: 50px 0 0 0;
 }
