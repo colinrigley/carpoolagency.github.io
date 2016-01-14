@@ -21,7 +21,7 @@ var showMessageForm = function() {
     if ($(".footer .messageFormBackground").is(':hidden')) {
         $(".footer .messageFormBackground").slideDown(200);
     }
-    $(".footerTopContainer").css("height","auto");
+    $(".footerTopContainer").css("height", "auto");
 };
 
 var hideMessageForm = function() {
@@ -34,7 +34,7 @@ var hideMessageForm = function() {
     if ($(".footer .messageFormBackground").is(':visible')) {
         $(".footer .messageFormBackground").slideUp(200);
     }
-    $(".footerTopContainer").css("height","auto");
+    $(".footerTopContainer").css("height", "auto");
 };
 
 var showLocationDropdown = function() {
@@ -51,36 +51,37 @@ $(function() {
     var isAboutPage = false;
     var isArticlePage = false;
     var isScrollingAnimation = false;
-if(navigator.userAgent.match(/Trident\/7\./)) {
-    $('body').on("mousewheel", function () {
-        event.preventDefault();
+    if (navigator.userAgent.match(/Trident\/7\./)) {
+        $('body').on("mousewheel", function() {
+            event.preventDefault();
 
-        var wheelDelta = event.wheelDelta;
+            var wheelDelta = event.wheelDelta;
 
-        var currentScrollPosition = window.pageYOffset;
-        window.scrollTo(0, currentScrollPosition - wheelDelta);
-    });
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
 
-    $('body').keydown(function (e) {
+        $('body').keydown(function(e) {
 
-        var currentScrollPosition = window.pageYOffset;
+            var currentScrollPosition = window.pageYOffset;
 
-        switch (e.which) {
+            switch (e.which) {
 
-            case 38: // up
-                e.preventDefault(); // prevent the default action (scroll / move caret)
-                window.scrollTo(0, currentScrollPosition - 120);
-                break;
+                case 38: // up
+                    e.preventDefault(); // prevent the default action (scroll / move caret)
+                    window.scrollTo(0, currentScrollPosition - 120);
+                    break;
 
-            case 40: // down
-                e.preventDefault(); // prevent the default action (scroll / move caret)
-                window.scrollTo(0, currentScrollPosition + 120);
-                break;
+                case 40: // down
+                    e.preventDefault(); // prevent the default action (scroll / move caret)
+                    window.scrollTo(0, currentScrollPosition + 120);
+                    break;
 
-            default: return; // exit this handler for other keys
-        } 
-    });
-}
+                default:
+                    return; // exit this handler for other keys
+            }
+        });
+    }
     // Set the active class for the navigation
     // Parameter is the href attribute for the navigation to be active
     var activeNavAnchors = function(href) {
@@ -123,15 +124,19 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
     }
 
     // DownArrow click event
-    $(".topMediaContainer .downArrow").unbind("click").bind("click", function(event) { 
-        $('html,body').animate( { scrollTop:$(".topMediaContainer").height() } , 1000, function() {
+    $(".topMediaContainer .downArrow").unbind("click").bind("click", function(event) {
+        $('html,body').animate({
+            scrollTop: $(".topMediaContainer").height()
+        }, 1000, function() {
             isScrollingAnimation = false;
         });
         return;
     });
 
-    $(".topMediaContainer .downArrowText").unbind("click").bind("click", function(event) { 
-        $('html,body').animate( { scrollTop:$(".topMediaContainer").height() } , 1000, function() {
+    $(".topMediaContainer .downArrowText").unbind("click").bind("click", function(event) {
+        $('html,body').animate({
+            scrollTop: $(".topMediaContainer").height()
+        }, 1000, function() {
             isScrollingAnimation = false;
         });
         return;
@@ -160,13 +165,15 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
     };
 
     // Smooth transition between pages
-    $(".pageNavLink").unbind("click").bind("click", function(event) {        
+    $(".pageNavLink").unbind("click").bind("click", function(event) {
         // Smooth transition to services on Welcome page
         if (isWelcomePage && $(this).attr("href") === "/#services") {
             event.preventDefault();
             isScrollingAnimation = true;
             blurArrow();
-            $('html,body').animate( { scrollTop:$("#services").offset().top } , 1000, function() {
+            $('html,body').animate({
+                scrollTop: $("#services").offset().top
+            }, 1000, function() {
                 activeNavAnchors("/#services");
                 isScrollingAnimation = false;
             });
@@ -179,11 +186,13 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
             event.preventDefault();
             isScrollingAnimation = true;
             showArrow();
-            $('html,body').animate( { scrollTop: 0 } , 1000, function() {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 1000, function() {
                 isScrollingAnimation = false;
-            });     
+            });
             return;
-        } 
+        }
     });
 
     var lastScrollTop = 0; // Previous page position
@@ -195,12 +204,6 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
     $(window).scroll(function(event) {
         var self = this;
         var st = $(this).scrollTop(); // Current page position
-
-        if (isScrollingAnimation) {
-            //console.log("Prevent scroll!");
-            event.preventDefault();
-            return false;
-        }
 
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
 
@@ -222,8 +225,7 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
             blurArrow();
             if (isArticlePage) { // Don't show nav on background media for article page
-            } else {
-            }
+            } else {}
             if (isWelcomePage) {
                 if ($("#welcome .welcomeMenu").is(':visible')) {
                     $("#welcome .welcomeMenu").hide();
@@ -286,11 +288,23 @@ if(navigator.userAgent.match(/Trident\/7\./)) {
         event.preventDefault();
         hideMessageForm();
         $(".footer .footerTopContainer .iconLink").removeClass("active");
-        if ($(".footer .locationDropdownContainer").is(':hidden'))  {
+        if ($(".footer .locationDropdownContainer").is(':hidden')) {
             $(".footer .footerLocation").parent().addClass("active");
             showLocationDropdown();
         } else {
             hideLocationDropdown();
+        }
+    });
+
+    $(document).on("scroll", function() {
+        if ($(document).scrollTop() > 100) {
+            $(".menuContainer").addClass("shrink");
+            $(".logo").css('background-image', "url(/carpool/img/svg_icons/carpool_logo_small_white.svg)");
+            $(".logo").css('height','30px');
+        } else {
+            $(".menuContainer").removeClass("shrink");
+            $(".logo").css('background-image', "url(/carpool/img/svg_icons/carpool_logo_white.svg)");
+            $(".logo").css('height','50px');
         }
     });
 });

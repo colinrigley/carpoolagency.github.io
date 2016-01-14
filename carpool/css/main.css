@@ -2108,6 +2108,8 @@ body {
     right: 0;
     top: 0;
     z-index: 8;
+    -webkit-transition: all 0.4s ease-in-out
+    -moz-transition: all 0.4s ease-in-out 
 }
 
 #carpool .header a {
@@ -2128,8 +2130,9 @@ body {
 
 #carpool .header .navContainer {
     position: fixed;
-    height: 65px;
+    height: auto;
     width: 100%;
+    background-color: rgba(0,0,0,.8);
 }
 
 #carpool .header .navContainer .transparentBg {
@@ -2154,14 +2157,19 @@ body {
     display: inline-block;
     text-indent: -9999px;
     width: 175px;
-    height: 60px;
+    height: 55px;
     background-size: contain;
     margin-top: 10px;
 }
 
 #carpool .header .menuContainer {
-    padding-top: 22px;
+    padding: 20px 0;
 }
+
+#carpool .header .shrink {
+    padding: 5px 0;
+}
+
 
 #carpool .header .menuContainer .globalNav li {
     display: inline;
@@ -2169,7 +2177,7 @@ body {
     font-size: 16px;
     list-style: none;
     color: #FFF;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 #carpool .header .rightContainer {
@@ -2648,9 +2656,10 @@ body {
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
+    height:100vh;
 }
 
 #carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
     font-size: 48px;
-    font-weight: lighter;    
+    font-weight: lighter;
 }
