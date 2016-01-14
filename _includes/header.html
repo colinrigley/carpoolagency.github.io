@@ -2,24 +2,22 @@
 *  Header starts here
 * -->
 <header class="header">
-    <div class="center-margin">
-        <div class="navContainer">
-            <div class="row relative">
-                <div class="logoContainer float-left">
-                    <a href="" class="logo pageNavLink">Carpool Agency</a>
-                </div>
-                <div class="menuContainer float-right">
-                    <nav class="globalNav">
-                        <ul class="carpool-nav">
-                            <li><a href="/" class="pageNavLink {% if page.title == 'Home' %}active{% endif %}">Home</a></li>
-                            <li><a href="/#services" class="pageNavLink">Services</a></li>
-                            <li><a href="/about/" class="pageNavLink {% if page.title == 'About' %}active{% endif %}">About</a></li>
-                            <li><a href="/work/" class="pageNavLink {% if page.title == 'Work' %}active{% endif %}">Work</a></li>
-                            <li><a href="/thoughts/" class="pageNavLink {% if page.title == 'Thoughts' %}active{% endif %}">Thoughts</a></li>
-                            <li><a href="/connect/" class="pageNavLink {% if page.title == 'Connect' %}active{% endif %}">Connect</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <div class="center-margin navContainer">
+        <div class="row relative">
+            <div class="logoContainer float-left">
+                <a href="" class="logo pageNavLink">Carpool Agency</a>
+            </div>
+            <div class="menuContainer float-right">
+                <nav class="globalNav">
+                    <ul class="carpool-nav">
+                        <li><a href="/" class="pageNavLink {% if page.title == 'Home' %}active{% endif %}">Home</a></li>
+                        <li><a href="/#services" class="pageNavLink">Services</a></li>
+                        <li><a href="/about/" class="pageNavLink {% if page.title == 'About' %}active{% endif %}">About</a></li>
+                        <li><a href="/work/" class="pageNavLink {% if page.title == 'Work' %}active{% endif %}">Work</a></li>
+                        <li><a href="/thoughts/" class="pageNavLink {% if page.title == 'Thoughts' %}active{% endif %}">Thoughts</a></li>
+                        <li><a href="/connect/" class="pageNavLink {% if page.title == 'Connect' %}active{% endif %}">Connect</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -27,6 +25,16 @@
 <!-- **
 *  Header ends here
 * -->
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {$('.header .twitterContent .dateLink').attr('href',$('#twitter-widget-0').contents().find('.stream .h-feed li time').parent().attr('href'));var tweetDateOriginal = $('#twitter-widget-0').contents().find('.stream .h-feed li time').html().split(' ');var tweetDateNew = tweetDateOriginal[1] + ' ' + tweetDateOriginal[0];$('.header .twitterContent .dateLink').html(tweetDateNew);$('.header .twitterContent .tweetContent').html($('#twitter-widget-0').contents().find('.stream .h-feed li .e-entry-title').html());$('.header .twitterContent .tweetContent a').attr('target','_blank');$('#twitter-widget-0').remove();});");fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
+<script>
+! function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + "://platform.twitter.com/widgets.js";
+        js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {$('.header .twitterContent .dateLink').attr('href',$('#twitter-widget-0').contents().find('.stream .h-feed li time').parent().attr('href'));var tweetDateOriginal = $('#twitter-widget-0').contents().find('.stream .h-feed li time').html().split(' ');var tweetDateNew = tweetDateOriginal[1] + ' ' + tweetDateOriginal[0];$('.header .twitterContent .dateLink').html(tweetDateNew);$('.header .twitterContent .tweetContent').html($('#twitter-widget-0').contents().find('.stream .h-feed li .e-entry-title').html());$('.header .twitterContent .tweetContent a').attr('target','_blank');$('#twitter-widget-0').remove();});");
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, "script", "twitter-wjs");
+</script>

@@ -1687,7 +1687,6 @@ body {
 }
 
 #carpool #welcome .welcomeVideo-overlay .welcomeWrapper {
-    width: 435px;
     height: 300px;
 }
 
@@ -1696,6 +1695,7 @@ body {
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 21px;
+    text-align: center;
 }
 
 #carpool #welcome .welcomeVideo-overlay .welcomeMenu a {
@@ -2159,15 +2159,15 @@ body {
     width: 175px;
     height: 55px;
     background-size: contain;
-    margin-top: 10px;
+    margin-top: 24px;
 }
 
 #carpool .header .menuContainer {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 #carpool .header .shrink {
-    padding: 5px 0;
+    padding: 15px 0;
 }
 
 
@@ -2662,4 +2662,10 @@ body {
 #carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
     font-size: 48px;
     font-weight: lighter;
+}
+
+#carpool .homeTopPicture {
+    background: url('/carpool/img/welcomeBg.jpg');
+    background-size: cover;
+    height: 100vh;
 }

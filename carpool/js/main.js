@@ -301,10 +301,12 @@ $(function() {
             $(".menuContainer").addClass("shrink");
             $(".logo").css('background-image', "url(/carpool/img/svg_icons/carpool_logo_small_white.svg)");
             $(".logo").css('height','30px');
+            $('.logo').css('margin-top', '10px');
         } else {
             $(".menuContainer").removeClass("shrink");
             $(".logo").css('background-image', "url(/carpool/img/svg_icons/carpool_logo_white.svg)");
             $(".logo").css('height','50px');
+            $('.logo').css('margin-top', '24px');            
         }
     });
 });
