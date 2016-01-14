@@ -2130,19 +2130,24 @@ body {
     width: 175px;
     height: 55px;
     background-size: contain;
-    margin-top: 2rem;
-    will-change: height;
+    margin-top: 2.5rem;
+    will-change: margin-top;
     transition: all 300ms ease;
 }
 
 #carpool .header .menuContainer {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
-#carpool .header .shrink {
-    padding: 15px 0;
+
+#carpool .header .navContainer.shrink .menuContainer {
+    padding: 23px 0;
 }
 
+#carpool .header .navContainer.shrink .logo{
+    background-position-x: -133px;
+    margin-top: .5rem;
+}
 
 #carpool .header .menuContainer .globalNav li {
     display: inline;
