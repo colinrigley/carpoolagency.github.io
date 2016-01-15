@@ -25,12 +25,14 @@ body {
 #carpool span,
 #carpool object,
 #carpool iframe,
+
 /*#carpool h1,
 #carpool h2,
 #carpool h3,
 #carpool h4,
 #carpool h5,
 #carpool h6,*/
+
 #carpool p,
 #carpool blockquote,
 #carpool pre,
@@ -56,9 +58,11 @@ body {
 #carpool dl,
 #carpool dt,
 #carpool dd,
+
 /*#carpool ol,
 #carpool ul,
 #carpool li,*/
+
 #carpool fieldset,
 #carpool form,
 #carpool label,
@@ -97,7 +101,8 @@ body {
     background: rgba(255, 255, 255, 0);
 }
 
-#carpool ul, ol {
+#carpool ul,
+ol {
     margin: 0;
     padding: 0;
 }
@@ -1558,10 +1563,11 @@ body {
     position: relative;
     z-index: 5;
     background-color: #FFF;
-/*    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
+    /*    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
     -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.8);
     box-shadow: 0 0 30px rgba(0,0,0,0.8);
-*/}
+*/
+}
 
 #carpool .topMediaContainer {
     width: 100%;
@@ -1583,72 +1589,75 @@ body {
 }
 
 #carpool input::-webkit-input-placeholder {
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-#carpool input:-moz-placeholder { /* Firefox 18- */
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+#carpool input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-#carpool input::-moz-placeholder {  /* Firefox 19+ */
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif; 
+#carpool input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-#carpool input:-ms-input-placeholder {  
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+#carpool input:-ms-input-placeholder {
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool textarea::-webkit-input-placeholder {
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-#carpool textarea:-moz-placeholder { /* Firefox 18- */
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+#carpool textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-#carpool textarea::-moz-placeholder {  /* Firefox 19+ */
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif; 
+#carpool textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
-#carpool textarea:-ms-input-placeholder {  
-   color: #999;
-   font-size: 20px;
-   font-weight: 400;
-   font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+#carpool textarea:-ms-input-placeholder {
+    color: #999;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
 #carpool .bgMedia {
     width: 100%;
     height: 100vh;
     min-height: 800px;
-    -webkit-background-size:cover; 
-    -moz-background-size:cover; 
-    -o-background-size:cover; 
-    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 #carpool #welcome .topMediaContainer video {
     display: block;
@@ -1669,7 +1678,9 @@ body {
     left: 0;
     right: 0;
     background: #000;
-    -ms-filter:"alpha(Opacity=30)";filter:alpha(opacity=30);opacity: .30;
+    -ms-filter: "alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: .30;
 }
 
 #carpool #welcome .welcomeVideo-overlay {
@@ -1729,7 +1740,7 @@ body {
     position: relative;
 }
 
-#carpool .video-overlay .wrapper .transparentBg{
+#carpool .video-overlay .wrapper .transparentBg {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1743,7 +1754,8 @@ body {
 
 #carpool .video-overlay .overlayTitle {
     font-size: 56px;
-    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+    ;
     color: #FFF;
     margin-bottom: 15px;
 }
@@ -1823,7 +1835,8 @@ body {
 }
 
 #carpool .sectionTitle {
-    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;;
+    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+    ;
     font-size: 56px;
     color: #999999;
 }
@@ -1923,7 +1936,9 @@ body {
     font-size: 28px;
 }
 
-#carpool #connect ul, #carpool #connect ol, #carpool #connect li {
+#carpool #connect ul,
+#carpool #connect ol,
+#carpool #connect li {
     margin: 0;
     padding: 0;
     border: 0;
@@ -1932,7 +1947,6 @@ body {
     vertical-align: baseline;
     background: transparent;
 }
-
 
 #carpool #connect .memberList {
     margin-left: -28px;
@@ -1984,9 +1998,6 @@ body {
 }
 
 
-
-
-
 /*
  * Post Article page
  */
@@ -2000,7 +2011,8 @@ body {
     text-decoration: underline;
 }
 
-#postArticle #postBody img, #postArticle #postBody iframe {
+#postArticle #postBody img,
+#postArticle #postBody iframe {
     max-width: 100%;
     display: block;
     margin: 10px auto;
@@ -2116,7 +2128,7 @@ body {
     position: fixed;
     height: auto;
     width: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, .8);
 }
 
 #carpool .header .logoContainer {
@@ -2132,19 +2144,18 @@ body {
     background-size: contain;
     margin-top: 2.5rem;
     will-change: margin-top;
-    transition: all 300ms ease;
+    transition: all 400ms ease;
 }
 
 #carpool .header .menuContainer {
     padding: 60px 0;
 }
 
-
 #carpool .header .navContainer.shrink .menuContainer {
     padding: 23px 0;
 }
 
-#carpool .header .navContainer.shrink .logo{
+#carpool .header .navContainer.shrink .logo {
     background-position-x: -133px;
     margin-top: .5rem;
 }
@@ -2157,6 +2168,7 @@ body {
     color: #FFF;
     text-transform: uppercase;
 }
+
 
 /*
  * Footer
@@ -2171,13 +2183,28 @@ body {
 }
 
 #carpool .footerLinksContainer {
-    background-image: url('/carpool/img/footer.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/showyou.png');
     background-size: 100% auto;
-    height: 30em;
+    height: 22em;
     background-position-y: -18em;
-    color:#FFF;
+    color: #FFF;
     text-align: center;
 }
+
+#carpool .aboutFooterLinksContainer {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/helpyou.png');
+    background-size: 100% auto;
+    height: 22em;
+    background-position-y: -18em;
+    color: #FFF;
+    text-align: center;
+}
+
+#carpool .aboutFooterLinksContainer h1 {
+    font-size: 3em;
+    font-weight: lighter;
+}
+
 
 /* Message form */
 
@@ -2185,9 +2212,9 @@ body {
     position: relative;
     background: #68bc47;
     display: none;
-    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
-    box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
     z-index: 5;
 }
 
@@ -2284,9 +2311,9 @@ body {
 #carpool .footer .locationAddressBackground {
     background: #68bc47;
     padding: 30px 20px 20px 20px;
-    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
-    box-shadow: inset 0px 25px 30px -30px rgba(0,0,0,1);
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
 }
 
 #carpool .footer .locationAddressBackground .locationAddress {
@@ -2316,13 +2343,12 @@ body {
 }
 
 #carpool .footerTopContainer {
-    position:relative;
+    position: relative;
     height: auto;
     bottom: 0;
     width: 100%;
     padding-top: 4.5em;
 }
-
 
 #carpool .footerBottomContainer {
     position: relative;
@@ -2357,8 +2383,7 @@ body {
     top: 196px;
 }
 
-#
-#carpool .footerTopContainer .textTop {
+# #carpool .footerTopContainer .textTop {
     color: #FFF;
     position: absolute;
 }
@@ -2372,12 +2397,13 @@ body {
     width: 100%;
     padding: 75px 0 100px 0;
     background: #4D4D4D;
-/*    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
+    /*    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
     background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
     background-image: -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
     background-image: -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
     background-image: repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-*/    bottom: 0px;
+*/
+    bottom: 0px;
 }
 
 #carpool .footerLogo {
@@ -2400,7 +2426,7 @@ body {
 }
 
 #carpool .welcomeButton {
-    color:#FFF;
+    color: #FFF;
     text-align: center;
     padding-top: .75em;
 }
@@ -2418,11 +2444,11 @@ body {
 }
 
 #carpool .animationTextContainer a {
-    color:#67bc46;
+    color: #67bc46;
 }
 
 #carpool .aboutSectionPicture {
-    background-image: url('/carpool/img/footer.jpg');
+    background-image: url('/carpool/img/sota.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -2432,7 +2458,7 @@ body {
 
 #carpool .aboutSectionPicture h1 {
     font-size: 48px;
-    font-weight: lighter;    
+    font-weight: lighter;
 }
 
 #carpool #about .topMediaContainer {
@@ -2444,7 +2470,9 @@ body {
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
-    height:100vh;
+    height: 100vh;
+    background-position-y: -200px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/binh.jpg') 0px -200px/cover;
 }
 
 #carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
