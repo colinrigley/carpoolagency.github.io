@@ -46,11 +46,7 @@ var hideLocationDropdown = function() {
 };
 
 $(function() {
-    var currentPage = "";
-    var isWelcomePage = false;
-    var isAboutPage = false;
-    var isArticlePage = false;
-    var isScrollingAnimation = false;
+    // IE scrolling override for smooth fixed position background effect
     if (navigator.userAgent.match(/Trident\/7\./)) {
         $('body').on("mousewheel", function() {
             event.preventDefault();
@@ -82,6 +78,13 @@ $(function() {
             }
         });
     }
+
+    var currentPage = "";
+    var isWelcomePage = false;
+    var isAboutPage = false;
+    var isArticlePage = false;
+    var isScrollingAnimation = false;
+
     // Set the active class for the navigation
     // Parameter is the href attribute for the navigation to be active
     var activeNavAnchors = function(href) {
@@ -123,48 +126,49 @@ $(function() {
         isArticlePage = true;
     }
 
-    // DownArrow click event
+    // Down Arrow click event
     $(".topMediaContainer .downArrow").unbind("click").bind("click", function(event) {
         $('html,body').animate({
-            scrollTop: $(".topMediaContainer").height()
+            scrollTop: $(".topMediaContainer").height() - 66
         }, 1000, function() {
             isScrollingAnimation = false;
         });
         return;
     });
 
+    // Down Arrow Text (on Thoughts Page)
     $(".topMediaContainer .downArrowText").unbind("click").bind("click", function(event) {
         $('html,body').animate({
-            scrollTop: $(".topMediaContainer").height()
+            scrollTop: $(".topMediaContainer").height() - 66
         }, 1000, function() {
             isScrollingAnimation = false;
         });
         return;
     });
 
-    // Hide the navigation logo and menu on start up for welcome page
-
+    // TODO: ask if we still need this, hard to see.
+    // TODO: maybe animate
+    // Fades opacity of down arrow as scroll position changes.
     var showArrow = function() {
         if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "0.3") {
             $(".downArrowContainer .downArrowText").fadeTo(100, 1);
         }
-
         if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
             $(".downArrowContainer .downArrow").fadeTo(100, 1);
         }
     };
-
     var blurArrow = function() {
         if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "1") {
-            $(".downArrowContainer .downArrowText").fadeTo(100, 0.3);
+            $(".downArrowContainer .downArrowText").fadeTo(400, 0.3);
         }
 
         if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-            $(".downArrowContainer .downArrow").fadeTo(100, 0.3);
+            $(".downArrowContainer .downArrow").fadeTo(400, 0.3);
         }
     };
 
     // Smooth transition between pages
+    // TODO: only the welcome page uses this. Get rid of if we separate this.
     $(".pageNavLink").unbind("click").bind("click", function(event) {
         // Smooth transition to services on Welcome page
         if (isWelcomePage && $(this).attr("href") === "/#services") {
@@ -195,11 +199,8 @@ $(function() {
         }
     });
 
-    var lastScrollTop = 0; // Previous page position
-    var minScrollEffectDistance = 50;
-    var upperTopMediaAnchorMark = 180;
+    var upperTopMediaAnchorMark = 300;
     var lowerPageFooterAnchorMark = 100;
-
     // Scrolling event binding
     $(window).scroll(function(event) {
         var self = this;
@@ -207,50 +208,25 @@ $(function() {
 
         var upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark;
 
-        if (isWelcomePage) {
-            upperTopMediaAnchor = $(".topMediaContainer").height() - upperTopMediaAnchorMark - $("#welcome .welcomeMenu").height() - 25;
-        }
-
         var topMediaAnchor = $(".topMediaContainer").height();
         var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
         if (st < upperTopMediaAnchor) { // Top media portion
             showArrow();
             if (isWelcomePage) {
-                if ($("#welcome .welcomeMenu").is(':hidden')) {
-                    $("#welcome .welcomeMenu").show();
-                }
                 activeNavAnchors("/");
             }
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
             blurArrow();
-            if (isArticlePage) { // Don't show nav on background media for article page
-            } else {}
             if (isWelcomePage) {
-                if ($("#welcome .welcomeMenu").is(':visible')) {
-                    $("#welcome .welcomeMenu").hide();
-                }
                 activeNavAnchors("/");
             }
-        } else if (st > topMediaAnchor && st < lowerPageFooterAnchor) { // Content portion
-
+        } else if ((st > topMediaAnchor && st < lowerPageFooterAnchor) || st > lowerPageFooterAnchor) { // Content portion
             // Activate service nav anchor for welcome page
             if (isWelcomePage) {
-                if ($("#welcome .welcomeMenu").is(':visible')) {
-                    $("#welcome .welcomeMenu").hide();
-                }
-                activeNavAnchors("/#services");
-            }
-        } else if (st > lowerPageFooterAnchor) { // Footer portion
-            if (isWelcomePage) {
-                if ($("#welcome .welcomeMenu").is(':visible')) {
-                    $("#welcome .welcomeMenu").hide();
-                }
                 activeNavAnchors("/#services");
             }
         }
-
-        lastScrollTop = st;
     });
 
     // Email Message
@@ -266,7 +242,7 @@ $(function() {
         }
     });
 
-    // Topic dropdown
+    // Email Message Topic dropdown
     $(".footer .messageFormBackground .topicInput").unbind("click").bind("click", function(event) {
         event.preventDefault();
         if ($(".footer .messageFormBackground .topicInputDropdown").is(':hidden')) {
@@ -276,14 +252,14 @@ $(function() {
         }
     });
 
-    // Topic dropdown selection
+    // Email Message Topic dropdown selection
     $(".footer .messageFormBackground .topicInputDropdown li").unbind("click").bind("click", function(event) {
         event.preventDefault();
         $(".footer .messageFormBackground .topicInput").val($(this).html());
         $(".footer .messageFormBackground .topicInputDropdown").slideUp(200);
     });
 
-    // Location
+    // Location Dropdown
     $(".footer .footerLocation").unbind("click").bind("click", function(event) {
         event.preventDefault();
         hideMessageForm();
@@ -296,6 +272,7 @@ $(function() {
         }
     });
 
+    // Header shrink and logo animation
     $(document).on("scroll", function() {
         if ($(document).scrollTop() > 100) {
             $(".navContainer").addClass("shrink");
