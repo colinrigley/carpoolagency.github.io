@@ -2142,13 +2142,13 @@ ol {
     width: 175px;
     height: 55px;
     background-size: contain;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     will-change: margin-top;
     transition: all 400ms ease;
 }
 
 #carpool .header .menuContainer {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 #carpool .header .navContainer.shrink .menuContainer {
