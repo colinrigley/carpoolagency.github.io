@@ -98,8 +98,8 @@ $(function() {
     if ($("#welcome").length > 0) {
         currentPage = "welcome";
         isWelcomePage = true;
-        if (window.location.hash === "#services") {
-            activeNavAnchors("/#services");
+        if (window.location.hash === "#approach") {
+            activeNavAnchors("/#approach");
         }
     } else if ($("#about").length > 0) {
         currentPage = "about";
@@ -170,21 +170,21 @@ $(function() {
     // Smooth transition between pages
     // TODO: only the welcome page uses this. Get rid of if we separate this.
     $(".pageNavLink").unbind("click").bind("click", function(event) {
-        // Smooth transition to services on Welcome page
-        if (isWelcomePage && $(this).attr("href") === "/#services") {
+        // Smooth transition to approach on Welcome page
+        if (isWelcomePage && $(this).attr("href") === "/#approach") {
             event.preventDefault();
             isScrollingAnimation = true;
             blurArrow();
             $('html,body').animate({
-                scrollTop: $("#services").offset().top
+                scrollTop: $("#approach").offset().top
             }, 1000, function() {
-                activeNavAnchors("/#services");
+                activeNavAnchors("/#approach");
                 isScrollingAnimation = false;
             });
             return;
-        } else if (!isWelcomePage && $(this).attr("href") === "/#services") {
+        } else if (!isWelcomePage && $(this).attr("href") === "/#approach") {
             event.preventDefault();
-            window.location.href = "/#services";
+            window.location.href = "/#approach";
             return;
         } else if (isWelcomePage && $(this).attr("href") === "/") {
             event.preventDefault();
@@ -224,7 +224,7 @@ $(function() {
         } else if ((st > topMediaAnchor && st < lowerPageFooterAnchor) || st > lowerPageFooterAnchor) { // Content portion
             // Activate service nav anchor for welcome page
             if (isWelcomePage) {
-                activeNavAnchors("/#services");
+                activeNavAnchors("/#approach");
             }
         }
     });
