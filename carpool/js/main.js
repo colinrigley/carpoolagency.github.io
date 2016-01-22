@@ -281,4 +281,7 @@ $(function() {
 
         }
     });
+
+    $('#aboutReadMore').readmore();
+
 });

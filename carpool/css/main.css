@@ -2183,7 +2183,7 @@ ol {
 }
 
 #carpool .footerLinksContainer {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/showyou.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9925.jpg');
     background-size: 100% auto;
     height: 22em;
     background-position-y: -18em;
@@ -2192,7 +2192,7 @@ ol {
 }
 
 #carpool .aboutFooterLinksContainer {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/helpyou.png');
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9831.jpg');
     background-size: 100% auto;
     height: 22em;
     background-position-y: -18em;
@@ -2395,7 +2395,7 @@ ol {
 
 #carpool .footerBottomContainer {
     width: 100%;
-    padding: 75px 0 100px 0;
+    padding: 30px 0 30px 0;
     background: #4D4D4D;
     /*    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
     background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
@@ -2470,9 +2470,8 @@ ol {
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
-    background-position-y: -200px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/binh.jpg') 0px -200px/cover;
+    height: 100vh;    
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9994.jpg') 0px -105px/cover;
 }
 
 #carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
@@ -2481,7 +2480,7 @@ ol {
 }
 
 #carpool .homeTopPicture {
-    background: url('/carpool/img/welcomeBg.jpg');
+    background: url('/carpool/img/9902.jpg');
     background-size: cover;
     height: 100vh;
 }
@@ -2496,4 +2495,9 @@ ol {
 
 #carpool .supportImage {
     margin: 50px 0 0 0;
+}
+
+#aboutReadMore + [data-readmore-toggle] {
+    color: #67bc46;
+    font-size: 16px;
 }
