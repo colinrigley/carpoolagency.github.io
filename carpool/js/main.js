@@ -242,6 +242,20 @@ $(function() {
         }
     });
 
+    // Navigation header email message
+    $("#connect").unbind("click").bind("click", function(event) {
+        $('html, body').animate({scrollTop:$(document).height()}, 'slow');
+        event.preventDefault();
+        hideLocationDropdown();
+        $(".footer .footerTopContainer table .iconLink").removeClass("active");
+        if ($(".footer .messageFormBackground").is(':hidden')) {
+            $(".footer .footerEmail").parent().addClass("active");
+            showMessageForm();
+        } else {
+            hideMessageForm();
+        }
+    });
+
     // Email Message Topic dropdown
     $(".footer .messageFormBackground .topicInput").unbind("click").bind("click", function(event) {
         event.preventDefault();

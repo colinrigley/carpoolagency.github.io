@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: servicesPost
 title: Carpool Environment Design
 author: Colin Rigley
 defaultImage: /carpool/img/posts_images/welcome.png
@@ -39,9 +39,6 @@ When we understand your company's content consumption patterns, we can understan
  
 Learn More
 ==========
-If you're ready to learn more about Carpool's environment design capabilities and processes, schedule a demo or set up a pilot today.
- 
-[INCLUDE CTA BUTTONS FOR DEMO AND PILOT]
- 
+If you're ready to learn more about Carpool's environment design capabilities and processes, schedule a demo or set up a pilot today. 
  
  

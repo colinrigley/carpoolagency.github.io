@@ -2501,3 +2501,11 @@ ol {
     color: #67bc46;
     font-size: 16px;
 }
+
+.pdfIcon {
+    background: url('/carpool/img/pdficon.png');
+    width:4em;
+    height:4em;
+    background-size: contain;
+    float:left;
+}

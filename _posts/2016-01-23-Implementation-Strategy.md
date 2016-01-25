@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: servicesPost
 title: Carpool Implementation Strategy
 author: Colin Rigley
 defaultImage: /carpool/img/posts_images/welcome.png
