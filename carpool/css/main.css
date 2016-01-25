@@ -2471,7 +2471,7 @@ ol {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;    
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9994.png') 0px -105px/cover;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9994.jpg') 0px -105px/cover;
 }
 
 #carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
