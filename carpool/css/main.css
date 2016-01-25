@@ -2462,7 +2462,7 @@ ol {
 }
 
 #carpool #about .topMediaContainer {
-    height: 40vh;
+    height: 65vh;
 }
 
 #carpool #about .topMediaContainer .innerContainer .aboutTopPicture {
@@ -2480,7 +2480,7 @@ ol {
 }
 
 #carpool .homeTopPicture {
-    background: url('/carpool/img/9902.jpg');
+    background: url('/carpool/img/9902.gif');
     background-size: cover;
     height: 100vh;
 }
