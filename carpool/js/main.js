@@ -290,9 +290,10 @@ $(function() {
     $(document).on("scroll", function() {
         if ($(document).scrollTop() > 100) {
             $(".navContainer").addClass("shrink");
+            $(".logoContainer").addClass("shrink");
         } else {
             $(".navContainer").removeClass("shrink");
-
+            $(".logoContainer").removeClass("shrink");
         }
     });
 

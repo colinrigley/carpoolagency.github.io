@@ -2129,10 +2129,15 @@ ol {
     height: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
+    transition: all 400ms ease;
 }
 
 #carpool .header .logoContainer {
-    margin-left: 15px;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+#carpool .header .shrink .logoContainer {
+    margin: 8px;
 }
 
 #carpool .header .logoContainer .logo {
@@ -2527,4 +2532,31 @@ ol {
     height: 30em;
     margin-right: 3em;
     margin-bottom: 3em;
+}
+
+.cpsprite {
+  background-image: url('/carpool/img/svg_icons/carpool_logo_white.svg');
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 200px 60px;
+}
+.cpsprite.cpsprite-carpool {
+  background-position: 0 0;
+  width: 158px;
+  height: 53px;
+  transition: .3s all ease;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.shrink .cpsprite.cpsprite-carpool {
+  transform: scaleX(0);
+}
+.cpsprite.cpsprite-carpool-car {
+  background-position: -158px 0;
+  width: 50px;
+  height: 55px;
+  transition: .4s all ease;
+}
+.shrink .cpsprite.cpsprite-carpool-car {
+  transform:translateX(-147px) scale(1.2);
 }
