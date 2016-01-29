@@ -33,4 +33,4 @@ Content is how we make information and data useful, polished, and consumable for
 We help you establish a consistent cadence to publish relevant content strategically. Furthermore, we coach you on how to create and share internal content that goes viral and has the largest impact possible. Carpool maintains a staff of content strategists and writers who are ready and eager to help your key content creators succeed. We work with key content creators to develop a taxonomy based on your company vision, mission, and priorities.  
 
 #Learn More
-If you're ready to learn more about Carpool's support capabilities and processes, schedule a demo or set up a pilot today.
+If you're ready to learn more about Carpool's support capabilities and processes, schedule a demo today.

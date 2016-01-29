@@ -26,4 +26,4 @@ After the analysis and [environment design](/articles/Environment-Design.html "E
 It takes a well-thought-out mixture of engagement strategy and technology infrastructure to improve the flow of communication. Carpool helps you achieve the right blend of both to create a thriving environment that fosters healthy workplace conversation, content creation, and formal consumption.
  
 #Learn More
-If you're ready to learn more about Carpool's implementation capabilities and processes, schedule a demo or set up a pilot today.
+If you're ready to learn more about Carpool's implementation capabilities and processes, schedule a demo today.

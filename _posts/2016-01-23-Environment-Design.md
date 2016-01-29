@@ -39,6 +39,6 @@ When we understand your company's content consumption patterns, we can understan
  
 Learn More
 ==========
-If you're ready to learn more about Carpool's environment design capabilities and processes, schedule a demo or set up a pilot today. 
+If you're ready to learn more about Carpool's environment design capabilities and processes, schedule a demo today. 
  
  
