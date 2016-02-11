@@ -2440,16 +2440,49 @@ ol {
     color: #FFF;
     text-align: center;
     background: url('/carpool/img/9994.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 50vh;
+    height: 55vh;
 }
 
 #carpool #about .aboutTopPicture h1 {
     font-size: 48px;
     font-weight: lighter;
 }
+
+#carpool #work .workTopPicture {
+    color: #FFF;
+    text-align: center;
+    background: url('/carpool/img/9922.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 55vh;
+    background-position-y: -15em;
+}
+
+#carpool #work .workTopPicture h1 {
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+#carpool #thoughts .thoughtsTopPicture {
+    color: #FFF;
+    text-align: center;
+    background: url('/carpool/img/9925.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 55vh;
+    background-position-y: -15em;
+}
+
+#carpool #thoughts .thoughtsTopPicture h1 {
+  font-size: 48px;
+  font-weight: lighter;
+}
+
 
 #carpool .homeTopPicture {
     background: url('/carpool/img/9902.gif');
