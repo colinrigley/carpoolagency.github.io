@@ -2133,30 +2133,24 @@ ol {
 }
 
 #carpool .header .logoContainer {
-    margin-left: 12px;
-    margin-top: 20px;
-}
-#carpool .header .shrink .logoContainer {
     margin: 8px;
+    height:53px;
+    background: url('/carpool/img/svg_icons/carpool_logo_white.svg');
+    width: 175px;
+    background-size: contain;
+
 }
 
 #carpool .header .logoContainer .logo {
-    background: url('/carpool/img/svg_icons/carpool_logo_white.svg');
     background-repeat: no-repeat;
     display: inline-block;
-    width: 175px;
     height: 55px;
-    background-size: contain;
     margin-top: 1.5rem;
     will-change: margin-top;
     transition: all 400ms ease;
 }
 
 #carpool .header .menuContainer {
-    padding: 40px 0;
-}
-
-#carpool .header .navContainer.shrink .menuContainer {
     padding: 23px 0;
 }
 
@@ -2173,7 +2167,6 @@ ol {
     color: #FFF;
     text-transform: uppercase;
 }
-
 
 /*
  * Footer
@@ -2257,7 +2250,7 @@ ol {
     padding: 5px 10px;
     font-size: 20px;
     color: #999;
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     -webkit-border-radius: 0px; */
 }
 
@@ -2476,7 +2469,7 @@ ol {
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;    
+    height: 100vh;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9994.jpg') 0px -105px/cover;
 }
 
@@ -2533,86 +2526,4 @@ ol {
     height: 30em;
     margin-right: 3em;
     margin-bottom: 3em;
-}
-
-.cpsprite {
-  background-image: url('/carpool/img/svg_icons/carpool_logo_white.svg');
-  background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 200px 60px;
-}
-.cpsprite.cpsprite-carpool {
-  background-position: 0 0;
-  width: 158px;
-  height: 53px;
-  transition: .3s all ease;
-  transform-origin: left;
-  transform: scaleX(1);
-}
-.shrink .cpsprite.cpsprite-carpool {
-  transform: scaleX(0);
-}
-.cpsprite.cpsprite-carpool-car {
-  background-position: -158px 0;
-  width: 50px;
-  height: 55px;
-  transition: .4s all ease;
-}
-.shrink .cpsprite.cpsprite-carpool-car {
-  transform:translateX(-147px) scale(1.2);
-}
-
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
 }
