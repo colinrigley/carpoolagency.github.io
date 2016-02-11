@@ -2151,7 +2151,7 @@ ol {
 }
 
 #carpool .header .menuContainer {
-    padding: 23px 0;
+    padding-top: 29px;
 }
 
 #carpool .header .navContainer.shrink .logo {
@@ -2181,13 +2181,13 @@ ol {
 }
 
 #carpool .footerLinksContainer {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9925.jpg');
-    background-size: 100% auto;
+    background: url('/carpool/img/9925.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 22em;
-    background-position-y: -18em;
     color: #FFF;
     text-align: center;
-    background-attachment: fixed;
 }
 
 #carpool .aboutFooterLinksContainer {
