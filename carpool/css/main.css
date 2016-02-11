@@ -25,14 +25,6 @@ body {
 #carpool span,
 #carpool object,
 #carpool iframe,
-
-/*#carpool h1,
-#carpool h2,
-#carpool h3,
-#carpool h4,
-#carpool h5,
-#carpool h6,*/
-
 #carpool p,
 #carpool blockquote,
 #carpool pre,
@@ -58,11 +50,6 @@ body {
 #carpool dl,
 #carpool dt,
 #carpool dd,
-
-/*#carpool ol,
-#carpool ul,
-#carpool li,*/
-
 #carpool fieldset,
 #carpool form,
 #carpool label,
@@ -97,7 +84,6 @@ body {
     border: 0;
     outline: 0;
     font-size: 100%;
-    /*vertical-align: baseline;*/
     background: rgba(255, 255, 255, 0);
 }
 
@@ -1563,10 +1549,6 @@ ol {
     position: relative;
     z-index: 5;
     background-color: #FFF;
-    /*    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.8)
-    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.8);
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
-*/
 }
 
 #carpool .topMediaContainer {
@@ -2396,12 +2378,6 @@ ol {
     width: 100%;
     padding: 30px 0 30px 0;
     background: #4D4D4D;
-    /*    background-image: -webkit-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: -moz-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: -ms-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: -o-repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-    background-image: repeating-linear-gradient(to right, #999999 18px, #a9a9a9 18px, #a9a9a9 19px, #999999 19px, #999999 37px);
-*/
     bottom: 0px;
 }
 
@@ -2460,20 +2436,17 @@ ol {
     font-weight: lighter;
 }
 
-#carpool #about .topMediaContainer {
-    height: 65vh;
-}
-
-#carpool #about .topMediaContainer .innerContainer .aboutTopPicture {
+#carpool #about .aboutTopPicture {
     color: #FFF;
     text-align: center;
-    background-size: cover;
+    background: url('/carpool/img/9994.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9994.jpg') 0px -105px/cover;
+    height: 50vh;
 }
 
-#carpool #about .topMediaContainer .innerContainer .aboutTopPicture h1 {
+#carpool #about .aboutTopPicture h1 {
     font-size: 48px;
     font-weight: lighter;
 }
@@ -2527,4 +2500,15 @@ ol {
     height: 30em;
     margin-right: 3em;
     margin-bottom: 3em;
+}
+
+.featherlight-content {
+  width: 70vh;
+  background-color: transparent !important;
+}
+
+.featherlight-close {
+  color:white !important;
+  font-size:25px;
+  background-color: transparent !important;
 }
