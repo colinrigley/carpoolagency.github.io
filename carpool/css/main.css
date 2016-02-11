@@ -2481,6 +2481,7 @@ ol {
 #carpool .homeTopPicture {
     background: url('/carpool/img/9902.gif');
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 

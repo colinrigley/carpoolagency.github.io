@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-283 375.2 43.8 43.8" style="enable-background:new -283 375.2 43.8 43.8;" xml:space="preserve">
+
+
+
+<style type="text/css">
+	.st0{
+		fill:none;stroke:#000000;stroke-miterlimit:10;
+	}
+	.circle {
+		stroke-dasharray: 134;
+		stroke-dashoffset: 134;
+		animation: dash 2s cubic-bezier(0.42, 0, 0.19, 1) forwards;
+	}
+	@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+</style>
+
+
+<g id="XMLID_2_">
+	<polyline id="XMLID_3_" class="st0" points="-273.2,391.7 -261,404.8 -248.8,391.7 	"/>
+</g>
+<path class="st0 circle" d="M-261,376.2c11.6,0,21,9.4,21,21s-9.4,21-21,21c-11.6,0-21-9.4-21-21S-272.6,376.2-261,376.2z"/>
+</svg>
