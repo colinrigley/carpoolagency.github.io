@@ -9,7 +9,7 @@ title: Thoughts
 <section id="thoughts" class="carpool-page">
   <div class="thoughtsTopPicture">
       <div class="row center-margin c-52 pt-12">
-        <h1>New Insights Into Internal Communications</h1>
+        <h1>Gain Insights Into Internal Communications</h1>
       </div>
   </div>
   <div class="row bg-lightGreen">
@@ -22,6 +22,29 @@ title: Thoughts
         <div class="sectionTitle mb-2">
             Some of Our Thinking
         </div>
+        <ul class="postList">
+          {% for post in site.posts limit:10 %}
+            {% if post.postType != "services" %}
+            <li class="postItem mb-6">
+                <div class="postDefaultImage float-left mr-3 c-15 r-15" style="background-image: url('{{ post.defaultImage }}');"></div>
+                    <table class="postSummary float-left c-40">
+                        <tr>
+                            <td class="postTitle"><a href="{{ post.url }}" class="green">{{ post.title }}</td>
+                        </tr>
+                        <tr>
+                            <td class="postAuthor">By {{ post.author }}</td>
+                        </tr>
+                        <tr>
+                            <td class="postBody">{{ post.excerpt }}</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{{ post.url }}" class="readMore green">Read more</a></td>
+                        </tr>
+                      </table>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
     </div>
 </section>
 <!-- **

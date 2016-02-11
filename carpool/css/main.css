@@ -2186,12 +2186,16 @@ ol {
     font-weight: lighter;
 }
 
+#carpool .footer .mailIcon .footerEmail img{
+  margin-top: 7px;
+}
+
 
 /* Message form */
 
 #carpool .footer .messageFormBackground {
     position: relative;
-    background: #68bc47;
+    background: #000;
     display: none;
     -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
     -moz-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
