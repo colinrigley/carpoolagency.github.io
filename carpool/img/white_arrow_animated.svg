@@ -13,6 +13,7 @@
 		stroke-dasharray: 134;
 		stroke-dashoffset: 134;
 		animation: dash 2s cubic-bezier(0.42, 0, 0.19, 1) forwards;
+		animation-delay: 1s;
 	}
 	@keyframes dash {
   to {
