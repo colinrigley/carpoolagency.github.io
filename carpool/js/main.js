@@ -149,23 +149,23 @@ $(function() {
     // TODO: ask if we still need this, hard to see.
     // TODO: maybe animate
     // Fades opacity of down arrow as scroll position changes.
-    var showArrow = function() {
-        if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "0.3") {
-            $(".downArrowContainer .downArrowText").fadeTo(100, 1);
-        }
-        if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
-            $(".downArrowContainer .downArrow").fadeTo(100, 1);
-        }
-    };
-    var blurArrow = function() {
-        if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "1") {
-            $(".downArrowContainer .downArrowText").fadeTo(400, 0.3);
-        }
-
-        if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
-            $(".downArrowContainer .downArrow").fadeTo(400, 0.3);
-        }
-    };
+    // var showArrow = function() {
+    //     if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "0.3") {
+    //         $(".downArrowContainer .downArrowText").fadeTo(100, 1);
+    //     }
+    //     if ($(".downArrowContainer .downArrow").css("opacity") === "0.3") {
+    //         $(".downArrowContainer .downArrow").fadeTo(100, 1);
+    //     }
+    // };
+    // var blurArrow = function() {
+    //     if ($(".downArrowContainer .downArrowText") && $(".downArrowContainer .downArrowText").css("opacity") === "1") {
+    //         $(".downArrowContainer .downArrowText").fadeTo(400, 0.3);
+    //     }
+    //
+    //     if ($(".downArrowContainer .downArrow").css("opacity") === "1") {
+    //         $(".downArrowContainer .downArrow").fadeTo(400, 0.3);
+    //     }
+    // };
 
     // Smooth transition between pages
     // TODO: only the welcome page uses this. Get rid of if we separate this.
@@ -174,7 +174,6 @@ $(function() {
         if (isWelcomePage && $(this).attr("href") === "/#approach") {
             event.preventDefault();
             isScrollingAnimation = true;
-            blurArrow();
             $('html,body').animate({
                 scrollTop: $("#approach").offset().top
             }, 1000, function() {
@@ -189,7 +188,6 @@ $(function() {
         } else if (isWelcomePage && $(this).attr("href") === "/") {
             event.preventDefault();
             isScrollingAnimation = true;
-            showArrow();
             $('html,body').animate({
                 scrollTop: 0
             }, 1000, function() {
@@ -212,12 +210,11 @@ $(function() {
         var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
         if (st < upperTopMediaAnchor) { // Top media portion
-            showArrow();
             if (isWelcomePage) {
                 activeNavAnchors("/");
             }
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
-            blurArrow();
+     
             if (isWelcomePage) {
                 activeNavAnchors("/");
             }

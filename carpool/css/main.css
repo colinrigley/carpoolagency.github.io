@@ -1630,6 +1630,17 @@ ol {
     font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
 }
 
+#carpool #welcome .welcomeTextTitle {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+#carpool #welcome .welcomeTextRest {
+  width:34em;
+  font-size: 21px;
+  margin-top: 10px;
+}
+
 #carpool .bgMedia {
     width: 100%;
     height: 100vh;
@@ -1665,21 +1676,19 @@ ol {
     opacity: .30;
 }
 
-#carpool #welcome .welcomeVideo-overlay {
+#carpool #welcome .welcomeHeaderOverlay {
     position: absolute;
-    bottom: 182px;
+    bottom: 45px;
     left: 0;
     right: 0;
-    /*left: 238px;
-    width: 435px;
-    height: 280px;*/
 }
 
-#carpool #welcome .welcomeVideo-overlay .welcomeWrapper {
+#carpool #welcome .welcomeHeaderOverlay .welcomeWrapper {
     height: 300px;
+    color: #2e2e2e;
 }
 
-#carpool #welcome .welcomeVideo-overlay .welcomeText {
+#carpool #welcome .welcomeHeaderOverlay .welcomeText {
     color: #FFF;
     font-size: 16px;
     line-height: 22px;
@@ -1687,19 +1696,19 @@ ol {
     text-align: center;
 }
 
-#carpool #welcome .welcomeVideo-overlay .welcomeMenu a {
+#carpool #welcome .welcomeHeaderOverlay .welcomeMenu a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
 }
 
-#carpool #welcome .welcomeVideo-overlay .welcomeMenu li {
+#carpool #welcome .welcomeHeaderOverlay .welcomeMenu li {
     display: inline;
     margin-right: 21px;
     list-style: none;
 }
 
-#carpool #welcome .welcomeVideo-overlay .welcomeMenu li:last-child {
+#carpool #welcome .welcomeHeaderOverlay .welcomeMenu li:last-child {
     margin-right: 0;
 }
 
@@ -1798,7 +1807,7 @@ ol {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 70px;
+    bottom: 10px;
 }
 
 #carpool .downArrowContainer .downArrow {
@@ -2489,7 +2498,7 @@ ol {
 
 
 #carpool .homeTopPicture {
-    background: url('/carpool/img/9902.gif');
+    background: url('/carpool/img/Carpool_Header.png');
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -2548,4 +2557,17 @@ ol {
   color:white !important;
   font-size:25px;
   background-color: transparent !important;
+}
+
+#carpool #setUpConvoButton {
+    width: 14em;
+    height: 2em;
+    border-style: solid;
+    border-color: #67BC46;
+    border-width: 4px;
+    color: white;
+    padding: 4px;
+    font-size: 2em;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
