@@ -19,15 +19,33 @@ title: Thoughts
   </div>
 
     <div class="row center-margin c-60 pt-3 pb-3 overflow-hidden">
-        <div class="sectionTitle mb-2">
+        <div class="sectionTitle mb-3">
             Some of Our Thinking
         </div>
-        <ul class="postList">
+        <div class="postGrid">
           {% for post in site.posts limit:10 %}
             {% if post.postType != "services" %}
-            <li class="postItem mb-6">
-                <div class="postDefaultImage float-left mr-3 c-15 r-15" style="background-image: url('{{ post.defaultImage }}');"></div>
-                    <table class="postSummary float-left c-40">
+            <div class="postItem float-left c-18 mr-1 mb-1">
+              <a href="{{ post.url }}">
+                <img src="{{ post.defaultImage }}" style="width:100%;"/>
+                <div class="postTitle"><b>{{ post.title}}</b></div>
+              </a>
+
+                <div class="postAuthor"><b>By {{ post.author }}</b></div>
+                <div class="postExcerpt">{{ post.excerpt }}</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                     <table class="postSummary float-left c-40">
                         <tr>
                             <td class="postTitle"><a href="{{ post.url }}" class="green">{{ post.title }}</td>
                         </tr>
@@ -41,10 +59,10 @@ title: Thoughts
                             <td><a href="{{ post.url }}" class="readMore green">Read more</a></td>
                         </tr>
                       </table>
-            </li>
+ -->            </div>
             {% endif %}
           {% endfor %}
-        </ul>
+        </div>
     </div>
 </section>
 <!-- **

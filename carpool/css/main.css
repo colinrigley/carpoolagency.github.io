@@ -1889,15 +1889,23 @@ ol {
 }
 
 #carpool #thoughts .postTitle {
-    font-size: 40px;
-    line-height: 50px;
+    font-size:17px;
+    color:#000;
+    line-height:21px;
+    text-align:left;
 }
 
 #carpool #thoughts .postAuthor {
-    padding: 7px 0;
-    font-size: 16px;
+    padding: 4px 0;
+    font-size: 14px;
     color: #999999;
-    line-height: 32px;
+    line-height: 21px;
+}
+
+#carpool #thoughts .postExcerpt {
+    font-size: 14px;
+    color: #000;
+    line-height: 21px;
 }
 
 #carpool #thoughts .postBody {
@@ -2491,7 +2499,7 @@ ol {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 55vh;
-    background-position-y: -15em;
+    background-position-y: -21em;
 }
 
 #carpool #work .workTopPicture .workTopText {
@@ -2555,7 +2563,7 @@ ol {
 
 #carpool .pdfIcon2 {
     background: url('/carpool/img/CaseStudy_2.png');
-    width:380px;
+    width:379px;
     height:255px;
     background-size: contain;
     float:left;
@@ -2616,4 +2624,11 @@ ol {
     width: 18em;
     margin-bottom: 13px;
     float: left;    
+}
+
+#carpool .postGrid .postItem {
+    border-width: 1px;
+    border-color: #ccc;
+    border-style: solid;
+    padding: 5px;
 }
