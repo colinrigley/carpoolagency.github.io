@@ -2545,22 +2545,21 @@ ol {
 }
 
 #carpool .pdfIcon {
-    background: url('/carpool/img/casestudy1.jpg');
-    width:56px;
-    height:56px;
+    background: url('/carpool/img/CaseStudy_1.png');
+    width:380px;
+    height:255px;
     background-size: contain;
     float:left;
-    margin-right: 1em;
+    margin-right: 3em;
 }
 
 #carpool .pdfIcon2 {
-    background: url('/carpool/img/casestudy2.jpg');
-    width:56px;
-    height:56px;
+    background: url('/carpool/img/CaseStudy_2.png');
+    width:380px;
+    height:255px;
     background-size: contain;
     float:left;
-    margin-right: 1em;
-    margin-top: 1em;
+    margin-right: 3em;
 }
 
 #carpool #thoughts iframe {
@@ -2609,4 +2608,12 @@ ol {
 #welcome .overlay {
     background: rgba(0,0,0,0.3);
     width: 100vw;
+}
+
+#carpool .caseStudyGreenBar {
+    height: 10px;
+    background: #68bc47;
+    width: 18em;
+    margin-bottom: 13px;
+    float: left;    
 }
