@@ -1510,7 +1510,7 @@ ol {
 }
 
 #carpool .bg-lightGreen {
-    background: #67bc46;
+    background: #68bc47;
 }
 
 #carpool .bg-yellow {
@@ -1631,13 +1631,19 @@ ol {
 }
 
 #carpool #welcome .welcomeTextTitle {
-    font-size: 3em;
+    font-size: 30px;
+    color:#2e2e2e;
+    line-height: 32px;
+    text-align: left;
     text-transform: uppercase;
 }
 
 #carpool #welcome .welcomeTextRest {
   width:34em;
-  font-size: 21px;
+  color:#2e2e2e;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
   margin-top: 10px;
 }
 
@@ -1787,10 +1793,10 @@ ol {
 }
 
 #carpool .sectionDetailContainer .animationTextHeader {
-    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
-    font-size: 40px;
-    color: #67bc46;
-    margin-bottom: 10px;
+    font-size:40px;
+    color:#68bc47;
+    line-height:28px;
+    margin-bottom: 39px;
 }
 
 #carpool .sectionDetailContainer .animationTextContent {
@@ -1826,10 +1832,9 @@ ol {
 }
 
 #carpool .sectionTitle {
-    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
-    ;
-    font-size: 56px;
-    color: #999999;
+    font-size:48px;
+    color:#68bc47;
+    line-height:25px;
 }
 
 #carpool .sectionText {
@@ -2176,10 +2181,19 @@ ol {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 22em;
-    color: #FFF;
-    text-align: center;
+    height: 316px;
+
 }
+
+#carpool .footerLinksContainer .text {
+    font-size:30px;
+    color:#ffffff;
+    line-height:32px;
+    text-align: center;
+    position: relative;
+    top:141px;
+}
+
 
 #carpool .aboutFooterLinksContainer {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/carpool/img/9831.jpg');
@@ -2204,7 +2218,7 @@ ol {
 
 #carpool .footer .messageFormBackground {
     position: relative;
-    background: #000;
+    background:#0c1d03;
     display: none;
     -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
     -moz-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
@@ -2560,14 +2574,17 @@ ol {
 }
 
 #carpool #setUpConvoButton {
-    width: 14em;
-    height: 2em;
-    border-style: solid;
-    border-color: #67BC46;
-    border-width: 4px;
+    border:3px solid #68bc47;
+    width:281px;
+    height:35px;
     color: white;
-    padding: 4px;
-    font-size: 2em;
-    margin-top: 10px;
     text-transform: uppercase;
+    margin-top: 20px;
+}
+
+#carpool #setUpConvoButton .buttonInnerText {
+    font-size:16px;
+    color:#ffffff;
+    line-height:28px;
+    text-align:center;
 }
