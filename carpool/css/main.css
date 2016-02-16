@@ -2494,9 +2494,13 @@ ol {
     background-position-y: -15em;
 }
 
-#carpool #work .workTopPicture h1 {
-  font-size: 48px;
-  font-weight: lighter;
+#carpool #work .workTopPicture .workTopText {
+    margin:0;
+    font-size:30px;
+    color:#ffffff;
+    line-height:32px;
+    text-align:center;
+    padding-top: 210px;
 }
 
 #carpool #thoughts .thoughtsTopPicture {
@@ -2592,4 +2596,17 @@ ol {
     color:#ffffff;
     line-height:28px;
     text-align:center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.3);
+    height: 55vh;
+}
+#about .overlay {
+    background: rgba(0,0,0,0.3);
+}
+
+#welcome .overlay {
+    background: rgba(0,0,0,0.3);
+    width: 100vw;
 }
