@@ -11,11 +11,8 @@ body {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-}
-
-body {
     font-size: 14px;
-    font-family: 'HelveticaNeue-Light', 'Tahoma', serif;
+    font-family: 'Karla', 'HelveticaNeue-Light', 'Tahoma', serif;
     font-weight: 400;
 }
 
