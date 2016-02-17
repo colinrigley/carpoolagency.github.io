@@ -3,7 +3,7 @@ layout: post
 title: Understand Social Engagement
 author: Jarom Reid
 authorImage: jarom.jpg
-defaultImage: /carpool/img/posts_images/welcome.png
+defaultImage: /carpool/img/posts_images/veg.jpg
 permalink: /articles/Understand-Social-Engagement.html
 ---
 Everything we do at Carpool is related to helping people make work a better place to be. This effort takes on many forms so our people have to be really good at experience design, community management, techonology and project management to name a few.

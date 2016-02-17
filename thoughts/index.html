@@ -6,7 +6,7 @@ title: Thoughts
 <!-- **
 *  Thoughts starts here
 * -->
-<section id="thoughts" class="carpool-page">
+<section id="thoughts" class="carpool-page">  
   <div class="thoughtsTopPicture">
       <div class="row center-margin c-52 pt-12">
         <h1>Gain Insights Into Internal Communications</h1>
@@ -23,7 +23,7 @@ title: Thoughts
             Some of Our Thinking
         </div>
         <div class="postGrid">
-          {% for post in site.posts limit:10 %}
+          {% for post in site.posts limit:30 %}
             {% if post.postType != "services" %}
             <div class="postItem float-left c-18 mr-1 mb-1">
               <a href="{{ post.url }}">
@@ -33,33 +33,7 @@ title: Thoughts
 
                 <div class="postAuthor"><b>By {{ post.author }}</b></div>
                 <div class="postExcerpt">{{ post.excerpt }}</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--                     <table class="postSummary float-left c-40">
-                        <tr>
-                            <td class="postTitle"><a href="{{ post.url }}" class="green">{{ post.title }}</td>
-                        </tr>
-                        <tr>
-                            <td class="postAuthor">By {{ post.author }}</td>
-                        </tr>
-                        <tr>
-                            <td class="postBody">{{ post.excerpt }}</td>
-                        </tr>
-                        <tr>
-                            <td><a href="{{ post.url }}" class="readMore green">Read more</a></td>
-                        </tr>
-                      </table>
- -->            </div>
+            </div>
             {% endif %}
           {% endfor %}
         </div>

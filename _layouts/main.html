@@ -16,9 +16,18 @@
 		<link href="/carpool/featherlight/featherlight.min.css" type="text/css" rel="stylesheet" />
     	<link href="/carpool/css/main.css" type="text/css" rel="stylesheet" />
 
-    	<script type="text/javascript" src="/carpool/js/lib/jquery-2.1.4.min.js"></script>
+    	<script type="text/javascript" src="/carpool/js/jquery-2.1.4.min.js"></script>
     	<script type="text/javascript" src="/carpool/js/readmore.min.js"></script>
 		<script type="text/javascript" src="/carpool/js/main.js"></script>
+		<!-- Used for the lightbox effect on the approach page -->		
 		<script type="text/javascript" src="/carpool/featherlight/featherlight.min.js"></script>
+		<!-- Used for the tesellated tils on thoughts page -->
+		<script type="text/javascript" src="/carpool/js/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="/carpool/js/imagesloaded.pkgd.min.js"></script>
+		<script type="text/javascript">
+		 	var $grid = $('.postGrid').imagesLoaded( function() {
+			  	var msnry = new Masonry( '.postGrid', { itemSelector: '.postItem' });
+			});
+    	</script>
 	</div>
 </html>
