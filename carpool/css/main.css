@@ -2640,3 +2640,16 @@ ol {
 #postArticle #postBody p {
     margin-top: 1em;
 }
+#carpool .postGrid .postItem .postGreenBar{
+    width: 100%;
+    height: 10px;
+    background-color: #68bc47;
+}
+#thoughts .thoughtsTopPicture .row {
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 32px;
+    text-align: center;
+    padding-top: 210px;
+}
+
