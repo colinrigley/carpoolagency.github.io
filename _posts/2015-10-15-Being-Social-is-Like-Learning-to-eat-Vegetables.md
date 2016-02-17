@@ -8,12 +8,10 @@ permalink: /articles/Being-Social-is-Like-Learning-to-eat-Vegetables.html
 ---
 For as long as I can remember my dad has been a meat and potatoes guy — literally, meat and potatoes. Every now and then he would dabble in beans or corn, but I’m pretty sure that was mainly to keep my mum happy.  
 
-
 <!--more-->
 
 Over the years he evolved his diet bit by bit — bean by bean, kernel by kernel — partly because of his doctor’s recommendation, but also because he finally began to realize the benefits that come with a healthier, more diverse diet. These days, he loves his veggies. He still eats meat, of course, but those carnivorous tendencies now make up only a part of his overall culinary habits. Some would say he’s a changed man; he even has his own garden in which to grow all sorts of green things.  
   
-
 The point is that people can change, and when they do they usually find they’re better for it. While we all know vegetables are good for us we don’t always partake in as many dark, leafy greens as we should.  
 
 This a lot like becoming social: We know it’s better to work out loud, but we tend to delay the transition because it’s tough to see the immediate value — it’s easier to just do our jobs the same way we have for years. Eating a spoon of canned corn with dinner isn’t enough, just like joining a YamJam or following a group isn’t being social. It requires conversion and commitment.
