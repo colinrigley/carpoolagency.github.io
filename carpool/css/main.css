@@ -1684,14 +1684,17 @@ ol {
 
 #carpool #welcome .welcomeHeaderOverlay {
     position: absolute;
-    bottom: 45px;
+    bottom: 95px;
     left: 0;
     right: 0;
 }
 
 #carpool #welcome .welcomeHeaderOverlay .welcomeWrapper {
-    height: 300px;
+    height: 212px;
     color: #2e2e2e;
+    width: 490px;
+    background-color: rgba(230,230,230,.6);
+    padding: 10px;
 }
 
 #carpool #welcome .welcomeHeaderOverlay .welcomeText {
@@ -1864,20 +1867,6 @@ ol {
     line-height: 24px;
 }
 
-#carpool .btnTwitter img {
-    height: 21px;
-    margin-right: 14px;
-}
-
-#carpool .btnLinkedIn img {
-    height: 21px;
-    margin-right: 14px;
-}
-
-#carpool .btnFacebook img {
-    height: 21px;
-    margin-right: 14px;
-}
 
 #carpool #thoughts .postList li:nth-child(n+5) {
     display: none;
@@ -2011,7 +2000,7 @@ ol {
 }
 
 #postArticle a {
-    color: #0000EE;
+    color: #68BC47;
     text-decoration: underline;
 }
 
@@ -2034,14 +2023,25 @@ ol {
 
 #postArticle .postWrapper {
     padding: 40px 56px;
-    background-color: rgba(255, 255, 255, 0.95);
-    margin-top: -238px;
+    background-color: rgba(255, 255, 255, 1);
     position: relative;
 }
 
 #postArticle #postBody {
     line-height: 24px;
     font-size: 16px;
+    float: left;
+    width: 60vw;
+    margin-left: 80px;
+    margin-bottom: 3em;
+}
+
+#postArticle #postBody p:nth-child(2) {
+    font-size:24px;
+    color:#000000;
+    line-height:37px;
+    margin-bottom: 1em;
+    margin-top: 0em;
 }
 
 #postArticle .postTitle {
@@ -2050,6 +2050,12 @@ ol {
     line-height: 70px;
     height: 140px;
     overflow: hidden;
+    display:inline-block;
+    margin-left: 13vw;
+    top: 489px;
+    position: absolute;
+    padding: 29px;
+    background: white;
 }
 
 #postArticle .defaultImage {
@@ -2061,25 +2067,17 @@ ol {
     background-size: cover;
     top: 0;
     left: 0;
+    margin-bottom: 5em;
 }
 
-#postArticle .postAuthor {
-    margin: 34px 0 42px 0;
-}
-
-#postArticle .authorTable td.picture {
-    width: 70px;
-    height: 70px;
-}
-
-#postArticle .authorTable .image {
-    width: 70px;
-    height: 70px;
+#postArticle .author .image {
+    width: 100px;
+    height: 100px;
     padding: 0;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 70px;
+    border-radius: 100px;
 }
 
 #postArticle .authorTable td {
@@ -2095,18 +2093,36 @@ ol {
     margin-left: 14px;
 }
 
+#postArticle .btnStack {
+    width:40px;
+}
+#postArticle .author {
+    width:100px;
+    float:left;
+}
+
+#postArticle .author .picture {
+    width:100px;
+    margin:auto;
+}
+
+#postArticle .author .name {
+    margin-top: 1em;
+    font-weight: bold;
+    width: 50px;
+}
+
 #postArticle .btnTwitter,
 #postArticle .btnLinkedIn,
 #postArticle .btnFacebook {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 22px;
+
 }
 
-#postArticle .btnTwitter img,
-#postArticle .btnLinkedIn img,
-#postArticle .btnFacebook img {
-    height: 21px;
-    margin-right: 14px;
+#postArticle .authorAndBody {
+    width:80%;
+    margin:auto;
 }
 
 
@@ -2653,3 +2669,10 @@ ol {
     padding-top: 210px;
 }
 
+#postArticle .articleTitle {
+    margin: auto;
+    font-size:40px;
+    color:#68bc47;
+    line-height:44px;
+    width: 32em;
+}

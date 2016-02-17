@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A more social way of being anti-social
+title: A More Social Way of Being Anti-social
 author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/posts_images/connect.png

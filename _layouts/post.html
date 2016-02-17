@@ -4,35 +4,31 @@ layout: main
 
 <div id="postArticle" class="carpool-page">
 	<div class="defaultImage topMediaContainer" style="background-image: url('{{ page.defaultImage }}');"></div>
-	<div class="postWrapper c-58 center-margin">
-		<div class="postTitle green">{{ page.title }}</div>
-		<div class="postAuthor">
-			<table class="authorTable">
-				<tbody>
-					<tr>
-						<td class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{% if page.authorImage %}{{ page.authorImage }}{% else %}Placeholder.png{% endif %}');"></div></td>
-						<td class="name gray"><div>By {{ page.author }}</div></td>
-					</tr>
-				</tbody>
-			</table>
+
+	<div class="postTitle green">
+		{{ page.title }}
+	</div>
+
+		<div class="authorAndBody">
 	
-			<a class="btnTwitter" href="https://www.twitter.com"><img src="/carpool/img/btn/Twitter.png"></a>
-			<a class="btnLinkedIn" href="https://www.linkedin.com"><img src="/carpool/img/btn/Linkedin.png"></a>
-			<a class="btnFacebook" href="https://www.facebook.com"><img src="/carpool/img/btn/Facebook.png"></a>
-	
+		<div class="author">
+					<div class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{% if page.authorImage %}{{ page.authorImage }}{% else %}Placeholder.png{% endif %}');"></div></div>						
+					<div class="name"><div>{{ page.author }}</div></div>						
+			<div class="btnStack">
+				<a class="btnTwitter" href="https://www.twitter.com"><img src="/carpool/img/btn/twitter_icon.png"></a>
+				<a class="btnLinkedIn" href="https://www.linkedin.com"><img src="/carpool/img/btn/linkedin_icon.png"></a>
+				<a class="btnFacebook" href="https://www.facebook.com"><img src="/carpool/img/btn/facebook_icon.png"></a>
+			</div>
 		</div>
 
-		<div id="postBody">
-			<p>{{ content }}</p>
-		</div>
+
+
+
+
+	<div id="postBody">
+		<p>{{ content }}</p>
 	</div>
-	
-	<div id="related" class="c-50 center-margin pb-8">
-	  <h2>Related Posts</h2>
-	  <ul class="posts">
-	    {% for post in site.related_posts limit:3 %}
-	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	    {% endfor %}
-	  </ul>
-	</div>
+
+</div>
+
 </div>
