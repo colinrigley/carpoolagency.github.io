@@ -226,49 +226,6 @@ $(function() {
         }
     });
 
-    // Email Message
-    $(".footer .footerEmail").unbind("click").bind("click", function(event) {
-        event.preventDefault();
-        hideLocationDropdown();
-        $(".footer .footerTopContainer table .iconLink").removeClass("active");
-        if ($(".footer .messageFormBackground").is(':hidden')) {
-            $(".footer .footerEmail").parent().addClass("active");
-            showMessageForm();
-        } else {
-            hideMessageForm();
-        }
-    });
-
-    // Navigation header email message
-    $("#connect").unbind("click").bind("click", function(event) {
-        $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-        event.preventDefault();
-        hideLocationDropdown();
-        $(".footer .footerTopContainer table .iconLink").removeClass("active");
-        if ($(".footer .messageFormBackground").is(':hidden')) {
-            $(".footer .footerEmail").parent().addClass("active");
-            showMessageForm();
-        } else {
-            hideMessageForm();
-        }
-    });
-
-    // Email Message Topic dropdown
-    $(".footer .messageFormBackground .topicInput").unbind("click").bind("click", function(event) {
-        event.preventDefault();
-        if ($(".footer .messageFormBackground .topicInputDropdown").is(':hidden')) {
-            $(".footer .messageFormBackground .topicInputDropdown").slideDown(200);
-        } else {
-            $(".footer .messageFormBackground .topicInputDropdown").slideUp(200);
-        }
-    });
-
-    // Email Message Topic dropdown selection
-    $(".footer .messageFormBackground .topicInputDropdown li").unbind("click").bind("click", function(event) {
-        event.preventDefault();
-        $(".footer .messageFormBackground .topicInput").val($(this).html());
-        $(".footer .messageFormBackground .topicInputDropdown").slideUp(200);
-    });
 
     // Location Dropdown
     $(".footer .footerLocation").unbind("click").bind("click", function(event) {

@@ -1,0 +1,31 @@
+---
+layout: main
+title: Post Archive
+---
+
+<!-- **
+*  About starts here
+* -->
+<section id="archive" class="carpool-page">
+
+    <div class="posts row">
+        <div class="listWrapper">
+            <ul class="postList">
+                  {% for post in site.posts %}
+                    {% if post.postType != "services" %}            
+                    <li>
+                      <a href="{{ post.url }}">
+                        <div class="postTitle"><b>{{ post.title}}</b></div>
+                      </a>
+                    </li>
+                    {% endif %}
+                  {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    
+</section>
+<!-- **
+*  About ends here
+* -->

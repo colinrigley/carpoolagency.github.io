@@ -2689,3 +2689,46 @@ ol {
     line-height:44px;
     width: 32em;
 }
+
+#archive .posts {
+    width: 100vw;
+    min-height: 554px;
+    margin-top: 90px;
+}
+#archive a {
+    color:black;
+    -webkit-transition: color .4s ease-out;
+    -moz-transition: color .4s ease-out;
+    -o-transition: color .4s ease-out;
+    -ms-transition: color .4s ease-out;
+    transition: color .4s ease-out;
+}
+
+
+#archive a:hover {
+    color: #67bc46;
+}
+#archive .postList {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+#thoughts .archiveLink {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#thoughts .archiveLink a {
+    color:black;
+    -webkit-transition: color .4s ease-out;
+    -moz-transition: color .4s ease-out;
+    -o-transition: color .4s ease-out;
+    -ms-transition: color .4s ease-out;
+    transition: color .4s ease-out;    
+}
+
+#thoughts .archiveLink a:hover {
+    color: #67bc46;
+}
