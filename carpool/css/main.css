@@ -1690,7 +1690,6 @@ ol {
     height: 212px;
     color: #2e2e2e;
     width: 490px;
-    background-color: rgba(230,230,230,.6);
     padding: 10px;
 }
 
@@ -1890,7 +1889,6 @@ ol {
 
 #carpool #thoughts .postExcerpt {
     font-size: 14px;
-    color: #000;
     line-height: 21px;
 }
 
@@ -1920,6 +1918,19 @@ ol {
     font-size: 16px;
     color: #999999;
     cursor: pointer;
+}
+
+#carpool #thoughts .postItem a {
+    color:black;
+    -webkit-transition: color .4s ease-out;
+    -moz-transition: color .4s ease-out;
+    -o-transition: color .4s ease-out;
+    -ms-transition: color .4s ease-out;
+    transition: color .4s ease-out;
+}
+
+#carpool #thoughts .postItem a:hover {
+    color: #67bc46;
 }
 
 #carpool #connect .apply a {
@@ -2024,11 +2035,15 @@ ol {
     position: relative;
 }
 
+#postArticle .articleImage {
+    overflow: normal;
+}
+
 #postArticle #postBody {
     line-height: 24px;
     font-size: 16px;
     float: left;
-    width: 60vw;
+    width: 650px;
     margin-left: 80px;
     margin-bottom: 3em;
 }
@@ -2044,14 +2059,14 @@ ol {
 #postArticle .postTitle {
     font-size: 56px;
     font-weight: 500;
+    width: 600px;
     line-height: 70px;
-    height: 140px;
     overflow: hidden;
-    display:inline-block;
+    display: inline-block;
     margin-left: 13vw;
-    top: 489px;
     position: absolute;
     padding: 29px;
+    bottom: -70px;
     background: white;
 }
 
@@ -2544,8 +2559,9 @@ ol {
 #carpool .homeTopPicture {
     background: url('/carpool/img/Carpool_Header.png');
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+    height: inherit;
+    width: 100%;
+    position:relative;
 }
 
 #carpool .enviroDesignImage {
@@ -2603,12 +2619,13 @@ ol {
 }
 
 #carpool #setUpConvoButton {
-    border:3px solid #68bc47;
+    background: #68bc47;
     width:281px;
     height:35px;
     color: white;
     text-transform: uppercase;
     margin-top: 20px;
+    padding:4px 0;
 }
 
 #carpool #setUpConvoButton .buttonInnerText {
@@ -2618,17 +2635,16 @@ ol {
     text-align:center;
 }
 
-.overlay {
+#about .overlay, #thoughts .overlay, #work .overlay {
     background: rgba(0,0,0,0.3);
     height: 55vh;
 }
-#about .overlay {
-    background: rgba(0,0,0,0.3);
-}
+
 
 #welcome .overlay {
     background: rgba(0,0,0,0.3);
     width: 100vw;
+    height: 100vh;
 }
 
 #carpool .caseStudyGreenBar {

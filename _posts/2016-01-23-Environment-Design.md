@@ -1,5 +1,5 @@
 ---
-layout: servicesPost
+layout: post
 title: Carpool Environment Design
 author: Colin Rigley
 defaultImage: /carpool/img/posts_images/welcome.png

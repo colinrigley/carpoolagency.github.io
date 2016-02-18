@@ -1,5 +1,5 @@
 ---
-layout: servicesPost
+layout: post
 title: Carpool Support Services
 author: Colin Rigley
 defaultImage: /carpool/img/posts_images/welcome.png

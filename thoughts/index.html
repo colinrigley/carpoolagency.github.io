@@ -8,9 +8,11 @@ title: Thoughts
 * -->
 <section id="thoughts" class="carpool-page">  
   <div class="thoughtsTopPicture">
+    <div class="overlay">
       <div class="row center-margin">
         Gain <b>Insights</b> Into <b>Internal Communications</b>
       </div>
+    </div>
   </div>
   <div class="row bg-lightGreen">
       <div class="welcomeMessage center-margin c-51">
@@ -31,7 +33,9 @@ title: Thoughts
                 <div class="postTitle"><b>{{ post.title}}</b></div>
               </a>
                 <div class="postAuthor"><b>By {{ post.author }}</b></div>
+                <a href="{{ post.url }}" class="bodyLink">
                 <div class="postExcerpt">{{ post.excerpt }}</div>
+              </a>
                 <div class="postGreenBar"></div>
             </div>
             {% endif %}
