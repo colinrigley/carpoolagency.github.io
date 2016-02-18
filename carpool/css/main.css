@@ -12,7 +12,7 @@ body {
     vertical-align: baseline;
     background: transparent;
     font-size: 14px;
-    font-family: 'Karla', 'HelveticaNeue-Light', 'Tahoma', serif;
+    font-family: 'HelveticaNeue-Light', 'Open Sans', 'Tahoma', serif;
     font-weight: 400;
 }
 
@@ -2048,7 +2048,7 @@ ol {
     margin-bottom: 3em;
 }
 
-#postArticle #postBody p:nth-child(2) {
+#postArticle #postBody > p:nth-child(2) {
     font-size:24px;
     color:#000000;
     line-height:37px;
@@ -2661,7 +2661,11 @@ ol {
     border-style: solid;
     box-shadow: 0 4px 5px -3px #333;
     border-bottom: transparent;
-    
+    transition: 1s opacity ease-out;
+    -webkit-transition: 1s opacity ease-out;
+    -moz-transition: 1s opacity ease-out;
+
+
 }
 #carpool .postGrid .postItem .postTitle, 
 #carpool .postGrid .postItem .postAuthor, 
@@ -2748,3 +2752,31 @@ ol {
 #work .caseStudy a:hover {
     color: #67bc46;
 }
+
+#postArticle blockquote {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 4em;    
+}
+
+#postArticle blockquote p {
+    font-size: 2em;
+}
+#postArticle blockquote .closeQuote {
+    color:#67bc46;
+    position:relative;
+    float:right;    
+    font-size: 2em;
+    line-height: 1em;
+    font-family: 'Source Sans Pro';
+}
+
+#postArticle blockquote .openQuote {
+    color:#67bc46;
+    font-size: 2em;
+    line-height: 1em;
+    transform: scale(-1, -1);
+    font-family: 'Source Sans Pro';
+    float: left;    
+}
+

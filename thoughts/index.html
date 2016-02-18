@@ -27,7 +27,7 @@ title: Thoughts
         <div class="postGrid">
           {% for post in site.posts limit:30 %}
             {% if post.postType != "services" %}
-            <div class="postItem float-left c-18 mr-1 mb-1">
+            <div class="postItem float-left c-18 mr-1 mb-1" style="opacity: 0;">
               <a href="{{ post.url }}">
                 <img src="{{ post.defaultImage }}" style="width:100%;"/>
                 <div class="postTitle"><b>{{ post.title}}</b></div>
@@ -42,8 +42,7 @@ title: Thoughts
           {% endfor %}
         </div>
     </div>
-
-    <div class="archiveLink"><a href="/archive/">ALL POSTS ></a></div>
+    <!-- <div class="archiveLink"><a href="/archive/">ALL POSTS ></a></div> -->
 </section>
 <!-- **
 *  Thoughts ends here

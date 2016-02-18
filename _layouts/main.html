@@ -15,7 +15,7 @@
 		<link href="/carpool/css/lightbox.min.css" type="text/css" rel="stylesheet" />
 		<link href="/carpool/featherlight/featherlight.min.css" type="text/css" rel="stylesheet" />
     	<link href="/carpool/css/main.css" type="text/css" rel="stylesheet" />
-		<link href='https://fonts.googleapis.com/css?family=Karla|Droid+Serif' rel='stylesheet' type='text/css'>
+    	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,700|Karla' rel='stylesheet' type='text/css'>
 
     	<script type="text/javascript" src="/carpool/js/jquery-2.1.4.min.js"></script>
     	<script type="text/javascript" src="/carpool/js/readmore.min.js"></script>
@@ -26,9 +26,21 @@
 		<script type="text/javascript" src="/carpool/js/masonry.pkgd.min.js"></script>
 		<script type="text/javascript" src="/carpool/js/imagesloaded.pkgd.min.js"></script>
 		<script type="text/javascript">
+
+		if($('.postGrid').size() > 0) {
 		 	var $grid = $('.postGrid').imagesLoaded( function() {
 			  	var msnry = new Masonry( '.postGrid', { itemSelector: '.postItem' });
+				//to fade in post grid on thoughts page
+			  	$('.postItem').css('opacity', 1);
 			});
+		 }
+    	
+		if($('blockquote').size() > 0) {
+			$('blockquote').prepend('<div class="openQuote">,,</div>');
+			$('blockquote').append('<div class="closeQuote">,,</div>');
+		}
+
     	</script>
+
 	</div>
 </html>
