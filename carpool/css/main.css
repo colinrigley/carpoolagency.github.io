@@ -2659,6 +2659,9 @@ ol {
     border-width: 1px;
     border-color: #ccc;
     border-style: solid;
+    box-shadow: 0 4px 5px -3px #333;
+    border-bottom: transparent;
+    
 }
 #carpool .postGrid .postItem .postTitle, 
 #carpool .postGrid .postItem .postAuthor, 
@@ -2730,5 +2733,18 @@ ol {
 }
 
 #thoughts .archiveLink a:hover {
+    color: #67bc46;
+}
+
+#work .caseStudy a {
+    color:black;
+    -webkit-transition: color .4s ease-out;
+    -moz-transition: color .4s ease-out;
+    -o-transition: color .4s ease-out;
+    -ms-transition: color .4s ease-out;
+    transition: color .4s ease-out;    
+}
+
+#work .caseStudy a:hover {
     color: #67bc46;
 }
