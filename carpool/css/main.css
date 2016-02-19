@@ -1793,7 +1793,7 @@ ol {
 
 #carpool .sectionDetailContainer .animationTextHeader {
     font-size:40px;
-    color:#68bc47;
+    color:black;
     line-height:28px;
     margin-bottom: 39px;
 }
@@ -1875,7 +1875,7 @@ ol {
 
 #carpool #thoughts .postTitle {
     font-size:17px;
-    color:#000;
+    color:#67bc46;
     line-height:21px;
     text-align:left;
 }
@@ -1921,16 +1921,7 @@ ol {
 }
 
 #carpool #thoughts .postItem a {
-    color:black;
-    -webkit-transition: color .4s ease-out;
-    -moz-transition: color .4s ease-out;
-    -o-transition: color .4s ease-out;
-    -ms-transition: color .4s ease-out;
-    transition: color .4s ease-out;
-}
-
-#carpool #thoughts .postItem a:hover {
-    color: #67bc46;
+    color:#67bc46;
 }
 
 #carpool #connect .apply a {
@@ -2490,9 +2481,6 @@ ol {
     transition: color .4s ease-out;      
 }
 
-#carpool .animationTextContainer a:hover {
-    color: #4D4D4D;
-}
 #carpool .aboutSectionPicture {
     background-image: url('/carpool/img/sota.jpg');
     background-size: cover;
@@ -2667,8 +2655,7 @@ ol {
     border-width: 1px;
     border-color: #ccc;
     border-style: solid;
-    box-shadow: 0 4px 5px -3px #333;
-    border-bottom: transparent;
+    
     transition: 1s opacity ease-out;
     -webkit-transition: 1s opacity ease-out;
     -moz-transition: 1s opacity ease-out;
@@ -2744,22 +2731,11 @@ ol {
     transition: color .4s ease-out;    
 }
 
-#thoughts .archiveLink a:hover {
-    color: #67bc46;
-}
-
 #work .caseStudy a {
     color:#67bc46;
-    -webkit-transition: color .4s ease-out;
-    -moz-transition: color .4s ease-out;
-    -o-transition: color .4s ease-out;
-    -ms-transition: color .4s ease-out;
-    transition: color .4s ease-out;    
 }
 
-#work .caseStudy a:hover {
-    color: #4D4D4D;
-}
+
 
 #postArticle blockquote {
     display: inline-block;
