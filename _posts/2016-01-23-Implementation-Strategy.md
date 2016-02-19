@@ -15,16 +15,15 @@ Carpool works with individuals or small teams and empowers them to become leader
 <br><br>
 Why do we work this way? Because experience has taught us that, in order to be successful in effecting positive change, a company's culture must be nurtured from the small scale up through the large scale. Carpool restructures internal communications at the DNA level, sparking evolutions that grow throughout your company culture not because something was mandated, but because people begin to see how they can work better.
 <br><br>
-Implementation carries out in two phases: engage and build.
 
-#Engage
+- **Engage** - 
 Carpool's team of internal communications strategists and account managers get the word out on your new internal communications strategy and highlight new communications tools. We have a proven track record of getting people excited about working in a better way. We do this through trainings, workshops, hands-on support, and creative marketing campaigns.
 
-#Build
+- **Build** - 
 After the analysis and [environment design](/articles/Environment-Design.html "Environment Design") we start building the tools and implementing strategies that fill any gaps in your internal communications to get information flowing better. Carpool maintains a team of clever and inventive developers who can find innovative solutions to help you evolve the way you work through our suite of flexible technology options.
 
-#Emergent Information Flow
+- **Emergent Information Flow** - 
 It takes a well-thought-out mixture of engagement strategy and technology infrastructure to improve the flow of communication. Carpool helps you achieve the right blend of both to create a thriving environment that fosters healthy workplace conversation, content creation, and formal consumption.
 
-#Learn More
+- **Learn More** -
 If you're ready to learn more about Carpool's implementation capabilities and processes, schedule a demo today.

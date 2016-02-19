@@ -27,8 +27,8 @@ dog's back.
 
 > This is a blockquote.
 > 
-> This is the second paragraph in the blockquote.
->
+> This is the second paragraph in the blockquote. Lorem Ipsum. Take up more room, etc. etc...
+> And even more content stuff.
 
 
 Some of these words *are emphasized*.
