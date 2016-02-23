@@ -1181,7 +1181,7 @@ ol {
 }
 
 #carpool .enviroDesignImage {
-    margin: 50px 0 0 0;
+    margin: 42px 0 0 0;
 }
 
 #carpool .implementationImage {
@@ -1189,7 +1189,7 @@ ol {
 }
 
 #carpool .supportImage {
-    margin: 50px 0 0 0;
+    margin: 25px 0 0 0;
 }
 
 #aboutReadMore + [data-readmore-toggle] {
