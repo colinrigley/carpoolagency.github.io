@@ -9,23 +9,23 @@ layout: main
 		</div>
 	</div>
 
-
-
 		<div class="authorAndBody">
 	
 		<div class="author">
 					<div class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{% if page.authorImage %}{{ page.authorImage }}{% else %}Placeholder.png{% endif %}');"></div></div>						
 					<div class="name"><div>{{ page.author }}</div></div>						
 			<div class="btnStack">
-				<a class="btnTwitter" href="https://www.twitter.com"><img src="/carpool/img/btn/twitter_icon.png"></a>
-				<a class="btnLinkedIn" href="https://www.linkedin.com"><img src="/carpool/img/btn/linkedin_icon.png"></a>
-				<a class="btnFacebook" href="https://www.facebook.com"><img src="/carpool/img/btn/facebook_icon.png"></a>
+				{% if page.twitter %}
+				<a class="btnTwitter" href="{{page.twitter}}" target="_blank"><img src="/carpool/img/btn/twitter_icon.png"></a>
+				{% endif %}
+				{% if page.linkedin %}
+				<a class="btnLinkedIn" href="{{page.linkedin}}" target="_blank"><img src="/carpool/img/btn/linkedin_icon.png"></a>
+				{% endif %}
+				{% if page.facebook %}
+				<a class="btnFacebook" href="{{page.facebook}}" target="_blank"><img src="/carpool/img/btn/facebook_icon.png"></a>
+				{% endif %}
 			</div>
 		</div>
-
-
-
-
 
 	<div id="postBody">
 		<p>{{ content }}</p>

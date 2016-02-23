@@ -5,6 +5,9 @@ author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/rats.png
 permalink: /articles/What-Rats-Can-Teach-Us-About-Email.html
+twitter: https://twitter.com/colin_rigley
+linkedin: https://www.linkedin.com/in/colin-rigley-53b44413
+facebook: https://www.facebook.com/colin.rigley
 ---
 The modern addict doesn’t need syringes or lighters, just an inbox.
 Instead of snorting line after line, we try to chip away out our lives one unread message at a time. Instead of sharing emails, we click “reply all.” We are addicted to email, and we need help.
@@ -47,15 +50,17 @@ Traditionally, the inbox was a one-stop shop for all things work, often resultin
 
 But it can be better; we can do better. For example:
 
-• A discussion on Yammer leads to a meeting, which is coordinated via email invites.
-• During and after the meeting, the team moves forward on a task to move the tracking of the project to a OneNote document.
-• Group members use Yammer to continue the conversation that started in the meeting.
-• Other members of the company passively watch the Yammer conversation, and add their own feedback based on the institutional knowledge of their team.
-• All the feedback is incorporated on the OneNote (or into a shared document), finalized, and published to SharePoint.
-• The entire company can view the work accomplished and give kudos and feedback via Yammer.
-• That project sparks another idea within another team.
-• The cycle starts again.
-
+<ul>
+    <li>A discussion on Yammer leads to a meeting, which is coordinated via email invites.</li>
+    <li>During and after the meeting, the team moves forward on a task to move the tracking of the project to a OneNote document.</li>
+    <li>Group members use Yammer to continue the conversation that started in the meeting.</li>
+    <li>Other members of the company passively watch the Yammer conversation, and add their own feedback based on the institutional knowledge of their team.</li>
+    <li>All the feedback is incorporated on the OneNote (or into a shared document), finalized, and published to SharePoint.</li>
+    <li>The entire company can view the work accomplished and give kudos and feedback via Yammer.</li>
+    <li>That project sparks another idea within another team.</li>
+    <li>The cycle starts again.</li>
+</ul>
+<br/>
 With email alone, this process could never evolve. The project would remain restricted to a few key members communicating over isolated email threads. In the end, the project still gets done, but not as well as it could have been when the channel of communication is open. Worse yet, the quality of that project would never be as good as it could be with more group input.
 
 As social creatures, we produce better work when we work together.

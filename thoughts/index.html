@@ -28,7 +28,11 @@ title: Thoughts
           {% for post in site.posts limit:30 %}
             {% if post.postType != "services" %}
             <div class="postItem float-left c-18 mr-1 mb-1" style="opacity: 0;">
+              {% if post.medium %}
+              <a href="{{ post.medium }}" target="_blank">
+              {% else %}
               <a href="{{ post.url }}">
+              {% endif %}
                 <img src="{{ post.defaultImage }}" style="width:100%;"/>
                 <div class="postTitle"><b>{{ post.title}}</b></div>
               </a>

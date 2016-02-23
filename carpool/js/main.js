@@ -84,6 +84,7 @@ $(function() {
     var isAboutPage = false;
     var isArticlePage = false;
     var isScrollingAnimation = false;
+    var isScrollingToSubSection = false;
 
     // Set the active class for the navigation
     // Parameter is the href attribute for the navigation to be active
@@ -100,6 +101,18 @@ $(function() {
         isWelcomePage = true;
         if (window.location.hash === "#approach") {
             activeNavAnchors("/#approach");
+        }
+        else if (window.location.hash === "#approached") {
+            isScrollingAnimation = true;
+            isScrollingToSubSection = true;
+            activeNavAnchors("/#approach");
+            window.location.hash = '';
+            $('html,body').animate({
+                scrollTop: $("#approach").offset().top
+            }, 500, function() {
+                isScrollingAnimation = false;
+                isScrollingToSubSection = false;
+            });
         }
     } else if ($("#about").length > 0) {
         currentPage = "about";
@@ -183,7 +196,7 @@ $(function() {
             return;
         } else if (!isWelcomePage && $(this).attr("href") === "/#approach") {
             event.preventDefault();
-            window.location.href = "/#approach";
+            window.location.href = "/#approached";
             return;
         } else if (isWelcomePage && $(this).attr("href") === "/") {
             event.preventDefault();
@@ -210,12 +223,12 @@ $(function() {
         var lowerPageFooterAnchor = $(".carpool-page").height() - lowerPageFooterAnchorMark;
 
         if (st < upperTopMediaAnchor) { // Top media portion
-            if (isWelcomePage) {
+            if (isWelcomePage && !isScrollingToSubSection) {
                 activeNavAnchors("/");
             }
         } else if (st >= upperTopMediaAnchor && st <= topMediaAnchor) { // Bottom media portion
      
-            if (isWelcomePage) {
+            if (isWelcomePage && !isScrollingToSubSection) {
                 activeNavAnchors("/");
             }
         } else if ((st > topMediaAnchor && st < lowerPageFooterAnchor) || st > lowerPageFooterAnchor) { // Content portion
