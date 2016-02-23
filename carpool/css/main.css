@@ -408,7 +408,7 @@ ol {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*border-radius: 210px;*/
+    margin-bottom: 2em;
 }
 
 #carpool .sectionDetailContainer .animationTextHeader {
@@ -1393,3 +1393,14 @@ ol {
     line-height: 0.8em;
 }
 
+#carpool .sectionDetail .enlarge {
+    color: #68bc47;
+    height: inherit;
+    width: inherit;
+    vertical-align: bottom;
+    display: table-cell;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: -20px;
+}
