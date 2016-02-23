@@ -5,9 +5,6 @@ author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/rats.png
 permalink: /articles/What-Rats-Can-Teach-Us-About-Email.html
-twitter: https://twitter.com/colin_rigley
-linkedin: https://www.linkedin.com/in/colin-rigley-53b44413
-facebook: https://www.facebook.com/colin.rigley
 ---
 The modern addict doesn’t need syringes or lighters, just an inbox.
 Instead of snorting line after line, we try to chip away out our lives one unread message at a time. Instead of sharing emails, we click “reply all.” We are addicted to email, and we need help.

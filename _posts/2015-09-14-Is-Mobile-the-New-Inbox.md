@@ -5,9 +5,6 @@ author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/posts_images/ismobile.jpeg
 permalink: /articles/Is-Mobile-the-New-Inbox.html
-twitter: https://twitter.com/colin_rigley
-linkedin: https://www.linkedin.com/in/colin-rigley-53b44413
-facebook: https://www.facebook.com/colin.rigley
 ---
 
 <p>Most people really like their phones.<br/>
