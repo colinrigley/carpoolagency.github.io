@@ -655,7 +655,6 @@ ol {
     font-size: 16px;
     float: left;
     width: 650px;
-    margin-left: 80px;
     margin-bottom: 3em;
 }
 
@@ -670,11 +669,13 @@ ol {
 #postArticle .postTitle {
     font-size: 56px;
     font-weight: 500;
-    width: 600px;
+    width: 630px;
+    left: 50%;
     line-height: 70px;
     overflow: hidden;
-    display: inline-block;
-    margin-left: 13vw;
+    display: table;
+    margin: 0 auto;
+    margin-left: -415px;
     position: absolute;
     padding: 29px;
     bottom: -70px;
@@ -722,6 +723,7 @@ ol {
 #postArticle .author {
     width:100px;
     float:left;
+    margin: 25px 80px 0 -80px;
 }
 
 #postArticle .author .picture {
@@ -744,8 +746,8 @@ ol {
 }
 
 #postArticle .authorAndBody {
-    width:80%;
-    margin:auto;
+    display: table;
+    margin: auto;
 }
 
 
