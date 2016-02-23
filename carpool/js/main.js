@@ -37,6 +37,14 @@ var hideMessageForm = function() {
     $(".footerTopContainer").css("height", "auto");
 };
 
+var showContactFormDropdown = function() {
+    $(".footer .contactFormDropdownContainer").slideDown(200);
+};
+
+var hideContactFormDropdown = function() {
+    $(".footer .contactFormDropdownContainer").slideUp(200);
+};
+
 var showLocationDropdown = function() {
     $(".footer .locationDropdownContainer").slideDown(200);
 };
@@ -239,11 +247,21 @@ $(function() {
         }
     });
 
+    // Contact form
+    $(".footer .footerEmail").unbind("click").bind("click", function(event) {
+        event.preventDefault();
+        hideLocationDropdown();
+        if ($(".footer .contactFormDropdownContainer").is(':hidden')) {
+            showContactFormDropdown();
+        } else {
+            hideContactFormDropdown();
+        }
+    });
 
     // Location Dropdown
     $(".footer .footerLocation").unbind("click").bind("click", function(event) {
         event.preventDefault();
-        hideMessageForm();
+        hideContactFormDropdown();
         $(".footer .footerTopContainer .iconLink").removeClass("active");
         if ($(".footer .locationDropdownContainer").is(':hidden')) {
             $(".footer .footerLocation").parent().addClass("active");

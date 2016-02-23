@@ -1404,3 +1404,53 @@ ol {
     position: relative;
     bottom: -20px;
 }
+
+#carpool .footer .contactFormDropdownContainer {
+    padding-top: 50px; padding-bottom: 40px;
+    background: #68bc47;
+    -webkit-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 25px 30px -30px rgba(0, 0, 0, 1);
+}
+
+#carpool #contactForm .contactName {
+    display: block; float: left; line-height: 1.4em; width: 48.5%; margin-right: 3%; font-size: 1.28em; padding: 5px 10px; border: none;
+}
+
+#carpool #contactForm .contactEmail {
+    display: block; float: left; line-height: 1.4em; width: 48.5%; font-size: 1.28em; padding: 5px 10px; border: none;
+}
+
+#carpool #contactForm .contactMessage {
+    width: 100%; height: 10em; margin-top: 1.5em; font-size: 1.28em; padding: 5px 10px; line-height: 1.4em; border: none;
+}
+
+#carpool #contactForm .submitButton {
+    background: #FFF; font-size: 1.28em; padding: 5px 40px; line-height: 1.4em; color: #ccc; margin-top: 1.5em; cursor: pointer; border: none;
+}
+
+#carpool #contactForm input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+#carpool #contactForm input::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+#carpool #contactForm input:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+#carpool #contactForm input:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+#carpool #contactForm textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+#carpool #contactForm textarea::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+#carpool #contactForm textarea:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+#carpool #contactForm textarea:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+
