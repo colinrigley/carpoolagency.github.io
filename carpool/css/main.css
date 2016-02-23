@@ -1365,10 +1365,10 @@ ol {
     font-size: 4em;    
 }
 
-#postArticle blockquote p {
+#postArticle #postBody blockquote p {
     font-size: 40px;
     line-height: 40px;
-
+    margin: 1em 1.5em 0em 1.8em;
 }
 #postArticle blockquote .closeQuote {
     color:#67bc46;

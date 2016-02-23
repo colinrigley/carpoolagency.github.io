@@ -5,6 +5,7 @@ author: Colin Rigley
 defaultImage: /carpool/img/posts_images/welcome.png
 permalink: /articles/Implementation.html
 postType: services
+stage: true
 ---
 At Carpool, when we say "implementation," we mean much more than just building tools and designing vibrant internal communications environments—we get people excited about their new communications environment and develop communities of people that want to work in a new way.
 

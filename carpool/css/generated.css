@@ -1050,6 +1050,18 @@
     text-align: center;
 }
 
+#carpool .pa-1{
+    padding: 14px;
+}
+
+#carpool .pa-2{
+    padding: 28px;
+}
+
+#carpool .pa-3{
+    padding: 52px;
+}
+
 #carpool .pt-1 {
     padding-top: 14px;
 }

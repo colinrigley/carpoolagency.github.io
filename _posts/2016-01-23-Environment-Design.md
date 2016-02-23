@@ -5,6 +5,7 @@ author: Colin Rigley
 defaultImage: /carpool/img/posts_images/welcome.png
 permalink: /articles/Environment-Design.html
 postType: services
+stage: true
 ---
 We want to help you work better. That means designing an environment, not selling a tool. At Carpool, our goal, first and foremost, is to build you a work environment that facilitates a flow of information and allows your people to work faster, easier, and more accurately.
 

@@ -15,9 +15,9 @@ Instead of snorting line after line, we try to chip away out our lives one unrea
 <!--more-->
 
 Like any addict, we don’t really get any pleasure from these habits, and the first step to recovery is to admit there’s a problem. Given the literature and studies available about email, that second step is the easy one.   
-Researchers have even coined a special name for email addiction: “workplace telepressure.” More so, they found that email can actually be unhealthy for some people and a “a fixation on work email can contribute to physical and mental burnout.”  
+Researchers have even coined a special name for email addiction: <a href="http://www.huffingtonpost.com/2014/12/01/work-email-health_n_6226912.html" target="_blank">“workplace telepressure.”</a> More so, they found that email can actually be unhealthy for some people and a “a fixation on work email can contribute to physical and mental burnout.”  
 
-In fact, a survey by the McKinsey Global Institute revealed that the average worker spent about 2.6 hours per day reading and answering emails. That adds up to about one month per year. For some people, that’s more than their vacation and sick time combined.
+In fact, a <a href="http://www.mckinsey.com/industries/high-tech/our-insights/the-social-economy" target="_blank">survey by the McKinsey Global Institute</a> revealed that the average worker spent about 2.6 hours per day reading and answering emails. That adds up to about one month per year. For some people, that’s more than their vacation and sick time combined.
 
 Our devotion to the inbox isn’t making us happier, it isn’t making us more productive, and it doesn’t make us enjoy our jobs more. Instead, email can feel like a job in and of itself.
 
@@ -25,7 +25,7 @@ So why do we do it?
 I think we rely so heavily on email only because we don’t know any better. Really, I think we need to take a cue from drug-addled rats.   
 For decades, the common perception of drug addiction has been that drugs create a chemical dependency that takes control of the user and leaves them hopelessly hooked unless they’re brave enough to go through a painful withdrawal. I’m not arguing that’s incorrect, but I am saying there’s reason to believe it might not paint the complete picture.
 
-In the 1970s, a Canadian psychology professor named Bruce Alexander noticed that previous experiments shared a common problem: Each experiment focused on a solitary rat to see how it became hooked on a given drug (usually heroin or cocaine laced in a water bottle) and whether it would choose to quit cold turkey or continue nurturing its addictions. So Alexander conducted a new experiment to see whether the rat’s social environment had any influence on addiction. What he found was startling: The rats that were placed within rich, social groups had no interest in drugs, but the isolated rats became heavy users.
+In the 1970s, a Canadian psychology professor named Bruce Alexander noticed that previous experiments shared a common problem: Each experiment focused on a solitary rat to see how it became hooked on a given drug (usually heroin or cocaine laced in a water bottle) and whether it would choose to quit cold turkey or continue nurturing its addictions. So Alexander conducted <a href="http://www.yesmagazine.org/peace-justice/portugal-cut-drug-addiction-rates-in-half-by-connecting-users-with-communities" target="_blank">a new experiment</a> to see whether the rat’s social environment had any influence on addiction. What he found was startling: The rats that were placed within rich, social groups had no interest in drugs, but the isolated rats became heavy users.
 
 This experiment was even carried out in the real world with real humans, where Portugal was able to reduce its own massive heroin problem by 50% — half! — simply by placing addicts in strongly connected communities and giving them tools to live better, more complete lives.
 
@@ -33,7 +33,7 @@ The main takeaway is that humans (and rats) want to be social. We want to intera
 
 And this is why I think we are addicted to email, not because it’s just some unfortunate reality of the workplace, but because we haven’t let ourselves be social. Unlike the rats in the early experiments, which got hooked on drugs because they were never provided with anything better, we have the ability to change but still choose the option we know to be harmful.
 
-How to get clean
+### How to get clean
 “Yeah?” you say apathetically. “Email’s not that great, but what do you propose that’s any better?”
 
 That is, of course, a fair response. Maybe email is just an unfortunate necessity of the workplace. Maybe most people fall victim to their inboxes because there isn’t anything better.

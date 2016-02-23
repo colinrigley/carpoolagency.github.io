@@ -6,6 +6,7 @@ authorImage: jarom.jpg
 defaultImage: /carpool/img/posts_images/welcome.png
 permalink: /articles/Pilot.html
 postType: services
+stage: true
 ---
 The Carpool pilot is your opportunity to experience a modern way of working before you fully commit.
 <br>
