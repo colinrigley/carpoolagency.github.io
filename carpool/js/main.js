@@ -39,6 +39,11 @@ var hideMessageForm = function() {
 
 var showContactFormDropdown = function() {
     $(".footer .contactFormDropdownContainer").slideDown(200);
+    $('html,body').animate({
+            scrollTop: $("footer.footer").offset().top
+        }, 200, function() {
+            isScrollingAnimation = false;
+        });
 };
 
 var hideContactFormDropdown = function() {
@@ -248,6 +253,34 @@ $(function() {
     });
 
     // Contact form
+    $(".welcomeWrapper a").unbind("click").bind("click", function(event) {
+        event.preventDefault();
+        hideLocationDropdown();
+        if ($(".footer .contactFormDropdownContainer").is(':hidden')) {
+            showContactFormDropdown();
+        }
+        isScrollingAnimation = true;
+        $('html,body').animate({
+            scrollTop: $("footer.footer").offset().top
+        }, 1000, function() {
+            isScrollingAnimation = false;
+        });
+    });
+
+    $("a#connect").unbind("click").bind("click", function(event) {
+        event.preventDefault();
+        hideLocationDropdown();
+        if ($(".footer .contactFormDropdownContainer").is(':hidden')) {
+            showContactFormDropdown();
+        }
+        isScrollingAnimation = true;
+        $('html,body').animate({
+            scrollTop: $("footer.footer").offset().top
+        }, 1000, function() {
+            isScrollingAnimation = false;
+        });
+    });
+
     $(".footer .footerEmail").unbind("click").bind("click", function(event) {
         event.preventDefault();
         hideLocationDropdown();
