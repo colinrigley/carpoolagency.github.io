@@ -38,12 +38,14 @@ var hideMessageForm = function() {
 };
 
 var showContactFormDropdown = function() {
+    hideLocationDropdown();
     $(".footer .contactFormDropdownContainer").slideDown(200);
     $('html,body').animate({
             scrollTop: $("footer.footer").offset().top
         }, 200, function() {
             isScrollingAnimation = false;
-        });
+        }
+    );
 };
 
 var hideContactFormDropdown = function() {
@@ -51,7 +53,14 @@ var hideContactFormDropdown = function() {
 };
 
 var showLocationDropdown = function() {
+    hideContactFormDropdown();
     $(".footer .locationDropdownContainer").slideDown(200);
+    $('html,body').animate({
+            scrollTop: $("footer.footer").offset().top
+        }, 200, function() {
+            isScrollingAnimation = false;
+        }
+    );
 };
 
 var hideLocationDropdown = function() {
@@ -255,7 +264,6 @@ $(function() {
     // Contact form
     $(".welcomeWrapper a").unbind("click").bind("click", function(event) {
         event.preventDefault();
-        hideLocationDropdown();
         if ($(".footer .contactFormDropdownContainer").is(':hidden')) {
             showContactFormDropdown();
         }
@@ -269,7 +277,6 @@ $(function() {
 
     $("a#connect").unbind("click").bind("click", function(event) {
         event.preventDefault();
-        hideLocationDropdown();
         if ($(".footer .contactFormDropdownContainer").is(':hidden')) {
             showContactFormDropdown();
         }
@@ -283,7 +290,6 @@ $(function() {
 
     $(".footer .footerEmail").unbind("click").bind("click", function(event) {
         event.preventDefault();
-        hideLocationDropdown();
         if ($(".footer .contactFormDropdownContainer").is(':hidden')) {
             showContactFormDropdown();
         } else {
@@ -294,7 +300,6 @@ $(function() {
     // Location Dropdown
     $(".footer .footerLocation").unbind("click").bind("click", function(event) {
         event.preventDefault();
-        hideContactFormDropdown();
         $(".footer .footerTopContainer .iconLink").removeClass("active");
         if ($(".footer .locationDropdownContainer").is(':hidden')) {
             $(".footer .footerLocation").parent().addClass("active");
