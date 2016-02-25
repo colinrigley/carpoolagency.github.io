@@ -1251,8 +1251,7 @@ ol {
     color: white;
     text-transform: uppercase;
     padding: 4px 0;
-    position: absolute;
-    bottom: 14px;
+    margin-top: 14px;
 }
 
 #carpool #setUpConvoButton .buttonInnerText {
