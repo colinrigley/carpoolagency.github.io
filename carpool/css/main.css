@@ -302,7 +302,7 @@ ol {
 #carpool #welcome .welcomeHeaderOverlay {
     position: absolute;
     bottom: 95px;
-    left: 0;
+    left: -25px;
     right: 0;
 }
 
@@ -825,6 +825,15 @@ ol {
     z-index: 7;
 }
 
+#carpool .footer .footerTopContainer .iconLink {
+    width: 19%;
+}
+
+#carpool .footer .footerTopContainer .first.iconLink,
+#carpool .footer .footerTopContainer .last.iconLink {
+    width: 12%;
+}
+
 #carpool .footerLinksContainer {
     background: url('/carpool/img/9925.jpg');
     background-size: cover;
@@ -1127,6 +1136,7 @@ ol {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 55vh;
+    background-position-y: -140px;
 }
 
 #carpool #about .aboutTopPicture .aboutTopText {
@@ -1165,7 +1175,7 @@ ol {
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 55vh;
-    background-position-y: -15em;
+    background-position-y: -52px;
 }
 
 #carpool #thoughts .thoughtsTopPicture h1 {
