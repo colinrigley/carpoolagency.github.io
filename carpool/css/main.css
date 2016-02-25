@@ -249,7 +249,7 @@ ol {
 
 #carpool #welcome .welcomeTextTitle {
     font-size: 30px;
-    color:#2e2e2e;
+    
     line-height: 32px;
     text-align: left;
     text-transform: uppercase;
@@ -257,7 +257,7 @@ ol {
 
 #carpool #welcome .welcomeTextRest {
   width: 100%;
-  color:#2e2e2e;
+  
   font-size: 14px;
   line-height: 20px;
   text-align: left;
@@ -307,10 +307,10 @@ ol {
 }
 
 #carpool #welcome .welcomeHeaderOverlay .welcomeWrapper {
-    color: #2e2e2e;
+    color: #e0e0e0;
     width: 490px;
     padding: 18px;
-    background-color: rgba(216,216,216,0.65);
+  //  background-color: rgba(216,216,216,0.65);
 }
 
 #carpool #welcome .welcomeHeaderOverlay .welcomeText {
@@ -1190,6 +1190,13 @@ ol {
     height: inherit;
     width: 100%;
     position:relative;
+}
+.homeTopPicture:before {
+    content: '';
+    background-color: rgba(202, 200, 200, 0.35);
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 #carpool .enviroDesignImage {
