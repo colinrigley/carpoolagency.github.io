@@ -256,7 +256,7 @@ ol {
 }
 
 #carpool #welcome .welcomeTextRest {
-  width:34em;
+  width: 100%;
   color:#2e2e2e;
   font-size: 14px;
   line-height: 20px;
@@ -307,10 +307,11 @@ ol {
 }
 
 #carpool #welcome .welcomeHeaderOverlay .welcomeWrapper {
-    height: 212px;
+    height: 218px;
     color: #2e2e2e;
     width: 490px;
-    padding: 10px;
+    padding: 18px;
+    background-color: rgba(216,216,216,0.65);
 }
 
 #carpool #welcome .welcomeHeaderOverlay .welcomeText {
@@ -783,7 +784,7 @@ ol {
     background: url('/carpool/img/svg_icons/carpool_logo_white.svg');
     width: 175px;
     background-size: contain;
-
+    margin-left: 14px;
 }
 
 #carpool .header .logoContainer .logo {
@@ -1249,8 +1250,9 @@ ol {
     height:35px;
     color: white;
     text-transform: uppercase;
-    margin-top: 20px;
-    padding:4px 0;
+    padding: 4px 0;
+    position: absolute;
+    bottom: 14px;
 }
 
 #carpool #setUpConvoButton .buttonInnerText {
@@ -1406,12 +1408,11 @@ ol {
 }
 
 #carpool .sectionDetail .enlarge {
-    color: #68bc47;
+    color: #A4A4A4;
     height: inherit;
     width: inherit;
     vertical-align: bottom;
     display: table-cell;
-    font-weight: bold;
     text-align: center;
     position: relative;
     bottom: -20px;
