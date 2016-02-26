@@ -1267,7 +1267,13 @@ ol {
     text-align:left;
     padding-left: 1em;
 }
-
+#carpool div.buttonInnerText:after {
+    content: '>';
+    padding-left: 0.5em;
+    top: -1px;
+    position: relative;
+    display: inline-block;
+}
 #carpool #about .overlay, #thoughts .overlay, #work .overlay {
     background: rgba(0,0,0,0.3);
     height: 55vh;
