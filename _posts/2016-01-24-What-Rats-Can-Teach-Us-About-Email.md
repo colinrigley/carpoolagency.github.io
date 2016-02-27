@@ -3,7 +3,7 @@ layout: post
 title: What Rats and Heroin Can Teach Us About Email
 author: Colin Rigley
 authorImage: colin.jpg
-defaultImage: /carpool/img/rats.png
+defaultImage: /carpool/img/rat.jpg
 permalink: /articles/What-Rats-Can-Teach-Us-About-Email.html
 ---
 The modern addict doesn’t need syringes or lighters, just an inbox.

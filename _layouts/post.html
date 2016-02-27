@@ -9,8 +9,8 @@ layout: main
 		</div>
 	</div>
 
-		<div class="authorAndBody">
-	
+	<div class="authorAndBody">
+		{% if page.author %}
 		<div class="author">
 					<div class="picture"><div class="image" style="background-image: url('/carpool/img/profile/{% if page.authorImage %}{{ page.authorImage }}{% else %}Placeholder.png{% endif %}');"></div></div>						
 					<div class="name"><div>{{ page.author }}</div></div>						
@@ -26,11 +26,20 @@ layout: main
 				{% endif %}
 			</div>
 		</div>
+		{% endif %}
 
-	<div id="postBody">
-		<p>{{ content }}</p>
+		{% if page.noAuthor %}
+		<div id="postBody" style="margin-left: -115px;">
+			<p>{{ content }}</p>
+		</div>
+		{% endif %}
+
+		{% if page.author %}
+		<div id="postBody">
+			<p>{{ content }}</p>
+		</div>
+		{% endif %}
+
 	</div>
-
-</div>
 
 </div>

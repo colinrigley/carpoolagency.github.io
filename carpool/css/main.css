@@ -1145,6 +1145,7 @@ ol {
     line-height:32px;
     text-align:center;
     padding-top: 210px;
+    text-transform: uppercase;
 }
 
 #carpool #work .workTopPicture {
@@ -1170,7 +1171,7 @@ ol {
 #carpool #thoughts .thoughtsTopPicture {
     color: #FFF;
     text-align: center;
-    background: url('/carpool/img/background_images/thoughts.png');
+    background: url('/carpool/img/background_images/thoughts.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1263,16 +1264,19 @@ ol {
 #carpool #setUpConvoButton .buttonInnerText {
     font-size:16px;
     color:#ffffff;
-    line-height:28px;
+    line-height:27px;
     text-align:left;
     padding-left: 1em;
 }
 #carpool div.buttonInnerText:after {
     content: '>';
     padding-left: 0.5em;
-    top: -1px;
+    /*top: -1px;*/
     position: relative;
     display: inline-block;
+}
+#carpool div.top-neg-1:after {
+    top: -1px;
 }
 #carpool #about .overlay, #thoughts .overlay, #work .overlay {
     background: rgba(0,0,0,0.3);
@@ -1501,4 +1505,6 @@ ol {
 #carpool #contactForm textarea:-moz-placeholder { /* Firefox 18- */
   color: #ccc;
 }
+
+#carpool .text-uppercase {text-transform: uppercase;}
 

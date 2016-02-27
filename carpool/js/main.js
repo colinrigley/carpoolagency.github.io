@@ -136,6 +136,10 @@ $(function() {
                 isScrollingToSubSection = false;
             });
         }
+       // Arrow alignment on chrome
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+            $("#setUpConvoButton .buttonInnerText").addClass("top-neg-1");
+        }
     } else if ($("#about").length > 0) {
         currentPage = "about";
         isAboutPage = true;

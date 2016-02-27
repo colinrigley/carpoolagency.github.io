@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Carpool Implementation Strategy
-author: Colin Rigley
+<!-- author: Colin Rigley -->
+noAuthor: true
 defaultImage: /carpool/img/posts_images/welcome.png
 permalink: /articles/Implementation.html
 postType: services
@@ -9,7 +10,8 @@ stage: true
 ---
 At Carpool, when we say "implementation," we mean much more than just building tools and designing vibrant internal communications environments—we get people excited about their new communications environment and develop communities of people that want to work in a new way.
 
-#It’s a Whole New World
+It’s a Whole New World
+======================
 Your people can only work better when they understand how a new way of working can help them highlight their value to the community and find new ways to do their jobs faster, easier, and with greater reach. Carpool strives to find solutions that fit within your unique business. Then we get to work engaging your workforce and helping them excel.
 <br><br>
 Carpool works with individuals or small teams and empowers them to become leaders who inspire evolutionary communications models throughout the company. We build tools for individuals and teams and provide training so they can become champions for the new communications principles and technology for the organization.
@@ -26,5 +28,5 @@ After the analysis and [environment design](/articles/Environment-Design.html "E
 - **Emergent Information Flow** - 
 It takes a well-thought-out mixture of engagement strategy and technology infrastructure to improve the flow of communication. Carpool helps you achieve the right blend of both to create a thriving environment that fosters healthy workplace conversation, content creation, and formal consumption.
 
-- **Learn More** -
+<br>
 If you're ready to learn more about Carpool's implementation capabilities and processes, schedule a demo today.

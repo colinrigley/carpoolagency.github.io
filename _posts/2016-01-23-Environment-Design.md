@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Carpool Environment Design
-author: Colin Rigley
+<!-- author: Colin Rigley -->
+noAuthor: true
 defaultImage: /carpool/img/posts_images/welcome.png
 permalink: /articles/Environment-Design.html
 postType: services
@@ -12,7 +13,7 @@ We want to help you work better. That means designing an environment, not sellin
 <!--more-->
 
 It Begins With People
-====================
+=====================
 Who are you? What do your people do? What value do they bring to the team? How do they fit into your overall organization?
 <br><br>
 Each person is a potential touchpoint for vital information and we want to understand where they fit, what they need to do their jobs more efficiently, and what value they offer to others. Carpool's value mapping process allows us to build an all-up blueprint of your internal communications. This serves as the foundation from which we can help you increase the value of your entire community. Everyone has value; we want to maximize that value and help them share it.
@@ -20,12 +21,13 @@ Each person is a potential touchpoint for vital information and we want to under
 Once we pull together relevant data about your people—who they are, what they do, how they interact, and how social they are—we can develop a firm understanding of how information moves throughout your organization. Most importantly, we can begin to see the gaps in that flow.
 
 
-#Technology That Works for You
+Technology That Works for You
+=============================
 If people are the touchpoints for information, then technology is the conduit through which the information flows. Our mission is to ensure that conduit connects the right people in the right way to deliver information as quickly as possible.
 <br><br>
 This requires an in-depth analysis of your existing communication tools and how people use them. We research the types of tools, whether they are used effectively, additional tools that can further improve the flow of information, and then develop a plan to fit all the technology pieces together into a cohesive communications package.
 <br><br>
-Every organization sets guidelines, whether consciously or not, that dictate how information is guided by specific tools and, ultimately, how it is created, accessed, shared, and consumed. We uncover those guidelines, look for gaps, and design an environment that removes the hurdles in your information flow.
+Every organization sets guidelines, whether consciously or not, that dictate how information is guided by specific tools and, ultimately, how it is created, accessed, shared, and consumed. We uncover those guidelines, look for gaps, and design an environment that removes the blockers in your information flow.
 
 Data-Based Results
 ==================
