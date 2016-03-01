@@ -4,7 +4,6 @@ title: Being Social is Like Learning to Eat Vegetables
 author: Jarom Reid
 authorImage: jarom.jpg
 defaultImage: /carpool/img/posts_images/veg.jpg
-permalink: /articles/Being-Social-is-Like-Learning-to-eat-Vegetables.html
 ---
 For as long as I can remember my dad has been a meat and potatoes guy — literally, meat and potatoes. Every now and then he would dabble in beans or corn, but I’m pretty sure that was mainly to keep my mum happy.  
 

@@ -4,7 +4,6 @@ title: Is Mobile the New Inbox?
 author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/posts_images/ismobile.jpeg
-permalink: /articles/Is-Mobile-the-New-Inbox.html
 ---
 
 <p>Most people really like their phones.<br/>

@@ -4,7 +4,6 @@ title: How to Leverage the Butterfly Effect
 author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/posts_images/butterfly.png
-permalink: /articles/How-to-Leverage-the-Butterfly-Effect.html
 stage: true
 ---
 To understand how information flows through a complex business environment, look no further than the mighty butterfly. And to do that, we should consult Dr. Ian Malcolm.

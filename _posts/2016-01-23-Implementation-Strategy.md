@@ -4,7 +4,6 @@ title: Carpool Implementation Strategy
 <!-- author: Colin Rigley -->
 noAuthor: true
 defaultImage: /carpool/img/posts_images/welcome.png
-permalink: /articles/Implementation.html
 postType: services
 stage: true
 ---
