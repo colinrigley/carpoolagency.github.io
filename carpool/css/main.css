@@ -827,6 +827,7 @@ ol {
 
 #carpool .footer .footerTopContainer .iconLink {
     width: 19%;
+    cursor: pointer;
 }
 
 #carpool .footer .footerTopContainer .first.iconLink,
