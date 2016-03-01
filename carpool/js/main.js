@@ -326,6 +326,51 @@ $(function() {
 
     $('#aboutReadMore').readmore();
 
+    var validate = function(input) {
+        if (!input || input === "") {
+            return false;
+        }
+        return true;
+    };
+
+    var displayNotification = function(message, closeEmail) {
+        $("#contactFormNotification").fadeIn("slow").find(".notificationMessage").text(message);
+        setTimeout(function() {
+            $("#contactFormNotification").fadeOut("slow", function() {
+                if (closeEmail) {
+                    hideContactFormDropdown();
+                }
+            });
+        }, 2000);
+    };
+
+    // Contact form
+    $("#contactForm").submit(function(event) {
+        event.preventDefault();
+        var contactName = $("#contactForm .contactName").val();
+        var contactEmail = $("#contactForm .contactEmail").val();
+        var contactMessage = $("#contactForm .contactMessage").val();
+        var gotcha = $("#contactForm .gotcha").val();
+        if (validate(gotcha)) {
+            gotcha = null;
+        }
+
+        // validate input
+        if (validate(contactName) && validate(contactEmail) && validate(contactMessage)) {
+            // Ajax call
+            $.ajax({
+                url: "//formspree.io/sales@carpoolagency.com",
+                method: "POST",
+                data: {message: contactMessage, name: contactName, _replyto: contactEmail, _gotcha: gotcha}
+            }).done(function() {
+                displayNotification('Thank you! Your message has been sent!', true);
+            });
+        } else {
+            displayNotification('Please check your inputs and try again!');
+        }
+    });
+
+    // Google Analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
