@@ -1186,7 +1186,7 @@ ol {
 
 
 #carpool .homeTopPicture {
-    background: url('/carpool/img/carpool_header.jpg');
+    background: url('/carpool/img/background_images/carpool_header.jpg');
     background-size: cover;
     height: inherit;
     width: 100%;
