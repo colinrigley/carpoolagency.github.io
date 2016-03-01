@@ -835,7 +835,7 @@ ol {
 }
 
 #carpool .footerLinksContainer {
-    background: url('/carpool/img/9925.jpg');
+    background: url('/carpool/img/home_footer.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1131,7 +1131,7 @@ ol {
 #carpool #about .aboutTopPicture {
     color: #FFF;
     text-align: center;
-    background: url('/carpool/img/background_images/about.png');
+    background: url('/carpool/img/background_images/about_header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1151,7 +1151,7 @@ ol {
 #carpool #work .workTopPicture {
     color: #FFF;
     text-align: center;
-    background: url('/carpool/img/9922.jpg');
+    background: url('/carpool/img/development.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1171,7 +1171,7 @@ ol {
 #carpool #thoughts .thoughtsTopPicture {
     color: #FFF;
     text-align: center;
-    background: url('/carpool/img/background_images/thoughts.jpg');
+    background: url('/carpool/img/background_images/thoughts_header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1186,7 +1186,7 @@ ol {
 
 
 #carpool .homeTopPicture {
-    background: url('/carpool/img/Carpool_Header.png');
+    background: url('/carpool/img/carpool_header.jpg');
     background-size: cover;
     height: inherit;
     width: 100%;
