@@ -1,3 +1,5 @@
 kelexcerpt_separator: "<!--more-->"
+permalink:  "/articles/:title.html"
 collections:
   - people
+    

@@ -4,7 +4,6 @@ title: 5 Arguments Against Going Social and How to Combat Them
 author: Colin Rigley
 authorImage: colin.jpg
 defaultImage: /carpool/img/posts_images/arguments.jpeg
-permalink: /articles/5-Arguments-Against-Going-Social-and-How-to-Combat-Them.html
 ---
 
 The fact that you’re reading this implies that you are very much on board with the whole social enterprise thing. Chances are, you use Yammer, you work out loud, and you’ve found that it’s a pretty good deal.
