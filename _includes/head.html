@@ -3,6 +3,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Carpool Agency{% if page.title %} - {{ page.title }}{% endif %}</title>
     <link rel="icon" type="image/png" href="/carpool/img/favicon.png">
+    <meta property="og:url"                content="http://carpoolagency.com{{page.url}}" />
+	<meta property="og:type"               content="website" />
+	<meta property="og:title"              content="Carpool Agency{% if page.title %} - {{ page.title }}{% endif %}" />
+	<meta property="og:image"              content="http://carpoolagency.com{% if page.defaultImage %}{{site.url}}{{ page.defaultImage }}{% else %}{{site.url}}/carpool/img/Carpool_Header.png{% endif %}" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
