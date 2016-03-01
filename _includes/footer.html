@@ -15,7 +15,7 @@
                     </a>
                 </div>
                 <div class="r-7 iconLink float-left mailIcon">
-                    <a href="mailto:info@carpoolagency.com" title="Send Carpool a Message" class="footerEmail">
+                    <a href="/" title="Send Carpool a Message" class="footerEmail">
                         <img class="r-2 centered" src='/carpool/img/svg_icons/envelope.svg'>
                     </a>
                 </div>
@@ -39,13 +39,17 @@
             <!-- Email form -->
             <div class="contactFormDropdownContainer d-none">
                 <div class="row c-58 center-margin overflow-hidden">
-                    <form id="contactForm" action="//formspree.io/sales@carpoolagency.com" method="POST">
+                    <div id="contactFormNotification" class="d-none">
+                        <span class="notificationMessage"></span>
+                    </div>
+                    <form id="contactForm">
                         <div class="contactCaption">Send us a note and we'll send one back.</div>
-                        <input type="hidden" name="_subject" value="Website contact" />
-                        <input class="contactName" type="text" name="name" placeholder="Name"/>
-                        <input class="contactEmail" type="email" name="_replyto" placeholder="Email address"/>
+                        <input type="hidden" name="_subject" value="Website contact"/>
+                        <input class="gotcha" type="hidden" name="_gotcha" value="Prevent Spam"/>
+                        <input class="contactName" type="text" name="name" placeholder="Name" required/>
+                        <input class="contactEmail" type="email" name="_replyto" placeholder="Email address" required/>
                         <div class="contactMessageCaption">Blank space for your words</div>
-                        <textarea class="contactMessage" name="message" placeholder="Once upon a time..."></textarea>
+                        <textarea class="contactMessage" name="message" placeholder="Once upon a time..." required></textarea>
                         <input class="submitButton" type="submit" value="Send">
                     </form>
                 </div>

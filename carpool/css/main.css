@@ -1464,6 +1464,7 @@ ol {
     cursor: pointer;
     border: none;
     width: 100%;
+    outline: none;
 }
 
 #carpool #contactForm .contactCaption {
@@ -1508,3 +1509,16 @@ ol {
 
 #carpool .text-uppercase {text-transform: uppercase;}
 
+#carpool #contactFormNotification {
+    position:absolute;
+    top:168px;
+    width:812px;
+    z-index:105;
+    text-align:center;
+    font-weight:normal;
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+    background-color:#248000;
+    padding:5px;
+}
