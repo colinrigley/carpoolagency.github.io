@@ -489,7 +489,7 @@ $( function ( ) {
             } else {
                 displayNotification( 'Please check your inputs and try again!' );
             }
-        }s );
+        } );
 
     // Google Analytics
     ( function ( i, s, o, g, r, a, m ) {
