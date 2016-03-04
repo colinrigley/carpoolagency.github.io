@@ -467,8 +467,9 @@ $( function ( ) {
                                 displayNotification('Thank you! Your message has been sent!', true);
                             });*/
                 var xhr = new XMLHttpRequest( );
+                xhr.open( 'POST', '//formspree.io/sales@carpoolagency.com', true );
                 xhr.setRequestHeader( "Accept", "application/json" )
- s               xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" )
+                xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" )
 
                 xhr.send(
                     "name=" + contactName +
