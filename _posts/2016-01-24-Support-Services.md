@@ -8,7 +8,7 @@ postType: services
 stage: true
 ---
 
-Unlike some other agencies, we don't cut and run. Carpool is here to help well after the [environment design](/articles/Environment-Design.html "Environment Design") and [implementation](/articles/Implementation.html "Implementation Strategy") phases. That's because our goal isn't to sell you a product; we want to help you do what do, only better.
+Unlike some other agencies, we don't cut and run. Carpool is here to help well after the [environment design](/articles/Environment-Design.html "Environment Design") and [implementation](/articles/Implementation-Strategy.html "Implementation Strategy") phases. That's because our goal isn't to sell you a product; we want to help you do what do, only better.
 <br><br>
 We care about the work we do and we want to be there to ensure your success.  
 
