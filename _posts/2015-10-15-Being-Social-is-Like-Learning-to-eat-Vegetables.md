@@ -10,6 +10,8 @@ For as long as I can remember my dad has been a meat and potatoes guy — li
 <!--more-->
 
 <p>Over the years he evolved his diet bit by bit — bean by bean, kernel by kernel — partly because of his doctor’s recommendation, but also because he finally began to realize the benefits that come with a healthier, more diverse diet. These days, he loves his veggies. He still eats meat, of course, but those carnivorous tendencies now make up only a part of his overall culinary habits. Some would say he’s a changed man; he even has his own garden in which to grow all sorts of green things.</p>
+
+<div style="font-size: 48px; color: #878787; line-height: 60px; width: 650px; padding: 50px 0 50px 0; height: 300px;"><img src="/carpool/img/quotes_open.png" style="width: 30px; display: block; float: left; margin-right: 20px;"><div style="display: block; width: 600px; float: left; padding-top: 20px;">People can change, and<br>when they do they usually<br>find they’re better for it.<img src="/carpool/img/quotes_close.png" style="width: 30px; margin: 0; display: inline; margin-left: 20px; transform: translateY(15px)"></div></div>
   
 <p>The point is that people can change, and when they do they usually find they’re better for it. While we all know vegetables are good for us we don’t always partake in as many dark, leafy greens as we should.</p>
 

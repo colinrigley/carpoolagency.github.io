@@ -17,6 +17,8 @@ In fact, a <a href="http://www.mckinsey.com/industries/high-tech/our-insights/th
 
 Our devotion to the inbox isn’t making us happier, it isn’t making us more productive, and it doesn’t make us enjoy our jobs more. Instead, email can feel like a job in and of itself.
 
+<div style="font-size: 48px; color: #878787; line-height: 60px; width: 650px; padding: 50px 0 50px 0; height: 240px;"><img src="/carpool/img/quotes_open.png" style="width: 30px; display: block; float: left; margin-right: 20px;"><div style="display: block; width: 600px; float: left; padding-top: 20px;">We haven’t let ourselves<br>be social.<img src="/carpool/img/quotes_close.png" style="width: 30px; margin: 0; display: inline; margin-left: 20px; transform: translateY(15px)"></div></div>
+
 So why do we do it?   
 I think we rely so heavily on email only because we don’t know any better. Really, I think we need to take a cue from drug-addled rats.   
 For decades, the common perception of drug addiction has been that drugs create a chemical dependency that takes control of the user and leaves them hopelessly hooked unless they’re brave enough to go through a painful withdrawal. I’m not arguing that’s incorrect, but I am saying there’s reason to believe it might not paint the complete picture.
@@ -33,6 +35,8 @@ And this is why I think we are addicted to email, not because it’s just some u
 “Yeah?” you say apathetically. “Email’s not that great, but what do you propose that’s any better?”
 
 That is, of course, a fair response. Maybe email is just an unfortunate necessity of the workplace. Maybe most people fall victim to their inboxes because there isn’t anything better.
+
+<div style="font-size: 48px; color: #878787; line-height: 60px; width: 650px; padding: 50px 0 50px 0; height: 360px;"><img src="/carpool/img/quotes_open.png" style="width: 30px; display: block; float: left; margin-right: 20px;"><div style="display: block; width: 540px; float: left; padding-top: 20px;">To break the inbox-<br>addiction cycle we need<br>to fill our lives with<br>something more.<img src="/carpool/img/quotes_close.png" style="width: 30px; margin: 0; display: inline; margin-left: 20px; transform: translateY(15px)"></div></div>
 
 But I say that maybe we’ve been asking the wrong questions. Rather than searching for ways to replace email, why don’t we simply adopt strategies that utilize email as just one tool in the toolbox?
 
