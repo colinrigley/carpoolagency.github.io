@@ -1522,3 +1522,6 @@ ol {
     background-color:#248000;
     padding:5px;
 }
+
+/* Disable scrolling on Google map */
+.locationDropdownContainer iframe {pointer-events: none;}

@@ -491,6 +491,16 @@ $( function ( ) {
             }
         } );
 
+    // Google Map
+    // Enable map events on click
+    $('.locationDropdownContainer').click(function () {
+        $('.locationDropdownContainer iframe').css("pointer-events", "auto");
+    });
+    // Disable map events on mouse leave
+    $('.locationDropdownContainer iframe').mouseleave(function() { 
+        $('.locationDropdownContainer iframe').css("pointer-events", "none");
+    });
+
     // Google Analytics
     ( function ( i, s, o, g, r, a, m ) {
         i[ 'GoogleAnalyticsObject' ] = r;
