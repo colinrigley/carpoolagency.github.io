@@ -497,7 +497,7 @@ $( function ( ) {
         $('.locationDropdownContainer iframe').css("pointer-events", "auto");
     });
     // Disable map events on mouse leave
-    $('.locationDropdownContainer iframe').mouseleave(function() { 
+    $('.locationDropdownContainer').mouseleave(function() { 
         $('.locationDropdownContainer iframe').css("pointer-events", "none");
     });
 
